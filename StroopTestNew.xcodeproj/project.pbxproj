@@ -23,13 +23,18 @@
 		FE9A3E531702067800716EA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2E1702067800716EA4 /* Foundation.framework */; };
 		FE9A3E5B1702067800716EA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE9A3E591702067800716EA4 /* InfoPlist.strings */; };
 		FE9A3E5E1702067800716EA4 /* StroopTestNewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E5D1702067800716EA4 /* StroopTestNewTests.m */; };
-		FE9A3E69170209F100716EA4 /* StroopTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E68170209F100716EA4 /* StroopTest.m */; };
 		FE9A3E6D17020A2C00716EA4 /* STScores.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E6C17020A2C00716EA4 /* STScores.m */; };
 		FE9A3E7017020A3E00716EA4 /* STSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E6F17020A3E00716EA4 /* STSettings.m */; };
 		FE9A3E7317020A5000716EA4 /* STScene.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7217020A5000716EA4 /* STScene.m */; };
 		FE9A3E7617020A5B00716EA4 /* STCard.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7517020A5B00716EA4 /* STCard.m */; };
 		FE9A3E7917020E2E00716EA4 /* STSceneVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7817020E2E00716EA4 /* STSceneVCViewController.m */; };
 		FE9A3E7C170211F100716EA4 /* STSceneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7B170211F000716EA4 /* STSceneVC.m */; };
+		FE9A3E7F17024FF200716EA4 /* STSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7E17024FF200716EA4 /* STSettingsVC.m */; };
+		FE9A3E82170255EC00716EA4 /* STColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E81170255EC00716EA4 /* STColors.m */; };
+		FE9A3E8B17035B8100716EA4 /* STScoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E8A17035B8100716EA4 /* STScoreVC.m */; };
+		FE9A3E8E17036AF000716EA4 /* STTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E8D17036AF000716EA4 /* STTest.m */; };
+		FE9A3E91170370B200716EA4 /* STCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E90170370B200716EA4 /* STCardView.m */; };
+		FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E94170393B900716EA4 /* STSelectionsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +70,6 @@
 		FE9A3E5A1702067800716EA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE9A3E5C1702067800716EA4 /* StroopTestNewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StroopTestNewTests.h; sourceTree = "<group>"; };
 		FE9A3E5D1702067800716EA4 /* StroopTestNewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StroopTestNewTests.m; sourceTree = "<group>"; };
-		FE9A3E67170209F100716EA4 /* StroopTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StroopTest.h; sourceTree = "<group>"; };
-		FE9A3E68170209F100716EA4 /* StroopTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StroopTest.m; sourceTree = "<group>"; };
 		FE9A3E6B17020A2C00716EA4 /* STScores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScores.h; sourceTree = "<group>"; };
 		FE9A3E6C17020A2C00716EA4 /* STScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScores.m; sourceTree = "<group>"; };
 		FE9A3E6E17020A3E00716EA4 /* STSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSettings.h; sourceTree = "<group>"; };
@@ -79,6 +82,18 @@
 		FE9A3E7817020E2E00716EA4 /* STSceneVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSceneVCViewController.m; sourceTree = "<group>"; };
 		FE9A3E7A170211F000716EA4 /* STSceneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSceneVC.h; sourceTree = "<group>"; };
 		FE9A3E7B170211F000716EA4 /* STSceneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSceneVC.m; sourceTree = "<group>"; };
+		FE9A3E7D17024FF200716EA4 /* STSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSettingsVC.h; sourceTree = "<group>"; };
+		FE9A3E7E17024FF200716EA4 /* STSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSettingsVC.m; sourceTree = "<group>"; };
+		FE9A3E80170255EC00716EA4 /* STColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STColors.h; sourceTree = "<group>"; };
+		FE9A3E81170255EC00716EA4 /* STColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STColors.m; sourceTree = "<group>"; };
+		FE9A3E8917035B8100716EA4 /* STScoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreVC.h; sourceTree = "<group>"; };
+		FE9A3E8A17035B8100716EA4 /* STScoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScoreVC.m; sourceTree = "<group>"; };
+		FE9A3E8C17036AF000716EA4 /* STTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STTest.h; path = ../STTest.h; sourceTree = "<group>"; };
+		FE9A3E8D17036AF000716EA4 /* STTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STTest.m; path = ../STTest.m; sourceTree = "<group>"; };
+		FE9A3E8F170370B200716EA4 /* STCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCardView.h; sourceTree = "<group>"; };
+		FE9A3E90170370B200716EA4 /* STCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCardView.m; sourceTree = "<group>"; };
+		FE9A3E93170393B900716EA4 /* STSelectionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSelectionsView.h; sourceTree = "<group>"; };
+		FE9A3E94170393B900716EA4 /* STSelectionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSelectionsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +156,14 @@
 				FE9A3E3B1702067800716EA4 /* STAppDelegate.h */,
 				FE9A3E3C1702067800716EA4 /* STAppDelegate.m */,
 				FE9A3E441702067800716EA4 /* MainStoryboard.storyboard */,
-				FE9A3E7717020E2E00716EA4 /* STSceneVCViewController.h */,
+				FE9A3E92170370B900716EA4 /* View */,
+				FE9A3E8917035B8100716EA4 /* STScoreVC.h */,
+				FE9A3E8A17035B8100716EA4 /* STScoreVC.m */,
+				FE9A3E7D17024FF200716EA4 /* STSettingsVC.h */,
+				FE9A3E7E17024FF200716EA4 /* STSettingsVC.m */,
 				FE9A3E7A170211F000716EA4 /* STSceneVC.h */,
 				FE9A3E7B170211F000716EA4 /* STSceneVC.m */,
+				FE9A3E7717020E2E00716EA4 /* STSceneVCViewController.h */,
 				FE9A3E7817020E2E00716EA4 /* STSceneVCViewController.m */,
 				FE9A3E6A17020A0200716EA4 /* Model */,
 				FE9A3E471702067800716EA4 /* STViewController.h */,
@@ -189,18 +209,31 @@
 		FE9A3E6A17020A0200716EA4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FE9A3E67170209F100716EA4 /* StroopTest.h */,
-				FE9A3E68170209F100716EA4 /* StroopTest.m */,
+				FE9A3E8C17036AF000716EA4 /* STTest.h */,
+				FE9A3E8D17036AF000716EA4 /* STTest.m */,
 				FE9A3E6B17020A2C00716EA4 /* STScores.h */,
 				FE9A3E6C17020A2C00716EA4 /* STScores.m */,
 				FE9A3E6E17020A3E00716EA4 /* STSettings.h */,
 				FE9A3E6F17020A3E00716EA4 /* STSettings.m */,
 				FE9A3E7117020A5000716EA4 /* STScene.h */,
 				FE9A3E7217020A5000716EA4 /* STScene.m */,
+				FE9A3E80170255EC00716EA4 /* STColors.h */,
+				FE9A3E81170255EC00716EA4 /* STColors.m */,
 				FE9A3E7417020A5B00716EA4 /* STCard.h */,
 				FE9A3E7517020A5B00716EA4 /* STCard.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		FE9A3E92170370B900716EA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE9A3E8F170370B200716EA4 /* STCardView.h */,
+				FE9A3E90170370B200716EA4 /* STCardView.m */,
+				FE9A3E93170393B900716EA4 /* STSelectionsView.h */,
+				FE9A3E94170393B900716EA4 /* STSelectionsView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,13 +350,18 @@
 				FE9A3E391702067800716EA4 /* main.m in Sources */,
 				FE9A3E3D1702067800716EA4 /* STAppDelegate.m in Sources */,
 				FE9A3E491702067800716EA4 /* STViewController.m in Sources */,
-				FE9A3E69170209F100716EA4 /* StroopTest.m in Sources */,
 				FE9A3E6D17020A2C00716EA4 /* STScores.m in Sources */,
 				FE9A3E7017020A3E00716EA4 /* STSettings.m in Sources */,
 				FE9A3E7317020A5000716EA4 /* STScene.m in Sources */,
 				FE9A3E7617020A5B00716EA4 /* STCard.m in Sources */,
 				FE9A3E7917020E2E00716EA4 /* STSceneVCViewController.m in Sources */,
 				FE9A3E7C170211F100716EA4 /* STSceneVC.m in Sources */,
+				FE9A3E7F17024FF200716EA4 /* STSettingsVC.m in Sources */,
+				FE9A3E82170255EC00716EA4 /* STColors.m in Sources */,
+				FE9A3E8B17035B8100716EA4 /* STScoreVC.m in Sources */,
+				FE9A3E8E17036AF000716EA4 /* STTest.m in Sources */,
+				FE9A3E91170370B200716EA4 /* STCardView.m in Sources */,
+				FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  STViewController.h
+//  STSettingsVC.h
 //  StroopTestNew
 //
 //  Created by Richard Sprague on 3/26/13.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "STSceneVC.h"
 
-@interface STViewController : UIViewController
+#define STMAXSCORE_KEY @"MaxScore"
+#define STMAXSCORE_DEFAULT 3
 
+@interface STSettingsVC : UIViewController
 
 @end

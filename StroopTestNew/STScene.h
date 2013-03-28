@@ -11,8 +11,10 @@
 #import "STScores.h"
 
 @interface STScene : NSObject
+
 @property (strong, nonatomic) STCard *card;
 @property (strong, nonatomic) NSArray *selections;
+@property float elapsedTimeInSeconds;
 @property uint latestScore;
 
 

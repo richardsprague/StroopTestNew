@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "STColors.h"
 
 @interface STCard : NSObject
 @property (strong, nonatomic) UIColor *color;

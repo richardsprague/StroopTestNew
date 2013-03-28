@@ -11,8 +11,12 @@
 @implementation STCard
 - (id) init
 { self = [super init];
-    // NSLog(@"init ColorCard");
-    if (!_color) _color = self.color;
+   // NSLog(@"init STCard");
+    if (!_color) {
+            _color = self.color;
+        _shuffledColors = self.shuffledColors;
+        
+    }
     
     
     return self;
@@ -20,7 +24,11 @@
 - (UIColor *) color
 {
     
-    if (!_color) _color = [STCard randomColor];
+    if (!_color) {
+   _color = [[[STColors alloc]  init] randomUIColor];
+    }
+    
+ 
   //  _colorName = [STCard colorAsString:_color];
     
     
@@ -33,39 +41,31 @@
     
 }
 
-
-+ (NSArray *) colorArray
+- (NSArray *) shuffledColors
 {
-    return @[
-             @[[UIColor greenColor],@"green"],
-             @[[UIColor blueColor],@"blue"],
-             @[[UIColor redColor], @"red" ]];
+    if (!_shuffledColors){
+        NSMutableArray *newColorArray = [[NSMutableArray alloc] initWithArray:[STColors colorAndColorNamesArray]];
+        NSArray *anotherArray =  [self shuffle:newColorArray];
+        
+        
+        _shuffledColors = [[NSArray alloc] initWithArray:(NSArray *) anotherArray];
+        
+    }
     
+    
+    return _shuffledColors;
 }
 
-+ (NSDictionary *) ColorToStringDictionary
+
+- (NSMutableArray *) shuffle: (NSMutableArray *) anArray
 {
-    return @{[UIColor greenColor]: @"green",
-             [UIColor blueColor]: @"blue",
-             [UIColor redColor] : @"red"
-             };
+    for (uint i=0;i<[anArray count];i++){
+        int nElements = anArray.count -i;
+        int n = arc4random_uniform(nElements) + i;
+        [anArray exchangeObjectAtIndex:i withObjectAtIndex:n ];
+        
+    }
+    return anArray;
 }
 
-+ (NSString *) colorAsString:(UIColor *)aColor
-{
-    NSDictionary *colorDict = [STCard ColorToStringDictionary];
-    NSString *colorString = colorDict[aColor];
-    
-    return colorString;
-}
-
-
-
-+ (UIColor *) randomColor {
-    
-    
-    unsigned int index = arc4random() % [[STCard colorArray] count];
-    return [STCard colorArray][index][0];
-    
-}
 @end

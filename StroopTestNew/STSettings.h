@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface STSettings : NSObject
+@property (nonatomic) uint latestScore;
 
 @end
