@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "STScene.h"
 
-@interface STTest : NSObject
+@interface STTest : NSObject 
 
 @property uint finalScore;
 @property float completionTimeInSeconds;

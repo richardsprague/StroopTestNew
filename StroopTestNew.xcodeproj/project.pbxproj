@@ -35,6 +35,7 @@
 		FE9A3E8E17036AF000716EA4 /* STTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E8D17036AF000716EA4 /* STTest.m */; };
 		FE9A3E91170370B200716EA4 /* STCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E90170370B200716EA4 /* STCardView.m */; };
 		FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E94170393B900716EA4 /* STSelectionsView.m */; };
+		FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBEB80D1714D9B1006CE864 /* StroopLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		FE9A3E90170370B200716EA4 /* STCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCardView.m; sourceTree = "<group>"; };
 		FE9A3E93170393B900716EA4 /* STSelectionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSelectionsView.h; sourceTree = "<group>"; };
 		FE9A3E94170393B900716EA4 /* STSelectionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSelectionsView.m; sourceTree = "<group>"; };
+		FEBEB80D1714D9B1006CE864 /* StroopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		FE9A3E201702067800716EA4 = {
 			isa = PBXGroup;
 			children = (
+				FEBEB80D1714D9B1006CE864 /* StroopLogo.png */,
 				FE9A3E321702067800716EA4 /* StroopTestNew */,
 				FE9A3E561702067800716EA4 /* StroopTestNewTests */,
 				FE9A3E2B1702067800716EA4 /* Frameworks */,
@@ -239,9 +242,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FE9A3E281702067800716EA4 /* StroopTestNew */ = {
+		FE9A3E281702067800716EA4 /* Stroop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE9A3E611702067800716EA4 /* Build configuration list for PBXNativeTarget "StroopTestNew" */;
+			buildConfigurationList = FE9A3E611702067800716EA4 /* Build configuration list for PBXNativeTarget "Stroop" */;
 			buildPhases = (
 				FE9A3E251702067800716EA4 /* Sources */,
 				FE9A3E261702067800716EA4 /* Frameworks */,
@@ -251,7 +254,7 @@
 			);
 			dependencies = (
 			);
-			name = StroopTestNew;
+			name = Stroop;
 			productName = StroopTestNew;
 			productReference = FE9A3E291702067800716EA4 /* StroopTestNew.app */;
 			productType = "com.apple.product-type.application";
@@ -297,7 +300,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE9A3E281702067800716EA4 /* StroopTestNew */,
+				FE9A3E281702067800716EA4 /* Stroop */,
 				FE9A3E4E1702067800716EA4 /* StroopTestNewTests */,
 			);
 		};
@@ -313,6 +316,7 @@
 				FE9A3E411702067800716EA4 /* Default@2x.png in Resources */,
 				FE9A3E431702067800716EA4 /* Default-568h@2x.png in Resources */,
 				FE9A3E461702067800716EA4 /* MainStoryboard.storyboard in Resources */,
+				FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +382,7 @@
 /* Begin PBXTargetDependency section */
 		FE9A3E551702067800716EA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FE9A3E281702067800716EA4 /* StroopTestNew */;
+			target = FE9A3E281702067800716EA4 /* Stroop */;
 			targetProxy = FE9A3E541702067800716EA4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -535,13 +539,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE9A3E611702067800716EA4 /* Build configuration list for PBXNativeTarget "StroopTestNew" */ = {
+		FE9A3E611702067800716EA4 /* Build configuration list for PBXNativeTarget "Stroop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FE9A3E621702067800716EA4 /* Debug */,
 				FE9A3E631702067800716EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE9A3E641702067800716EA4 /* Build configuration list for PBXNativeTarget "StroopTestNewTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +555,7 @@
 				FE9A3E661702067800716EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

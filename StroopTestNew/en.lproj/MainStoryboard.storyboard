@@ -15,8 +15,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ioS-1V-jt9">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="OyJ-IG-tiQ"/>
-                                    <constraint firstAttribute="width" constant="258" id="zqN-H3-vBS"/>
+                                    <constraint firstAttribute="height" constant="116" id="ZsZ-md-2W4"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Welcome to the Stroop Test">
@@ -34,7 +33,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Just click start, and try to match the color of the card with the label.  Be as quick as possible.">
+                                    <fragment content="When you click start, try to match the color of the card with the label.  Be as quick as possible.">
                                         <attributes>
                                             <font key="NSFont" size="13" name="LucidaGrande"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -68,12 +67,13 @@ Cgo
                         </subviews>
                         <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ioS-1V-jt9" firstAttribute="leading" secondItem="5n5-rr-RKp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2Nt-ie-uw4"/>
-                            <constraint firstItem="ioS-1V-jt9" firstAttribute="top" secondItem="5n5-rr-RKp" secondAttribute="top" constant="35" id="QIt-o9-Xm0"/>
-                            <constraint firstItem="4Wm-kn-8GF" firstAttribute="leading" secondItem="5n5-rr-RKp" secondAttribute="leading" constant="36" id="Tet-Pf-aNM"/>
+                            <constraint firstItem="4Wm-kn-8GF" firstAttribute="leading" secondItem="5n5-rr-RKp" secondAttribute="leading" constant="36" id="0MJ-oZ-qtA"/>
+                            <constraint firstItem="8nL-ry-Goi" firstAttribute="centerX" secondItem="4Wm-kn-8GF" secondAttribute="centerX" type="default" id="0fo-DO-kBF"/>
+                            <constraint firstAttribute="trailing" secondItem="ioS-1V-jt9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ak8-yh-2Lg"/>
+                            <constraint firstItem="ioS-1V-jt9" firstAttribute="leading" secondItem="5n5-rr-RKp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Riz-Ox-kK0"/>
+                            <constraint firstItem="ioS-1V-jt9" firstAttribute="top" secondItem="5n5-rr-RKp" secondAttribute="top" constant="20" symbolic="YES" type="default" id="a3B-vf-0gx"/>
+                            <constraint firstAttribute="bottom" secondItem="4Wm-kn-8GF" secondAttribute="bottom" constant="37" id="dPm-Pl-8ab"/>
                             <constraint firstItem="8nL-ry-Goi" firstAttribute="centerY" secondItem="5n5-rr-RKp" secondAttribute="centerY" type="default" id="f8Z-Wk-Cvp"/>
-                            <constraint firstItem="8nL-ry-Goi" firstAttribute="centerX" secondItem="ioS-1V-jt9" secondAttribute="centerX" type="default" id="m0l-d6-c3h"/>
-                            <constraint firstAttribute="bottom" secondItem="4Wm-kn-8GF" secondAttribute="bottom" constant="129" id="peX-AR-JyK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stroop" id="iur-gR-br7"/>
@@ -97,6 +97,10 @@ Cgo
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv2-hD-opH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fEX-Fl-0D2"/>
+                                    <constraint firstAttribute="width" constant="59" id="jNf-IK-EYN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,18 +155,18 @@ Cgo
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="L09-R3-7tf" firstAttribute="leading" secondItem="InQ-xN-WAY" secondAttribute="leading" constant="94" id="CYz-j0-s1g"/>
+                            <constraint firstItem="L09-R3-7tf" firstAttribute="centerX" secondItem="InQ-xN-WAY" secondAttribute="centerX" type="default" id="EP9-9Z-VYf"/>
+                            <constraint firstItem="L09-R3-7tf" firstAttribute="top" secondItem="InQ-xN-WAY" secondAttribute="top" constant="20" symbolic="YES" type="default" id="EoT-dk-SVl"/>
+                            <constraint firstAttribute="bottom" secondItem="Iv2-hD-opH" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="FKE-EH-xWh"/>
+                            <constraint firstItem="jiG-yz-fDG" firstAttribute="centerX" secondItem="L09-R3-7tf" secondAttribute="centerX" type="user" id="HZQ-55-uXC"/>
                             <constraint firstItem="aP5-KU-p6e" firstAttribute="baseline" secondItem="jiG-yz-fDG" secondAttribute="baseline" type="default" id="HjB-ws-m6v"/>
-                            <constraint firstItem="Iv2-hD-opH" firstAttribute="leading" secondItem="InQ-xN-WAY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KaC-D9-r19"/>
-                            <constraint firstAttribute="bottom" secondItem="QU1-Bw-YAb" secondAttribute="bottom" constant="181" id="Qg1-Jn-ldx"/>
+                            <constraint firstItem="L09-R3-7tf" firstAttribute="leading" secondItem="InQ-xN-WAY" secondAttribute="leading" constant="57" id="TVr-4k-iZO"/>
                             <constraint firstItem="QU1-Bw-YAb" firstAttribute="baseline" secondItem="jiG-yz-fDG" secondAttribute="baseline" type="default" id="VaS-cB-Gr2"/>
-                            <constraint firstItem="Iv2-hD-opH" firstAttribute="top" secondItem="InQ-xN-WAY" secondAttribute="top" constant="20" symbolic="YES" type="default" id="b9H-hy-eGO"/>
+                            <constraint firstAttribute="bottom" secondItem="L09-R3-7tf" secondAttribute="bottom" constant="220" id="YJi-Y3-0a4"/>
                             <constraint firstAttribute="trailing" secondItem="aP5-KU-p6e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bhL-kk-uZ3"/>
-                            <constraint firstItem="jiG-yz-fDG" firstAttribute="centerX" secondItem="InQ-xN-WAY" secondAttribute="centerX" type="default" id="hwK-u6-efG"/>
-                            <constraint firstAttribute="bottom" secondItem="L09-R3-7tf" secondAttribute="bottom" constant="249" id="nJP-hf-lSW"/>
-                            <constraint firstItem="jiG-yz-fDG" firstAttribute="centerX" secondItem="L09-R3-7tf" secondAttribute="centerX" type="default" id="pbY-OH-Pu7"/>
+                            <constraint firstAttribute="bottom" secondItem="QU1-Bw-YAb" secondAttribute="bottom" constant="131" id="gaj-2d-rx8"/>
                             <constraint firstItem="QU1-Bw-YAb" firstAttribute="leading" secondItem="InQ-xN-WAY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qah-0Z-DNG"/>
-                            <constraint firstItem="L09-R3-7tf" firstAttribute="top" secondItem="InQ-xN-WAY" secondAttribute="top" constant="79" id="yxL-cp-vMq"/>
+                            <constraint firstItem="Iv2-hD-opH" firstAttribute="leading" secondItem="InQ-xN-WAY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sJg-8l-aX7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -180,7 +184,7 @@ Cgo
         <scene sceneID="rzB-xZ-J2m">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="BZd-Zl-tp5" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="80S-Rz-hyk">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -340,6 +344,7 @@ Cgo
         <class className="STSceneVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STSceneVC.h"/>
             <relationships>
+                <relationship kind="action" name="STSelectionButtons:"/>
                 <relationship kind="outlet" name="STCardForCurrentScene" candidateClass="STCardView"/>
                 <relationship kind="outletCollection" name="STSelectionButtons" candidateClass="UIButton"/>
             </relationships>
@@ -347,12 +352,16 @@ Cgo
         <class className="STScoreVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STScoreVC.h"/>
             <relationships>
+                <relationship kind="action" name="sortByDate:"/>
+                <relationship kind="action" name="sortByScore:"/>
+                <relationship kind="action" name="sortByTime:"/>
                 <relationship kind="outlet" name="STScoreDisplayTextView" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="STSettingsVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STSettingsVC.h"/>
             <relationships>
+                <relationship kind="action" name="STMaxScoreAdjustStepper:"/>
                 <relationship kind="outlet" name="STMaxScoreAdjustStepper" candidateClass="UIStepper"/>
                 <relationship kind="outlet" name="STMaxScoreLabel" candidateClass="UILabel"/>
             </relationships>
@@ -360,6 +369,7 @@ Cgo
         <class className="STViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STViewController.h"/>
             <relationships>
+                <relationship kind="action" name="startTestButtonPressed:"/>
                 <relationship kind="outlet" name="elapsedSecondsLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
