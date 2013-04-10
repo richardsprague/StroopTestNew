@@ -49,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FE9A3E291702067800716EA4 /* StroopTestNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StroopTestNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE9A3E291702067800716EA4 /* Stroop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stroop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9A3E2C1702067800716EA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE9A3E2E1702067800716EA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FE9A3E301702067800716EA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,7 +136,7 @@
 		FE9A3E2A1702067800716EA4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE9A3E291702067800716EA4 /* StroopTestNew.app */,
+				FE9A3E291702067800716EA4 /* Stroop.app */,
 				FE9A3E4F1702067800716EA4 /* StroopTestNewTests.octest */,
 			);
 			name = Products;
@@ -256,7 +256,7 @@
 			);
 			name = Stroop;
 			productName = StroopTestNew;
-			productReference = FE9A3E291702067800716EA4 /* StroopTestNew.app */;
+			productReference = FE9A3E291702067800716EA4 /* Stroop.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FE9A3E4E1702067800716EA4 /* StroopTestNewTests */ = {

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FE9A3E281702067800716EA4"
-               BuildableName = "StroopTestNew.app"
+               BuildableName = "Stroop.app"
                BlueprintName = "Stroop"
                ReferencedContainer = "container:StroopTestNew.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE9A3E281702067800716EA4"
-            BuildableName = "StroopTestNew.app"
+            BuildableName = "Stroop.app"
             BlueprintName = "Stroop"
             ReferencedContainer = "container:StroopTestNew.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE9A3E281702067800716EA4"
-            BuildableName = "StroopTestNew.app"
+            BuildableName = "Stroop.app"
             BlueprintName = "Stroop"
             ReferencedContainer = "container:StroopTestNew.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE9A3E281702067800716EA4"
-            BuildableName = "StroopTestNew.app"
+            BuildableName = "Stroop.app"
             BlueprintName = "Stroop"
             ReferencedContainer = "container:StroopTestNew.xcodeproj">
          </BuildableReference>
