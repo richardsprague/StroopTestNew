@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "STSettings.h"
 
 @interface STScores : NSObject
 

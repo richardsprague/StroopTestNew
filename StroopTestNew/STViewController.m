@@ -12,6 +12,7 @@
 
 @interface STViewController ()<STSceneProtocol>
 @property (weak, nonatomic) IBOutlet UILabel *elapsedSecondsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *STCorrectScoreLabel;
 @property (strong, nonatomic) STTest *stroopTest;
 
 @end
@@ -19,6 +20,12 @@
 @implementation STViewController
 
 @synthesize stroopTest = _stroopTest;
+
+- (void) initializeSettingsIfNecessary
+{
+   // int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    
+}
 
 - (void) setStroopTest:(STTest *)stroopTest
 {
@@ -39,7 +46,7 @@
 
 - ( void)  StroopTestScore: (uint) finalTestScore
 {
-   
+       self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Correct: %d",finalTestScore];
     
 }
 - (IBAction)startTestButtonPressed:(id)sender {
@@ -67,6 +74,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self initializeSettingsIfNecessary];
+    
 }
 
 - (void)didReceiveMemoryWarning

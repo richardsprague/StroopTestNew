@@ -12,6 +12,7 @@
 @interface STSettingsVC ()
 @property (weak, nonatomic) IBOutlet UILabel *STMaxScoreLabel;
 // @property (weak, nonatomic) IBOutlet UIStepper *;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *STTimerSegmentControl;
 
 @property (weak, nonatomic) IBOutlet UIStepper *STMaxScoreAdjustStepper;
 @property uint STMaxScore;
@@ -22,6 +23,25 @@
 
 
 @synthesize STMaxScore = _STMaxScore;
+- (IBAction)STResetScores:(UIButton *)sender {
+    [[NSUserDefaults standardUserDefaults] setObject:NULL forKey:ALL_RESULTS_KEY];
+}
+
+
+- (IBAction)STTimerSegmentedControlClicked:(UISegmentedControl *)sender {
+    
+    
+    if (!(sender.selectedSegmentIndex==0)) { // something other than OFF is selected
+        
+        
+        [[NSUserDefaults standardUserDefaults] setFloat:STTIMER_DEFAULT forKey:STMAXTIMER_KEY];
+        [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:STMODE_KEY];
+        
+    } else         [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:STMODE_KEY];
+    
+    
+
+}
 
 
 

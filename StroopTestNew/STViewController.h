@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "STSceneVC.h"
+#import "STSettings.h"
 
 @interface STViewController : UIViewController
 

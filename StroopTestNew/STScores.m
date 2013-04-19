@@ -18,10 +18,6 @@
 
 @implementation STScores
 
-#define ALL_RESULTS_KEY @"STScores_All"
-#define START_KEY @"StartDate"
-#define END_KEY @"EndDate"
-#define SCORE_KEY @"Score"
 
 
 - (NSComparisonResult)dateCompare:(STScores *)aSTScores {

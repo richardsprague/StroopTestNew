@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#define STMAXSCORE_KEY @"MaxScore"
-#define STMAXSCORE_DEFAULT 3
+#import "STSettings.h"
 
 @interface STSettingsVC : UIViewController
 
