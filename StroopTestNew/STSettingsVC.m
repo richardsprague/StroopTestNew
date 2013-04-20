@@ -86,7 +86,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-  self.STMaxScoreAdjustStepper.value =  (double) self.STMaxScore;
+    self.STMaxScoreAdjustStepper.value =  (double) self.STMaxScore;
+    self.STTimerSegmentControl.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     
     self.STMaxScoreLabel.text = [[NSString alloc] initWithFormat:@"%d",self.STMaxScore];
 }

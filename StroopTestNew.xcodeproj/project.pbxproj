@@ -36,6 +36,8 @@
 		FE9A3E91170370B200716EA4 /* STCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E90170370B200716EA4 /* STCardView.m */; };
 		FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E94170393B900716EA4 /* STSelectionsView.m */; };
 		FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBEB80D1714D9B1006CE864 /* StroopLogo.png */; };
+		FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF9F52117220D7600C42FEF /* 1366432723_play.png */; };
+		FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		FE9A3E93170393B900716EA4 /* STSelectionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSelectionsView.h; sourceTree = "<group>"; };
 		FE9A3E94170393B900716EA4 /* STSelectionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSelectionsView.m; sourceTree = "<group>"; };
 		FEBEB80D1714D9B1006CE864 /* StroopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLogo.png; sourceTree = "<group>"; };
+		FEF9F52117220D7600C42FEF /* 1366432723_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1366432723_play.png; sourceTree = "<group>"; };
+		FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1366433186_Perspective Button - Go.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 		FE9A3E331702067800716EA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */,
+				FEF9F52117220D7600C42FEF /* 1366432723_play.png */,
 				FE9A3E341702067800716EA4 /* StroopTestNew-Info.plist */,
 				FE9A3E351702067800716EA4 /* InfoPlist.strings */,
 				FE9A3E381702067800716EA4 /* main.m */,
@@ -317,6 +323,8 @@
 				FE9A3E431702067800716EA4 /* Default-568h@2x.png in Resources */,
 				FE9A3E461702067800716EA4 /* MainStoryboard.storyboard in Resources */,
 				FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */,
+				FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */,
+				FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,7 +46,10 @@
 
 - ( void)  StroopTestScore: (uint) finalTestScore
 {
-       self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Correct: %d",finalTestScore];
+    if(finalTestScore>0) {
+        
+    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Correct: %d",finalTestScore];
+    }
     
 }
 - (IBAction)startTestButtonPressed:(id)sender {
@@ -57,7 +60,8 @@
 
 - ( void)  ElapsedTimeInSeconds: (float) StroopTestElapsedTime
 {
-    self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %f",StroopTestElapsedTime];
+    if (StroopTestElapsedTime>0.1) {self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %f",StroopTestElapsedTime];
+    }
     
 }
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
