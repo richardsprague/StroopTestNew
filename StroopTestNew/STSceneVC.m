@@ -34,6 +34,7 @@
 - (IBAction)STSceneClickCancel:(UIButton *)sender {
     
     [self.delegate StroopTestScore:0];
+      self.testResult  = nil;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -111,7 +112,10 @@ int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
 - (void) showCard
 {
     //self.STCardView.backgroundColor = self.scene.card.color;
-    [self.STCardForCurrentScene showCard:self.currentScene.card];
+  [self.STCardForCurrentScene showCard:self.currentScene.card];
+    
+    
+//   self.STCardForCurrentScene = [[STCardView alloc] initWithCard:self.currentScene.card];
    
 
 }
@@ -133,7 +137,7 @@ int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
         
         
         [aButton setTitleColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
-        [aButton setBackgroundColor:[[[STColors alloc] init] randomUIColor]];
+        [aButton setTitleShadowColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
     }
     
 }
@@ -208,7 +212,8 @@ int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     }
     
     self.startTime = [[NSDate alloc] init];
-    self.testResult.score   = 0;
+   // self.testResult.score   = nil;
+     self.testResult   = nil;
     self.numAttempts = 0;
     [self showScene];
     

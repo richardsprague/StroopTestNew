@@ -10,7 +10,7 @@
 #import "STColors.h"
 
 @interface STCard : NSObject
-@property (strong, nonatomic) UIColor *color;
+@property (strong, nonatomic) STColors *color;
 @property (strong, nonatomic) NSArray *shuffledColors;
 
 

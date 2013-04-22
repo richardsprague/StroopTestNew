@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "STColors.h"
 
 #define ALL_RESULTS_KEY @"STScores_All"
 #define START_KEY @"StartDate"

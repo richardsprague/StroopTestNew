@@ -37,7 +37,7 @@
 
 
 
-- (UIColor *) randomUIColor {
+- (STColors *) randomUIColor {
     
     if (!_randomUIColor){
         unsigned int index = arc4random() % [[STColors colorAndColorNamesArray] count];

@@ -21,7 +21,7 @@
     
     return self;
 }
-- (UIColor *) color
+- (STColors *) color
 {
     
     if (!_color) {

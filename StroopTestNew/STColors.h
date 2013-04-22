@@ -15,8 +15,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface STColors : NSObject
+@interface STColors : UIColor
 + (NSArray *) colorAndColorNamesArray;
-+ (NSString *) colorAsString:(UIColor *)aColor;
-@property (weak, nonatomic) UIColor *randomUIColor ;
++ (NSString *) colorAsString:(STColors *)aColor;
+@property (weak, nonatomic) STColors *randomUIColor ;
 @end
