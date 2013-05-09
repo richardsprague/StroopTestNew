@@ -53,8 +53,7 @@
     
 }
 - (IBAction)startTestButtonPressed:(id)sender {
-   
-    self.stroopTest = [[STTest alloc] init];
+
     
 }
 
@@ -67,9 +66,13 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     STSceneVC *nextView = [segue destinationViewController];
-
     
-  //  nextView.scene = [[STScene alloc] init];
+    STScene *startingScene = [[STScene alloc] init];
+    
+    self.stroopTest = [[STTest alloc] initTestWithScene:startingScene];
+    
+
+ //   nextView.scene = [self.stroopTest currentScene];
     nextView.delegate = self;
     
 }

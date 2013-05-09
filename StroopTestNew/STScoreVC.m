@@ -9,13 +9,52 @@
 #import "STScoreVC.h"
 #import "STScores.h"
 
-@interface STScoreVC ()
+@interface STScoreVC ()<UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *STScoreTableView;
+
 @property (weak, nonatomic) IBOutlet UITextView *STScoreDisplayTextView;
 @property (strong, nonatomic) NSArray *allSTScores;
 @property (nonatomic) SEL sortSelector; 
 @end
 
 @implementation STScoreVC
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    // Return the number of rows in the section.
+    // Usually the number of items in your array (the one that holds your list)
+    return [self.allSTScores count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"STScoreTableRow";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell...
+    cell.textLabel.text = [self titleForRow:indexPath.row];
+    //cell.detailTextLabel.text = [self subtitleForRow:indexPath.row];
+    
+    
+    return cell;
+}
+
+- (NSString *)titleForRow:(NSUInteger)row
+{
+    
+    STScores *result = self.allSTScores[row];
+    NSString *titleString = [[NSString alloc] initWithFormat:@"Score: %d (%f)",result.score,result.duration];
+    return titleString; //[[NSString alloc] initWithFormat:@"hello %@",[self.allSTScores[row] description]]; //[SCORE_KEY] description]]; // description because could be NSNull
+}
+
 
 - (IBAction)sortByDate:(id)sender {
 self.sortSelector = @selector(compareEndDateToSTScores:);
@@ -81,6 +120,7 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
     [super viewWillAppear:animated];
     self.allSTScores = [STScores allSTScores];
     [self updateUI];
+    [self.STScoreTableView reloadData];
 }
 
 - (void) viewDidAppear:(BOOL)animated

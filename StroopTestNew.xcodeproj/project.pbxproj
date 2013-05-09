@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE909FD11724C36A00A3030E /* STScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */; };
+		FE909FD41724C7FF00A3030E /* STScoreTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD31724C7FE00A3030E /* STScoreTableView.m */; };
 		FE9A3E2D1702067800716EA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2C1702067800716EA4 /* UIKit.framework */; };
 		FE9A3E2F1702067800716EA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2E1702067800716EA4 /* Foundation.framework */; };
 		FE9A3E311702067800716EA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E301702067800716EA4 /* CoreGraphics.framework */; };
@@ -27,7 +29,7 @@
 		FE9A3E7017020A3E00716EA4 /* STSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E6F17020A3E00716EA4 /* STSettings.m */; };
 		FE9A3E7317020A5000716EA4 /* STScene.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7217020A5000716EA4 /* STScene.m */; };
 		FE9A3E7617020A5B00716EA4 /* STCard.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7517020A5B00716EA4 /* STCard.m */; };
-		FE9A3E7917020E2E00716EA4 /* STSceneVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7817020E2E00716EA4 /* STSceneVCViewController.m */; };
+		FE9A3E7917020E2E00716EA4 /* STSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7817020E2E00716EA4 /* STSceneViewController.m */; };
 		FE9A3E7C170211F100716EA4 /* STSceneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7B170211F000716EA4 /* STSceneVC.m */; };
 		FE9A3E7F17024FF200716EA4 /* STSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E7E17024FF200716EA4 /* STSettingsVC.m */; };
 		FE9A3E82170255EC00716EA4 /* STColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E81170255EC00716EA4 /* STColors.m */; };
@@ -51,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE909FCF1724C36900A3030E /* STScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableViewCell.h; sourceTree = "<group>"; };
+		FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScoreTableViewCell.m; sourceTree = "<group>"; };
+		FE909FD21724C7FE00A3030E /* STScoreTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableView.h; sourceTree = "<group>"; };
+		FE909FD31724C7FE00A3030E /* STScoreTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScoreTableView.m; sourceTree = "<group>"; };
 		FE9A3E291702067800716EA4 /* Stroop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stroop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9A3E2C1702067800716EA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE9A3E2E1702067800716EA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,8 +87,8 @@
 		FE9A3E7217020A5000716EA4 /* STScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScene.m; sourceTree = "<group>"; };
 		FE9A3E7417020A5B00716EA4 /* STCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCard.h; sourceTree = "<group>"; };
 		FE9A3E7517020A5B00716EA4 /* STCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCard.m; sourceTree = "<group>"; };
-		FE9A3E7717020E2E00716EA4 /* STSceneVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSceneVCViewController.h; sourceTree = "<group>"; };
-		FE9A3E7817020E2E00716EA4 /* STSceneVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSceneVCViewController.m; sourceTree = "<group>"; };
+		FE9A3E7717020E2E00716EA4 /* STSceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSceneViewController.h; sourceTree = "<group>"; };
+		FE9A3E7817020E2E00716EA4 /* STSceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSceneViewController.m; sourceTree = "<group>"; };
 		FE9A3E7A170211F000716EA4 /* STSceneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSceneVC.h; sourceTree = "<group>"; };
 		FE9A3E7B170211F000716EA4 /* STSceneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSceneVC.m; sourceTree = "<group>"; };
 		FE9A3E7D17024FF200716EA4 /* STSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSettingsVC.h; sourceTree = "<group>"; };
@@ -170,8 +176,8 @@
 				FE9A3E7E17024FF200716EA4 /* STSettingsVC.m */,
 				FE9A3E7A170211F000716EA4 /* STSceneVC.h */,
 				FE9A3E7B170211F000716EA4 /* STSceneVC.m */,
-				FE9A3E7717020E2E00716EA4 /* STSceneVCViewController.h */,
-				FE9A3E7817020E2E00716EA4 /* STSceneVCViewController.m */,
+				FE9A3E7717020E2E00716EA4 /* STSceneViewController.h */,
+				FE9A3E7817020E2E00716EA4 /* STSceneViewController.m */,
 				FE9A3E6A17020A0200716EA4 /* Model */,
 				FE9A3E471702067800716EA4 /* STViewController.h */,
 				FE9A3E481702067800716EA4 /* STViewController.m */,
@@ -237,6 +243,10 @@
 		FE9A3E92170370B900716EA4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE909FD21724C7FE00A3030E /* STScoreTableView.h */,
+				FE909FD31724C7FE00A3030E /* STScoreTableView.m */,
+				FE909FCF1724C36900A3030E /* STScoreTableViewCell.h */,
+				FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */,
 				FE9A3E8F170370B200716EA4 /* STCardView.h */,
 				FE9A3E90170370B200716EA4 /* STCardView.m */,
 				FE9A3E93170393B900716EA4 /* STSelectionsView.h */,
@@ -366,7 +376,7 @@
 				FE9A3E7017020A3E00716EA4 /* STSettings.m in Sources */,
 				FE9A3E7317020A5000716EA4 /* STScene.m in Sources */,
 				FE9A3E7617020A5B00716EA4 /* STCard.m in Sources */,
-				FE9A3E7917020E2E00716EA4 /* STSceneVCViewController.m in Sources */,
+				FE9A3E7917020E2E00716EA4 /* STSceneViewController.m in Sources */,
 				FE9A3E7C170211F100716EA4 /* STSceneVC.m in Sources */,
 				FE9A3E7F17024FF200716EA4 /* STSettingsVC.m in Sources */,
 				FE9A3E82170255EC00716EA4 /* STColors.m in Sources */,
@@ -374,6 +384,8 @@
 				FE9A3E8E17036AF000716EA4 /* STTest.m in Sources */,
 				FE9A3E91170370B200716EA4 /* STCardView.m in Sources */,
 				FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */,
+				FE909FD11724C36A00A3030E /* STScoreTableViewCell.m in Sources */,
+				FE909FD41724C7FF00A3030E /* STScoreTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

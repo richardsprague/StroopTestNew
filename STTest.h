@@ -14,6 +14,7 @@
 @property uint finalScore;
 @property float completionTimeInSeconds;
 
-- (void) startTest: (STScene *) latestScene;
+- (id) initTestWithScene: (STScene *) latestScene;
+- (STScene *) currentScene ;
 
 @end

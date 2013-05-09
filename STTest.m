@@ -11,15 +11,22 @@
 
 @interface STTest()
 
-//@property (strong, nonatomic) STScene *latestScene;
+@property (strong, nonatomic) STScene *latestScene;
 
 
 @end
 
 @implementation STTest
 
-- (void) startTest: (STScene *) latestScene;
+- (STScene *) currentScene
 {
+    return self.latestScene;
+}
+- (id) initTestWithScene: (STScene *) latestScene;
+{
+    self = [super init];
+    self.latestScene = latestScene;
+    return self;
     
 }
 

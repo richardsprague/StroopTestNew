@@ -48,10 +48,10 @@ Cgo
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nL-ry-Goi">
+                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nL-ry-Goi">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="G1y-ta-u6S"/>
-                                    <constraint firstAttribute="height" constant="60" id="fdc-UU-odf"/>
+                                    <constraint firstAttribute="height" constant="61" id="bGK-bb-Vxx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Start" image="1366433186_Perspective Button - Go.png">
@@ -264,7 +264,7 @@ Cgo
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4f7-Aa-Ut2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-807" y="45"/>
+            <point key="canvasLocation" x="-739" y="-15"/>
         </scene>
         <!--ScoreVC - Scores-->
         <scene sceneID="5">
@@ -277,8 +277,8 @@ Cgo
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlT-lh-JFU">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="313" id="Uzh-fY-OD4"/>
                                     <constraint firstAttribute="width" constant="293" id="VbL-iq-v9g"/>
+                                    <constraint firstAttribute="height" constant="128" id="fAF-1W-MG6"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -332,22 +332,47 @@ Cgo
                                     <action selector="sortByTime:" destination="2" eventType="touchUpInside" id="Owz-Ac-8n2"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WvK-Sj-KP3">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="twT-L8-JnC"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="STScoreTableRow" id="I8b-qw-ndS" customClass="STScoreTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="293" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="293" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="fdO-IN-Afa"/>
+                                    <outlet property="delegate" destination="2" id="85L-Gd-h1m"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YlT-lh-JFU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="15" id="0t8-to-7np"/>
                             <constraint firstAttribute="trailing" secondItem="47h-hr-2m8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4lN-gi-d2D"/>
+                            <constraint firstItem="WvK-Sj-KP3" firstAttribute="centerX" secondItem="Jd8-pM-mHb" secondAttribute="centerX" type="default" id="82I-zX-l87"/>
                             <constraint firstItem="Jd8-pM-mHb" firstAttribute="baseline" secondItem="Ard-4S-yef" secondAttribute="baseline" type="default" id="J4E-E9-U3e"/>
-                            <constraint firstItem="Jd8-pM-mHb" firstAttribute="centerX" secondItem="YlT-lh-JFU" secondAttribute="centerX" type="default" id="Mg7-0d-an5"/>
+                            <constraint firstAttribute="trailing" secondItem="WvK-Sj-KP3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JTx-Zy-AJV"/>
                             <constraint firstItem="Ard-4S-yef" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="N1T-jP-2mx"/>
                             <constraint firstAttribute="trailing" secondItem="YlT-lh-JFU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VIw-dn-hhm"/>
+                            <constraint firstItem="Ard-4S-yef" firstAttribute="top" secondItem="WvK-Sj-KP3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XeB-rH-CtS"/>
                             <constraint firstItem="47h-hr-2m8" firstAttribute="baseline" secondItem="Jd8-pM-mHb" secondAttribute="baseline" type="default" id="lls-Ka-hHx"/>
-                            <constraint firstItem="Ard-4S-yef" firstAttribute="top" secondItem="YlT-lh-JFU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mxc-TM-b0i"/>
+                            <constraint firstItem="WvK-Sj-KP3" firstAttribute="top" secondItem="YlT-lh-JFU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oAX-h0-P3T"/>
+                            <constraint firstItem="WvK-Sj-KP3" firstAttribute="leading" secondItem="YlT-lh-JFU" secondAttribute="leading" type="default" id="wAL-8t-7nd"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scores" id="2wu-Nj-zlQ"/>
                     <connections>
                         <outlet property="STScoreDisplayTextView" destination="YlT-lh-JFU" id="PSt-TK-5oG"/>
+                        <outlet property="STScoreTableView" destination="WvK-Sj-KP3" id="ozJ-7E-Thh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -440,12 +465,64 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cb1-O3-UKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="257" y="57"/>
+            <point key="canvasLocation" x="277" y="21"/>
         </scene>
     </scenes>
     <resources>
         <image name="1366433186_Perspective Button - Go.png" width="128" height="128"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="STCardView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/STCardView.h"/>
+        </class>
+        <class className="STSceneVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/STSceneVC.h"/>
+            <relationships>
+                <relationship kind="action" name="STSceneClickCancel:" candidateClass="UIButton"/>
+                <relationship kind="action" name="STSelectionButtons:"/>
+                <relationship kind="outlet" name="STCardForCurrentScene" candidateClass="STCardView"/>
+                <relationship kind="outlet" name="STLatestScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="STModeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="STSecsLabel" candidateClass="UILabel"/>
+                <relationship kind="outletCollection" name="STSelectionButtons" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="STScoreTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/STScoreTableViewCell.h"/>
+        </class>
+        <class className="STScoreVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/STScoreVC.h"/>
+            <relationships>
+                <relationship kind="action" name="sortByDate:"/>
+                <relationship kind="action" name="sortByScore:"/>
+                <relationship kind="action" name="sortByTime:"/>
+                <relationship kind="outlet" name="STScoreDisplayTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="STScoreTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="STSettingsVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/STSettingsVC.h"/>
+            <relationships>
+                <relationship kind="action" name="STMaxScoreAdjustStepper:"/>
+                <relationship kind="action" name="STResetScores:" candidateClass="UIButton"/>
+                <relationship kind="action" name="STTimerSegmentedControlClicked:" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="STMaxScoreAdjustStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="STMaxScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="STTimerSegmentControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="STViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/STViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="startTestButtonPressed:"/>
+                <relationship kind="outlet" name="STCorrectScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="elapsedSecondsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
