@@ -17,7 +17,7 @@
 
 @property (readonly, nonatomic) NSDate *start;
 @property (readonly, nonatomic) NSDate *end;
-@property (readonly, nonatomic) NSTimeInterval duration;
+@property (nonatomic) NSTimeInterval duration;
 @property (nonatomic) int score;
 
 

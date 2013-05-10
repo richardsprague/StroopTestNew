@@ -11,10 +11,13 @@
 
 @interface STTest : NSObject 
 
-@property uint finalScore;
-@property float completionTimeInSeconds;
+@property uint currentScore;
 
-- (id) initTestWithScene: (STScene *) latestScene;
-- (STScene *) currentScene ;
+
+@property (strong, nonatomic) STScene *latestScene;
+
+- (NSTimeInterval) elapsedTime;
+
+
 
 @end

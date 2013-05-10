@@ -438,20 +438,31 @@ Cgo
                                     <action selector="STResetScores:" destination="bDI-RE-ySY" eventType="touchUpInside" id="UaJ-IF-Nie"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcK-8W-EzB">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="YId-NP-n5Y"/>
+                                    <constraint firstAttribute="width" constant="97" id="hYQ-2K-Rrf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DAx-t3-K1I" firstAttribute="leading" secondItem="l8J-Ju-NnW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="63v-er-8C3"/>
+                            <constraint firstItem="K5P-HH-WBA" firstAttribute="leading" secondItem="l8J-Ju-NnW" secondAttribute="leading" constant="55" id="7MY-6k-Xsx"/>
                             <constraint firstAttribute="bottom" secondItem="03M-P8-iVb" secondAttribute="bottom" constant="147" id="8b5-qN-Awz"/>
                             <constraint firstItem="Odi-YT-q1G" firstAttribute="top" secondItem="l8J-Ju-NnW" secondAttribute="top" constant="128" id="HaT-yD-jct"/>
                             <constraint firstItem="K5P-HH-WBA" firstAttribute="top" secondItem="Odi-YT-q1G" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Sbw-Ix-GUU"/>
                             <constraint firstItem="DAx-t3-K1I" firstAttribute="top" secondItem="bTT-uA-fGk" secondAttribute="top" type="default" id="YJb-h8-7fz"/>
+                            <constraint firstItem="Odi-YT-q1G" firstAttribute="trailing" secondItem="lcK-8W-EzB" secondAttribute="trailing" type="default" id="Z6B-CB-i5A"/>
                             <constraint firstItem="Odi-YT-q1G" firstAttribute="leading" secondItem="l8J-Ju-NnW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="d11-NW-teK"/>
                             <constraint firstItem="03M-P8-iVb" firstAttribute="leading" secondItem="l8J-Ju-NnW" secondAttribute="leading" constant="40" id="euL-AA-hcc"/>
                             <constraint firstItem="kfx-RC-QHA" firstAttribute="baseline" secondItem="DAx-t3-K1I" secondAttribute="baseline" type="default" id="f21-fw-8AU"/>
+                            <constraint firstItem="lcK-8W-EzB" firstAttribute="top" secondItem="l8J-Ju-NnW" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gZV-5C-Nhm"/>
                             <constraint firstItem="DAx-t3-K1I" firstAttribute="top" secondItem="l8J-Ju-NnW" secondAttribute="top" constant="82" id="kQt-nK-BuU"/>
                             <constraint firstItem="kfx-RC-QHA" firstAttribute="leading" secondItem="bTT-uA-fGk" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="kml-zk-iN4"/>
-                            <constraint firstItem="K5P-HH-WBA" firstAttribute="leading" secondItem="l8J-Ju-NnW" secondAttribute="leading" constant="55" id="nn8-Bp-Mu9"/>
                             <constraint firstItem="bTT-uA-fGk" firstAttribute="centerX" secondItem="l8J-Ju-NnW" secondAttribute="centerX" type="default" id="sW8-gC-7So"/>
                             <constraint firstAttribute="trailing" secondItem="kfx-RC-QHA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zyJ-QT-ylm"/>
                         </constraints>

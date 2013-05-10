@@ -57,7 +57,8 @@
             _start = resultDictionary[START_KEY];
             _end = resultDictionary[END_KEY];
             _score = [resultDictionary[SCORE_KEY] intValue];
-            if (!_start || !_end) self = nil;
+            _duration = [resultDictionary[DURATION_KEY] doubleValue];
+           if (!_start || !_end) self = nil;
             
         }
     }
@@ -69,9 +70,7 @@
 - (void) synchronize
 {
     NSMutableDictionary *mutableSTScoresFromUserDefaults =
-    [[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY]
-     
-     mutableCopy];
+    [[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] mutableCopy];
     
     if (!mutableSTScoresFromUserDefaults)
         mutableSTScoresFromUserDefaults = [[NSMutableDictionary alloc] init];
@@ -117,7 +116,7 @@
 
 - (id) asPropertyList
 {
-    return @{ START_KEY: self.start, END_KEY : self.end, SCORE_KEY : @(self.score  )};
+    return @{ START_KEY: self.start, END_KEY : self.end, SCORE_KEY : @(self.score  ), DURATION_KEY: @(self.duration)};
     
 }
 
@@ -133,9 +132,18 @@
     return self;
 }
 
-- (NSTimeInterval) duration
+//- (NSTimeInterval) duration
+//{
+//    if (!_duration) {
+//        _duration = 0;
+//    }
+//    return _duration ; //[self.end timeIntervalSinceDate:self.start];
+//}
+
+- (void) setDuration:(NSTimeInterval)duration
 {
-    return [self.end timeIntervalSinceDate:self.start];
+    _duration = duration;
+    //[self synchronize];
 }
 
 - (void) setScore:(int)score

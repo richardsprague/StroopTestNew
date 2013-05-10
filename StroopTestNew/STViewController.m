@@ -13,7 +13,10 @@
 @interface STViewController ()<STSceneProtocol>
 @property (weak, nonatomic) IBOutlet UILabel *elapsedSecondsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *STCorrectScoreLabel;
+@property (strong, nonatomic) STScores *testResult;
 @property (strong, nonatomic) STTest *stroopTest;
+@property (strong, nonatomic) STSceneVC *nextView;
+@property (strong, nonatomic) NSTimer *timerForTest;
 
 @end
 
@@ -27,54 +30,155 @@
     
 }
 
-- (void) setStroopTest:(STTest *)stroopTest
+- (void) setStroopTest:(STTest *)newStroopTest
 {
     if (!_stroopTest) _stroopTest = [[STTest alloc] init];
-    else _stroopTest = stroopTest;
+    else _stroopTest = newStroopTest;
     
 }
 
 - (STTest *) stroopTest
 {
     
-    if (!self.stroopTest) {
-        self.stroopTest = [[STTest alloc] init];
+    if (!_stroopTest) {
+        _stroopTest = [[STTest alloc] init];
+        self.stroopTest = _stroopTest;
     }
-    return self.stroopTest;
+    return _stroopTest;
     
 }
 
-- ( void)  StroopTestScore: (uint) finalTestScore
+- (void) STUpdateScore
 {
-    if(finalTestScore>0) {
-        
-    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Correct: %d",finalTestScore];
+    NSTimeInterval duration = self.stroopTest.elapsedTime;
+    
+    //warning!  You must set duration and score in this order
+   self.testResult.duration = duration;
+    self.testResult.score = self.stroopTest.currentScore;
+    self.testResult = nil;
+    
+    
+    
+    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Time's up! Score=%d",self.stroopTest.currentScore];
+    if (duration>0.1){
+        self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %f",duration];
     }
     
 }
+
+- (void) StroopTestScorePlusOne
+{
+    self.stroopTest.currentScore++;
+        self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Score: %d",self.stroopTest.currentScore];
+  
+        uint userDefaultNumTests;
+    userDefaultNumTests = [[NSUserDefaults standardUserDefaults] integerForKey:STMAXSCORE_KEY];
+    
+    
+    if (userDefaultNumTests==0) userDefaultNumTests=3;
+
+    
+    int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    
+    
+    if (!STMode) {   // STMode=0 means continue to max score
+        if (self.stroopTest.currentScore>=userDefaultNumTests){ // only do this if we're done with the Test
+    
+            [self STUpdateScore];
+            
+            [self.nextView dismissViewControllerAnimated:YES completion:nil];
+        }
+    }
+    
+    
+}
+
+- (void) cancelTest
+{
+    [ self.timerForTest invalidate];
+    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Cancelled"];
+    
+}
+
+//- ( void)  StroopTestScore: (uint) finalTestScore
+//{
+//    if(finalTestScore>0) {
+//        
+//    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Correct: %d",finalTestScore];
+//    }
+//    
+//}
+
+- (STScores *) testResult
+{
+    if (!_testResult) _testResult = [[STScores alloc] init];
+    return _testResult;
+}
+
 - (IBAction)startTestButtonPressed:(id)sender {
+  //  [NSTimer scheduledTimerWithTimeInterval: 5.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
+    
+    int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
 
     
-}
-
-- ( void)  ElapsedTimeInSeconds: (float) StroopTestElapsedTime
-{
-    if (StroopTestElapsedTime>0.1) {self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %f",StroopTestElapsedTime];
+    if (!(STMode==0)) {
+        
+        //        if (STMode==1) {
+        //
+        //        [NSTimer scheduledTimerWithTimeInterval: 15.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
+        //        } else if (STMode == 2) {
+        //                  [NSTimer scheduledTimerWithTimeInterval: 30.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
+        //        } else if (STMode == 3) {
+        //                  [NSTimer scheduledTimerWithTimeInterval: 60.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
+        //        }
+        
+        switch (STMode) {
+            case 1:
+                self.timerForTest = [NSTimer scheduledTimerWithTimeInterval: 15.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
+                break;
+            case 2:
+                self.timerForTest = [NSTimer scheduledTimerWithTimeInterval: 30.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
+                break;
+            case 3:
+                self.timerForTest = [NSTimer scheduledTimerWithTimeInterval: 60.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
+                break;
+                
+            default: NSLog(@"unknown STMode");
+                break;
+        }
+        
     }
     
+    
 }
+
+//- ( void)  ElapsedTimeInSeconds: (float) StroopTestElapsedTime
+//{
+//    if (StroopTestElapsedTime>0.1) {self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %f",StroopTestElapsedTime];
+//    }
+//    
+//}
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    STSceneVC *nextView = [segue destinationViewController];
+    self.nextView = [segue destinationViewController];
     
     STScene *startingScene = [[STScene alloc] init];
     
-    self.stroopTest = [[STTest alloc] initTestWithScene:startingScene];
+    self.stroopTest = [[STTest alloc] init];
+    
+   self.stroopTest.latestScene = startingScene;
     
 
- //   nextView.scene = [self.stroopTest currentScene];
-    nextView.delegate = self;
+ self.nextView.scene = self.stroopTest.latestScene;
+    self.nextView.delegate = self;
     
+}
+
+- (void) STTimeExpired
+{
+        
+    [self STUpdateScore];
+        [self.nextView dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad
@@ -82,6 +186,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self initializeSettingsIfNecessary];
+
     
 }
 

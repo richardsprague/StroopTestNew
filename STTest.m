@@ -10,39 +10,29 @@
 
 
 @interface STTest()
-
-@property (strong, nonatomic) STScene *latestScene;
-
+@property (strong, nonatomic) NSDate *startTime;
 
 @end
 
+
 @implementation STTest
 
-- (STScene *) currentScene
-{
-    return self.latestScene;
-}
-- (id) initTestWithScene: (STScene *) latestScene;
+- (id) init
 {
     self = [super init];
-    self.latestScene = latestScene;
+    
+    self.startTime = [[NSDate alloc] init];
+    
     return self;
-    
 }
 
-@synthesize completionTimeInSeconds = _completionTimeInSeconds;
-
-- (float) completionTimeInSeconds
+- (NSTimeInterval) elapsedTime
 {
-    return self.completionTimeInSeconds;
+    return -[self.startTime timeIntervalSinceNow];
     
 }
 
-- (void) setCompletionTimeInSeconds:(float)completionTimeInSeconds
-{
-    _completionTimeInSeconds = completionTimeInSeconds;
-    
-}
+
 
 @end
 

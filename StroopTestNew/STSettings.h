@@ -13,6 +13,7 @@
 #define START_KEY @"StartDate"
 #define END_KEY @"EndDate"
 #define SCORE_KEY @"Score"
+#define DURATION_KEY @"Duration"
 
 
 #define STMAXSCORE_KEY @"MaxScore"

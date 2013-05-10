@@ -11,20 +11,19 @@
 #import "STSelectionsView.h"
 #import "STScores.h"
 
-@interface STSceneVC ()// <STSceneProtocol>
+@interface STSceneVC ()
 
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *STSelectionButtons;
 
 @property (weak, nonatomic) IBOutlet UILabel *STSecsLabel;
 @property (weak, nonatomic) IBOutlet STCardView *STCardForCurrentScene;
-@property (strong, nonatomic) STScene *currentScene;
+
 @property (strong, nonatomic) NSDate *startTime;
 @property (weak, nonatomic) IBOutlet UILabel *STLatestScoreLabel;
 @property (nonatomic) uint latestScore;
-@property (nonatomic) float elapsedTime;
-@property (strong, nonatomic) STScores *testResult;
-@property uint numAttempts;
+//@property (nonatomic) float elapsedTime;
+
 @property (weak, nonatomic) IBOutlet UILabel *STModeLabel;
 
 @end
@@ -33,68 +32,30 @@
 
 - (IBAction)STSceneClickCancel:(UIButton *)sender {
     
-    [self.delegate StroopTestScore:0];
-      self.testResult  = nil;
+    [self.delegate cancelTest];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (STScores *) testResult
-{
-    if (!_testResult) _testResult = [[STScores alloc] init];
-    return _testResult;
-}
 
-- ( void)  StroopTestScore: (uint)  finalTestScore
-{
-    
-}
 
-- ( void)  ElapsedTimeInSeconds: (float)StroopTestElapsedTime
-{
-    
-}
-
-- (STScene *) currentScene
-{
-    if (!_currentScene) _currentScene = [[STScene alloc] init];
-    return _currentScene;
-}
 
 
 - (IBAction)STSelectionButtons:(id)sender {
 
-    uint userDefaultNumTests;
+    
     uint thisButton = [self.STSelectionButtons indexOfObject:sender];
     
     
-    NSArray *aColor = self.currentScene.card.shuffledColors[thisButton];
+    NSArray *aColor = self.scene.card.shuffledColors[thisButton];
     
-    if (self.currentScene.card.color == aColor[0]) self.latestScore++;
-    
-    
-    
-    [self.delegate StroopTestScore:self.currentScene.latestScore];
-    [self.delegate ElapsedTimeInSeconds:-[self.startTime timeIntervalSinceNow]];
-    
-    userDefaultNumTests = [[NSUserDefaults standardUserDefaults] integerForKey:STMAXSCORE_KEY];
-    
+    if (self.scene.card.color == aColor[0]){
+       self.latestScore++;
+        [self.delegate StroopTestScorePlusOne];
         
-        if (userDefaultNumTests==0) userDefaultNumTests=3;
-        self.numAttempts++;
-    
-int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
-    
-    
-    if (!STMode) {   // STMode=0 means continue to max score
-        if (self.latestScore>=userDefaultNumTests){
-            self.testResult.score = self.numAttempts;
-            
-            
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
     }
     
-    self.currentScene = nil;
+
+    self.scene = [[STScene alloc] init ];
     
     [self showScene];
     
@@ -111,24 +72,20 @@ int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
 
 - (void) showCard
 {
-    //self.STCardView.backgroundColor = self.scene.card.color;
-  [self.STCardForCurrentScene showCard:self.currentScene.card];
-    
-    
-//   self.STCardForCurrentScene = [[STCardView alloc] initWithCard:self.currentScene.card];
+  
+    [self.STCardForCurrentScene showCard:self.scene.card];
    
-
+    
+   
 }
 
 - (void) showSelectionButtons
 {
-    
-   // [self.STSelectionButtons showButtons:self.currentScene.selections];
-    
+        
     
     for (int i = 0 ; i < [self.STSelectionButtons count] ; i++){
         UIButton *aButton = self.STSelectionButtons[i];
-        NSArray *aColor = self.currentScene.card.shuffledColors[i];
+        NSArray *aColor = self.scene.card.shuffledColors[i];
         
      
         
@@ -147,15 +104,7 @@ int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     self.STSecsLabel.text = [[NSString alloc] initWithFormat:@"%d",-(int)[self.startTime timeIntervalSinceNow]];
 }
 
-- (void) STTimeExpired
-{
-  //  NSLog(@"time expired after %f sec",-[self.startTime timeIntervalSinceNow]);
-    self.testResult.score = self.numAttempts;
-    
-    [self.delegate StroopTestScore:self.numAttempts];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -170,11 +119,9 @@ int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    if (!self.currentScene){
-        self.currentScene  = [[STScene alloc] init];
-    }
+
+    assert(self.scene); // the scene had better have been created before getting here.
     
-   // + (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)seconds invocation:(NSInvocation *)invocation repeats:(BOOL)repeats
     
     self.STModeLabel.text = [[NSString alloc] initWithFormat:@"mode:%d",[[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY]];
     
@@ -183,38 +130,8 @@ int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     self.STModeLabel.text = [[NSString alloc] initWithFormat:@"mode:%d",STMode];
     
-    if (!(STMode==0)) {
-        
-        //        if (STMode==1) {
-        //
-        //        [NSTimer scheduledTimerWithTimeInterval: 15.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
-        //        } else if (STMode == 2) {
-        //                  [NSTimer scheduledTimerWithTimeInterval: 30.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
-        //        } else if (STMode == 3) {
-        //                  [NSTimer scheduledTimerWithTimeInterval: 60.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
-        //        }
-        
-        switch (STMode) {
-            case 1:
-                [NSTimer scheduledTimerWithTimeInterval: 15.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
-                break;
-            case 2:
-                [NSTimer scheduledTimerWithTimeInterval: 30.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
-                break;
-            case 3:
-                [NSTimer scheduledTimerWithTimeInterval: 60.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
-                break;
-                
-            default: NSLog(@"unknown STMode");
-                break;
-        }
-        
-    }
-    
     self.startTime = [[NSDate alloc] init];
-   // self.testResult.score   = nil;
-     self.testResult   = nil;
-    self.numAttempts = 0;
+
     [self showScene];
     
 }
