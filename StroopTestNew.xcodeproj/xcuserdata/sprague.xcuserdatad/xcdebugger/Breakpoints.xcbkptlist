@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "StroopTestNew/STScoreVC.m"
-         timestampString = "389901877.648591"
+         timestampString = "390523089.433374"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "88"
-         endingLineNumber = "88"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
          landmarkName = "-updateUI"
          landmarkType = "5">
       </FileBreakpoint>
@@ -40,19 +40,6 @@
          startingLineNumber = "145"
          endingLineNumber = "145"
          landmarkName = "-setDuration:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "StroopTestNew/STScores.m"
-         timestampString = "389908838.103916"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "152"
-         endingLineNumber = "152"
-         landmarkName = "-setScore:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

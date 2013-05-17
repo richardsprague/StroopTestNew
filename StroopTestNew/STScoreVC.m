@@ -13,12 +13,20 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *STScoreTableView;
 
-@property (weak, nonatomic) IBOutlet UITextView *STScoreDisplayTextView;
+//@property (weak, nonatomic) IBOutlet UITextView *STScoreDisplayTextView;
 @property (strong, nonatomic) NSArray *allSTScores;
 @property (nonatomic) SEL sortSelector; 
 @end
 
 @implementation STScoreVC
+
+- (IBAction)editPushed:(UIButton *)sender {
+    if (self.STScoreTableView.isEditing)
+        [self.STScoreTableView setEditing:NO];
+        else [self.STScoreTableView setEditing:YES  ];
+    
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
@@ -40,19 +48,41 @@
     }
     
     // Configure the cell...
+
+    
+    
+  //  cell.textLabel.font = [UIFont systemFontOfSize:14.0];//[[[UIFont alloc] init]fontWithSize:[UIFont smallSystemFontSize]];
+    cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
     cell.textLabel.text = [self titleForRow:indexPath.row];
-    //cell.detailTextLabel.text = [self subtitleForRow:indexPath.row];
+    cell.textLabel.textColor = [UIColor redColor];
+
+    //cell.detailTextLabel.text = [self titleForRow:indexPath.row];
     
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [UIFont smallSystemFontSize]+6;  //16.0;
+}
+
 - (NSString *)titleForRow:(NSUInteger)row
 {
+   // NSString *displayText = @"";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterShortStyle];          
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    NSArray *resultArray = [[STScores allSTScores] sortedArrayUsingSelector:self.sortSelector];
+    STScores *result = resultArray [ row]; //self.allSTScores[row];
     
-    STScores *result = self.allSTScores[row];
-    NSString *titleString = [[NSString alloc] initWithFormat:@"Score: %d (%f)",result.score,result.duration];
-    return titleString; //[[NSString alloc] initWithFormat:@"hello %@",[self.allSTScores[row] description]]; //[SCORE_KEY] description]]; // description because could be NSNull
+    NSString *titleString = [[NSString alloc]
+                             initWithFormat:@"%-5d|        %16@ |       %5f",result.score,[formatter stringFromDate:result.end],result.duration];
+    
+    
+    return titleString;
+    
+    //[SCORE_KEY] description]]; // description because could be NSNull
 }
 
 
@@ -70,14 +100,7 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
 
 - (void) updateUI
 {
-//    NSString *displayText= @"";
-//    for (STScores *result in [STScores allSTScores]) {
-//        displayText = [displayText stringByAppendingFormat:@"Score: %d (%@ %fs)\n", result.score,
-//                       
-//                       [NSDateFormatter localizedStringFromDate:result.end dateStyle: NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle],
-//                       result.duration ];
-//    }
-//    self.STScoreDisplayTextView.text = displayText;
+
     NSString *displayText = @"";
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init]; // added after lecture
     [formatter setDateStyle:NSDateFormatterShortStyle];          // added after lecture
@@ -87,7 +110,7 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
         // displayText = [displayText stringByAppendingFormat:@"Score: %d (%@, %0g)\n", result.score, result.end,result.duration]; // version in lecture
         displayText = [displayText stringByAppendingFormat:@"Score: %d (%@, %0g)\n", result.score, [formatter stringFromDate:result.end], result.duration];  // formatted date
     }
-    self.STScoreDisplayTextView.text = displayText;
+  //  self.STScoreDisplayTextView.text = displayText;
     
     
 }
@@ -110,6 +133,7 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
 {
     _sortSelector = sortSelector;
     [self updateUI];
+     [self.STScoreTableView reloadData];   
 }
 
 
@@ -127,6 +151,7 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
 {
     [super viewDidAppear:animated];
     [self updateUI];
+        [self.STScoreTableView reloadData];
 }
 
 

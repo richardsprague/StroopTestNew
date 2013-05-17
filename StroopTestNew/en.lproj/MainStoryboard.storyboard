@@ -9,7 +9,7 @@
             <objects>
                 <viewController title="Stroop Test" id="oO6-bh-Rb4" customClass="STViewController" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="5n5-rr-RKp">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ioS-1V-jt9">
@@ -83,14 +83,14 @@ Cgo
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8nL-ry-Goi" firstAttribute="centerX" secondItem="ioS-1V-jt9" secondAttribute="centerX" type="default" id="1hQ-17-3Hu"/>
-                            <constraint firstItem="Gcg-xs-HMQ" firstAttribute="leading" secondItem="5n5-rr-RKp" secondAttribute="leading" constant="154" id="453-Bm-5zl"/>
+                            <constraint firstItem="8nL-ry-Goi" firstAttribute="leading" secondItem="5n5-rr-RKp" secondAttribute="leading" constant="124" id="5ST-PQ-WEt"/>
+                            <constraint firstItem="8nL-ry-Goi" firstAttribute="top" secondItem="ioS-1V-jt9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7aV-tU-tNp"/>
                             <constraint firstItem="Gcg-xs-HMQ" firstAttribute="centerX" secondItem="4Wm-kn-8GF" secondAttribute="centerX" type="default" id="AUN-KV-e3m"/>
                             <constraint firstAttribute="trailing" secondItem="ioS-1V-jt9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ak8-yh-2Lg"/>
                             <constraint firstItem="ioS-1V-jt9" firstAttribute="leading" secondItem="5n5-rr-RKp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Riz-Ox-kK0"/>
                             <constraint firstItem="ioS-1V-jt9" firstAttribute="top" secondItem="5n5-rr-RKp" secondAttribute="top" constant="20" symbolic="YES" type="default" id="a3B-vf-0gx"/>
+                            <constraint firstItem="8nL-ry-Goi" firstAttribute="centerX" secondItem="4Wm-kn-8GF" secondAttribute="centerX" type="default" id="bBp-b5-HKd"/>
                             <constraint firstAttribute="bottom" secondItem="4Wm-kn-8GF" secondAttribute="bottom" constant="37" id="dPm-Pl-8ab"/>
-                            <constraint firstItem="8nL-ry-Goi" firstAttribute="top" secondItem="5n5-rr-RKp" secondAttribute="top" constant="220" id="eAS-Eq-9tQ"/>
                             <constraint firstAttribute="bottom" secondItem="Gcg-xs-HMQ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="z5O-2Q-hfm"/>
                         </constraints>
                     </view>
@@ -109,7 +109,7 @@ Cgo
             <objects>
                 <viewController id="C9Z-TF-cnz" customClass="STSceneVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="InQ-xN-WAY">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L09-R3-7tf" customClass="STCardView"/>
@@ -211,15 +211,15 @@ Cgo
                             <constraint firstItem="FCk-3I-dB3" firstAttribute="baseline" secondItem="J66-zA-X8L" secondAttribute="baseline" type="default" id="9WR-pB-vt8"/>
                             <constraint firstItem="ByA-g4-GYI" firstAttribute="baseline" secondItem="y2q-n8-Qsl" secondAttribute="baseline" type="default" id="BEN-xw-b9z"/>
                             <constraint firstItem="L09-R3-7tf" firstAttribute="top" secondItem="InQ-xN-WAY" secondAttribute="top" constant="20" symbolic="YES" type="default" id="EoT-dk-SVl"/>
+                            <constraint firstItem="J66-zA-X8L" firstAttribute="leading" secondItem="L09-R3-7tf" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Eqp-c1-crJ"/>
                             <constraint firstAttribute="bottom" secondItem="Iv2-hD-opH" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="FKE-EH-xWh"/>
                             <constraint firstItem="jiG-yz-fDG" firstAttribute="centerX" secondItem="InQ-xN-WAY" secondAttribute="centerX" type="default" id="Go7-H1-Iwa"/>
-                            <constraint firstItem="jiG-yz-fDG" firstAttribute="centerX" secondItem="L09-R3-7tf" secondAttribute="centerX" type="user" id="HZQ-55-uXC"/>
                             <constraint firstItem="aP5-KU-p6e" firstAttribute="baseline" secondItem="jiG-yz-fDG" secondAttribute="baseline" type="default" id="HjB-ws-m6v"/>
-                            <constraint firstItem="J66-zA-X8L" firstAttribute="leading" secondItem="L09-R3-7tf" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="QLJ-Eb-aGm"/>
-                            <constraint firstItem="L09-R3-7tf" firstAttribute="leading" secondItem="InQ-xN-WAY" secondAttribute="leading" constant="57" id="TVr-4k-iZO"/>
+                            <constraint firstItem="L09-R3-7tf" firstAttribute="centerX" secondItem="jiG-yz-fDG" secondAttribute="centerX" type="default" id="Ryv-95-cLC"/>
                             <constraint firstItem="QU1-Bw-YAb" firstAttribute="baseline" secondItem="jiG-yz-fDG" secondAttribute="baseline" type="default" id="VaS-cB-Gr2"/>
                             <constraint firstItem="FCk-3I-dB3" firstAttribute="leading" secondItem="InQ-xN-WAY" secondAttribute="leading" constant="5" id="Xmg-Ia-2Wy"/>
                             <constraint firstAttribute="bottom" secondItem="L09-R3-7tf" secondAttribute="bottom" constant="220" id="YJi-Y3-0a4"/>
+                            <constraint firstItem="L09-R3-7tf" firstAttribute="leading" secondItem="InQ-xN-WAY" secondAttribute="leading" constant="57" id="YqU-a8-VW2"/>
                             <constraint firstAttribute="trailing" secondItem="aP5-KU-p6e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bhL-kk-uZ3"/>
                             <constraint firstAttribute="bottom" secondItem="QU1-Bw-YAb" secondAttribute="bottom" constant="131" id="gaj-2d-rx8"/>
                             <constraint firstItem="ByA-g4-GYI" firstAttribute="top" secondItem="J66-zA-X8L" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hjH-x1-bxa"/>
@@ -271,22 +271,13 @@ Cgo
             <objects>
                 <viewController title="Scores" id="2" customClass="STScoreVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlT-lh-JFU">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="293" id="VbL-iq-v9g"/>
-                                    <constraint firstAttribute="height" constant="128" id="fAF-1W-MG6"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ard-4S-yef">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="XSZ-4h-CQ6"/>
+                                    <constraint firstAttribute="width" constant="73" type="user" id="XSZ-4h-CQ6"/>
+                                    <constraint firstAttribute="height" constant="14" id="f9j-r9-5sd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Date">
@@ -302,7 +293,7 @@ Cgo
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jd8-pM-mHb">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="MQc-Wr-GbO"/>
+                                    <constraint firstAttribute="width" constant="73" type="user" id="MQc-Wr-GbO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Score">
@@ -318,10 +309,10 @@ Cgo
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47h-hr-2m8">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="yTM-kD-t55"/>
+                                    <constraint firstAttribute="width" constant="63" id="bIF-i9-L9Y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Time">
+                                <state key="normal" title="Seconds">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -335,14 +326,15 @@ Cgo
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WvK-Sj-KP3">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="177" id="twT-L8-JnC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="293" type="user" id="CJc-Cy-d83"/>
+                                    <constraint firstAttribute="height" constant="304" id="Ry9-OF-zrO"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="STScoreTableRow" id="I8b-qw-ndS" customClass="STScoreTableViewCell">
-                                        <rect key="frame" x="0.0" y="22" width="293" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="293" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -353,25 +345,45 @@ Cgo
                                     <outlet property="delegate" destination="2" id="85L-Gd-h1m"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqg-mC-VyP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="cC6-g6-wka"/>
+                                    <constraint firstAttribute="height" constant="22" id="tpC-rr-7ok"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editPushed:" destination="2" eventType="touchUpInside" id="BUS-8U-weN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YlT-lh-JFU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="15" id="0t8-to-7np"/>
-                            <constraint firstAttribute="trailing" secondItem="47h-hr-2m8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4lN-gi-d2D"/>
-                            <constraint firstItem="WvK-Sj-KP3" firstAttribute="centerX" secondItem="Jd8-pM-mHb" secondAttribute="centerX" type="default" id="82I-zX-l87"/>
+                            <constraint firstItem="WvK-Sj-KP3" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="5gU-rT-fVH"/>
+                            <constraint firstItem="47h-hr-2m8" firstAttribute="baseline" secondItem="Ard-4S-yef" secondAttribute="baseline" type="default" id="9ml-aW-fJT"/>
+                            <constraint firstItem="47h-hr-2m8" firstAttribute="centerY" secondItem="Ard-4S-yef" secondAttribute="centerY" type="default" id="HKk-C4-doj"/>
                             <constraint firstItem="Jd8-pM-mHb" firstAttribute="baseline" secondItem="Ard-4S-yef" secondAttribute="baseline" type="default" id="J4E-E9-U3e"/>
-                            <constraint firstAttribute="trailing" secondItem="WvK-Sj-KP3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JTx-Zy-AJV"/>
-                            <constraint firstItem="Ard-4S-yef" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="N1T-jP-2mx"/>
-                            <constraint firstAttribute="trailing" secondItem="YlT-lh-JFU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VIw-dn-hhm"/>
-                            <constraint firstItem="Ard-4S-yef" firstAttribute="top" secondItem="WvK-Sj-KP3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XeB-rH-CtS"/>
-                            <constraint firstItem="47h-hr-2m8" firstAttribute="baseline" secondItem="Jd8-pM-mHb" secondAttribute="baseline" type="default" id="lls-Ka-hHx"/>
-                            <constraint firstItem="WvK-Sj-KP3" firstAttribute="top" secondItem="YlT-lh-JFU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oAX-h0-P3T"/>
-                            <constraint firstItem="WvK-Sj-KP3" firstAttribute="leading" secondItem="YlT-lh-JFU" secondAttribute="leading" type="default" id="wAL-8t-7nd"/>
+                            <constraint firstAttribute="bottom" secondItem="47h-hr-2m8" secondAttribute="bottom" constant="89" id="KV1-7W-Ld5"/>
+                            <constraint firstItem="Ard-4S-yef" firstAttribute="centerX" secondItem="WvK-Sj-KP3" secondAttribute="centerX" type="default" id="Kn0-Ua-l28"/>
+                            <constraint firstAttribute="trailing" secondItem="Xqg-mC-VyP" secondAttribute="trailing" constant="13" id="M6f-Vh-xHX"/>
+                            <constraint firstAttribute="bottom" secondItem="Xqg-mC-VyP" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="aXg-Fi-ecQ"/>
+                            <constraint firstItem="Ard-4S-yef" firstAttribute="top" secondItem="Jd8-pM-mHb" secondAttribute="top" type="default" id="bdS-sL-jjk"/>
+                            <constraint firstItem="WvK-Sj-KP3" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="hRh-1T-6MQ"/>
+                            <constraint firstItem="47h-hr-2m8" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="mKz-xe-W5L"/>
+                            <constraint firstItem="47h-hr-2m8" firstAttribute="top" secondItem="Ard-4S-yef" secondAttribute="top" type="default" id="n9V-Or-yfP"/>
+                            <constraint firstItem="Ard-4S-yef" firstAttribute="bottom" secondItem="Jd8-pM-mHb" secondAttribute="bottom" type="default" id="sUj-dR-pD8"/>
+                            <constraint firstItem="Jd8-pM-mHb" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="scc-0w-XwZ"/>
+                            <constraint firstItem="WvK-Sj-KP3" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="y29-5w-wUv"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scores" id="2wu-Nj-zlQ"/>
                     <connections>
-                        <outlet property="STScoreDisplayTextView" destination="YlT-lh-JFU" id="PSt-TK-5oG"/>
                         <outlet property="STScoreTableView" destination="WvK-Sj-KP3" id="ozJ-7E-Thh"/>
                     </connections>
                 </viewController>
@@ -384,7 +396,7 @@ Cgo
             <objects>
                 <viewController title="Settings" id="bDI-RE-ySY" customClass="STSettingsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l8J-Ju-NnW">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bTT-uA-fGk">
@@ -507,10 +519,10 @@ Cgo
         <class className="STScoreVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STScoreVC.h"/>
             <relationships>
+                <relationship kind="action" name="editPushed:" candidateClass="UIButton"/>
                 <relationship kind="action" name="sortByDate:"/>
                 <relationship kind="action" name="sortByScore:"/>
                 <relationship kind="action" name="sortByTime:"/>
-                <relationship kind="outlet" name="STScoreDisplayTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="STScoreTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
@@ -537,6 +549,6 @@ Cgo
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

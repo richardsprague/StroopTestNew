@@ -22,8 +22,4 @@
 - (void ) StroopTestScorePlusOne;
 - (void) cancelTest;
 
-@optional
-- ( void)  StroopTestScore: (uint)  finalTestScore;
-- ( void)  ElapsedTimeInSeconds: (float)StroopTestElapsedTime;
-
 @end

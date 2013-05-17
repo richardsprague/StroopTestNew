@@ -100,14 +100,7 @@
     
 }
 
-//- ( void)  StroopTestScore: (uint) finalTestScore
-//{
-//    if(finalTestScore>0) {
-//        
-//    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Correct: %d",finalTestScore];
-//    }
-//    
-//}
+
 
 - (STScores *) testResult
 {
@@ -116,21 +109,13 @@
 }
 
 - (IBAction)startTestButtonPressed:(id)sender {
-  //  [NSTimer scheduledTimerWithTimeInterval: 5.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
+
     
     int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
 
     
     if (!(STMode==0)) {
         
-        //        if (STMode==1) {
-        //
-        //        [NSTimer scheduledTimerWithTimeInterval: 15.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
-        //        } else if (STMode == 2) {
-        //                  [NSTimer scheduledTimerWithTimeInterval: 30.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
-        //        } else if (STMode == 3) {
-        //                  [NSTimer scheduledTimerWithTimeInterval: 60.0 target:self selector:@selector(STTimeExpired) userInfo:nil repeats:NO];
-        //        }
         
         switch (STMode) {
             case 1:
@@ -152,12 +137,7 @@
     
 }
 
-//- ( void)  ElapsedTimeInSeconds: (float) StroopTestElapsedTime
-//{
-//    if (StroopTestElapsedTime>0.1) {self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %f",StroopTestElapsedTime];
-//    }
-//    
-//}
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     self.nextView = [segue destinationViewController];
