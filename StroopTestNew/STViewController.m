@@ -108,6 +108,16 @@
     return _testResult;
 }
 
+
+- (IBAction)InstructionsButtonPressed:(id)sender {
+    
+    UIViewController *instructionsVC = [self.storyboard instantiateViewControllerWithIdentifier:(@"instructionsNavController")];
+    
+    [self.navigationController pushViewController:instructionsVC animated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 - (IBAction)startTestButtonPressed:(id)sender {
 
     
@@ -140,17 +150,22 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    self.nextView = [segue destinationViewController];
     
-    STScene *startingScene = [[STScene alloc] init];
-    
-    self.stroopTest = [[STTest alloc] init];
-    
-   self.stroopTest.latestScene = startingScene;
-    
-
- self.nextView.scene = self.stroopTest.latestScene;
-    self.nextView.delegate = self;
+    if ([segue.identifier isEqualToString:@"gotoSceneVC"]){
+        self.nextView = [segue destinationViewController];
+        
+        STScene *startingScene = [[STScene alloc] init];
+        
+        self.stroopTest = [[STTest alloc] init];
+        
+        self.stroopTest.latestScene = startingScene;
+        
+        
+        self.nextView.scene = self.stroopTest.latestScene;
+        self.nextView.delegate = self;
+    }
+    else
+        NSLog(@"segue=%@",segue.identifier);
     
 }
 

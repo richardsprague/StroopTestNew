@@ -38,6 +38,7 @@
 		FE9A3E91170370B200716EA4 /* STCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E90170370B200716EA4 /* STCardView.m */; };
 		FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E94170393B900716EA4 /* STSelectionsView.m */; };
 		FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBEB80D1714D9B1006CE864 /* StroopLogo.png */; };
+		FECDBE99174C2EB900B4C960 /* STInstructionsNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECDBE98174C2EB900B4C960 /* STInstructionsNavViewController.m */; };
 		FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF9F52117220D7600C42FEF /* 1366432723_play.png */; };
 		FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */; };
 /* End PBXBuildFile section */
@@ -104,6 +105,8 @@
 		FE9A3E93170393B900716EA4 /* STSelectionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSelectionsView.h; sourceTree = "<group>"; };
 		FE9A3E94170393B900716EA4 /* STSelectionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSelectionsView.m; sourceTree = "<group>"; };
 		FEBEB80D1714D9B1006CE864 /* StroopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLogo.png; sourceTree = "<group>"; };
+		FECDBE97174C2EB900B4C960 /* STInstructionsNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STInstructionsNavViewController.h; path = ../STInstructionsNavViewController.h; sourceTree = "<group>"; };
+		FECDBE98174C2EB900B4C960 /* STInstructionsNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STInstructionsNavViewController.m; path = ../STInstructionsNavViewController.m; sourceTree = "<group>"; };
 		FEF9F52117220D7600C42FEF /* 1366432723_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1366432723_play.png; sourceTree = "<group>"; };
 		FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1366433186_Perspective Button - Go.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +179,8 @@
 				FE9A3E7E17024FF200716EA4 /* STSettingsVC.m */,
 				FE9A3E7A170211F000716EA4 /* STSceneVC.h */,
 				FE9A3E7B170211F000716EA4 /* STSceneVC.m */,
+				FECDBE97174C2EB900B4C960 /* STInstructionsNavViewController.h */,
+				FECDBE98174C2EB900B4C960 /* STInstructionsNavViewController.m */,
 				FE9A3E7717020E2E00716EA4 /* STSceneViewController.h */,
 				FE9A3E7817020E2E00716EA4 /* STSceneViewController.m */,
 				FE9A3E6A17020A0200716EA4 /* Model */,
@@ -386,6 +391,7 @@
 				FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */,
 				FE909FD11724C36A00A3030E /* STScoreTableViewCell.m in Sources */,
 				FE909FD41724C7FF00A3030E /* STScoreTableView.m in Sources */,
+				FECDBE99174C2EB900B4C960 /* STInstructionsNavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

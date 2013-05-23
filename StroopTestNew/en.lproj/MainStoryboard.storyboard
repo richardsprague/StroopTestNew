@@ -63,7 +63,7 @@ Cgo
                                 </state>
                                 <connections>
                                     <action selector="startTestButtonPressed:" destination="oO6-bh-Rb4" eventType="touchUpInside" id="dNz-4W-UI2"/>
-                                    <segue destination="C9Z-TF-cnz" kind="modal" id="lLr-Fy-pOl"/>
+                                    <segue destination="C9Z-TF-cnz" kind="modal" identifier="gotoSceneVC" id="lLr-Fy-pOl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wm-kn-8GF">
@@ -80,21 +80,42 @@ Cgo
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSf-1a-hR5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="UVE-ef-5it"/>
+                                    <constraint firstAttribute="height" constant="44" id="uf2-ay-8zl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Instructions">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InstructionsButtonPressed:" destination="oO6-bh-Rb4" eventType="touchUpInside" id="LdP-Vd-oZi"/>
+                                    <segue destination="VcG-j8-4NI" kind="modal" identifier="gotoInstructions" id="Ryc-qp-N90"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8nL-ry-Goi" firstAttribute="leading" secondItem="5n5-rr-RKp" secondAttribute="leading" constant="124" id="5ST-PQ-WEt"/>
                             <constraint firstItem="8nL-ry-Goi" firstAttribute="top" secondItem="ioS-1V-jt9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7aV-tU-tNp"/>
+                            <constraint firstAttribute="trailing" secondItem="jSf-1a-hR5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8Mp-b9-DxE"/>
                             <constraint firstItem="Gcg-xs-HMQ" firstAttribute="centerX" secondItem="4Wm-kn-8GF" secondAttribute="centerX" type="default" id="AUN-KV-e3m"/>
                             <constraint firstAttribute="trailing" secondItem="ioS-1V-jt9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ak8-yh-2Lg"/>
                             <constraint firstItem="ioS-1V-jt9" firstAttribute="leading" secondItem="5n5-rr-RKp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Riz-Ox-kK0"/>
                             <constraint firstItem="ioS-1V-jt9" firstAttribute="top" secondItem="5n5-rr-RKp" secondAttribute="top" constant="20" symbolic="YES" type="default" id="a3B-vf-0gx"/>
                             <constraint firstItem="8nL-ry-Goi" firstAttribute="centerX" secondItem="4Wm-kn-8GF" secondAttribute="centerX" type="default" id="bBp-b5-HKd"/>
                             <constraint firstAttribute="bottom" secondItem="4Wm-kn-8GF" secondAttribute="bottom" constant="37" id="dPm-Pl-8ab"/>
+                            <constraint firstItem="4Wm-kn-8GF" firstAttribute="leading" secondItem="5n5-rr-RKp" secondAttribute="leading" constant="37" id="pGy-iU-Xes"/>
+                            <constraint firstItem="4Wm-kn-8GF" firstAttribute="top" secondItem="jSf-1a-hR5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ygn-mK-wRg"/>
                             <constraint firstAttribute="bottom" secondItem="Gcg-xs-HMQ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="z5O-2Q-hfm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stroop" id="iur-gR-br7"/>
+                    <tabBarItem key="tabBarItem" title="Stroop" id="44s-im-fRG"/>
+                    <navigationItem key="navigationItem" title="Stroop Test" id="EfP-v7-PoW"/>
                     <connections>
                         <outlet property="STCorrectScoreLabel" destination="Gcg-xs-HMQ" id="Nlx-EU-VIb"/>
                         <outlet property="elapsedSecondsLabel" destination="4Wm-kn-8GF" id="Z9k-Mo-rdg"/>
@@ -102,7 +123,87 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gg0-4T-7SN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213" y="403"/>
+            <point key="canvasLocation" x="-205" y="619"/>
+        </scene>
+        <!--View Controller - Instructions-->
+        <scene sceneID="4zR-1i-BUn">
+            <objects>
+                <viewController storyboardIdentifier="instructionsVC" title="Instructions" id="hLG-bO-QYF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nwl-KQ-mx1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You will see a card on screen:" translatesAutoresizingMaskIntoConstraints="NO" id="BQ0-Ky-Iis">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="jdj-XU-YhY"/>
+                                    <constraint firstAttribute="height" constant="34" id="nWx-0n-be5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeB-Vj-9cr" customClass="STCardView">
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="and a series of labels." translatesAutoresizingMaskIntoConstraints="NO" id="eDA-yL-cmy">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Aqj-Mh-NGa"/>
+                                    <constraint firstAttribute="width" constant="240" id="p2y-kF-gZM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEO-ji-7SV">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mQ4-Yn-WO0" kind="push" id="wyu-ai-Mgf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eDA-yL-cmy" firstAttribute="top" secondItem="BeB-Vj-9cr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9mT-md-nXJ"/>
+                            <constraint firstItem="BeB-Vj-9cr" firstAttribute="leading" secondItem="nwl-KQ-mx1" secondAttribute="leading" constant="80" id="EbO-Gy-T6c"/>
+                            <constraint firstItem="eDA-yL-cmy" firstAttribute="leading" secondItem="nwl-KQ-mx1" secondAttribute="leading" constant="9" id="FlV-Xn-cVx"/>
+                            <constraint firstItem="BeB-Vj-9cr" firstAttribute="top" secondItem="BQ0-Ky-Iis" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Jjh-UR-u0g"/>
+                            <constraint firstItem="BQ0-Ky-Iis" firstAttribute="top" secondItem="nwl-KQ-mx1" secondAttribute="top" constant="65" id="L9q-st-Au9"/>
+                            <constraint firstItem="eDA-yL-cmy" firstAttribute="top" secondItem="nwl-KQ-mx1" secondAttribute="top" constant="249" id="N4V-kv-giZ"/>
+                            <constraint firstAttribute="trailing" secondItem="BeB-Vj-9cr" secondAttribute="trailing" constant="104" id="SHG-3a-Oz8"/>
+                            <constraint firstAttribute="bottom" secondItem="SEO-ji-7SV" secondAttribute="bottom" constant="37" id="lr9-r9-ULD"/>
+                            <constraint firstItem="BQ0-Ky-Iis" firstAttribute="leading" secondItem="nwl-KQ-mx1" secondAttribute="leading" constant="17" id="ptv-mH-R6c"/>
+                            <constraint firstAttribute="trailing" secondItem="SEO-ji-7SV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zFB-sE-8zA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Instructions" id="f27-OX-fbd">
+                        <barButtonItem key="backBarButtonItem" title="goBack" id="oyi-Ph-e4r"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zL-sd-Po0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149" y="595"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="43s-39-sq9">
+            <objects>
+                <viewController id="mQ4-Yn-WO0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ebR-lk-mor">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Ih-er-Ei9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="euz-Rt-kTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2082" y="631"/>
         </scene>
         <!--SceneVC-->
         <scene sceneID="yfz-cJ-jgU">
@@ -244,7 +345,7 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9IQ-qv-3f5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-221" y="1083"/>
+            <point key="canvasLocation" x="305" y="1083"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rzB-xZ-J2m">
@@ -257,14 +358,14 @@ Cgo
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="oO6-bh-Rb4" kind="relationship" relationship="viewControllers" id="NcI-Ki-8yH"/>
+                        <segue destination="oO6-bh-Rb4" kind="relationship" relationship="viewControllers" id="CEi-sH-YNA"/>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="gXl-cm-TDf"/>
                         <segue destination="bDI-RE-ySY" kind="relationship" relationship="viewControllers" id="c6p-tA-znM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4f7-Aa-Ut2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-739" y="-15"/>
+            <point key="canvasLocation" x="-753" y="229"/>
         </scene>
         <!--ScoreVC - Scores-->
         <scene sceneID="5">
@@ -490,6 +591,28 @@ Cgo
             </objects>
             <point key="canvasLocation" x="277" y="21"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8jC-R4-04c">
+            <objects>
+                <navigationController storyboardIdentifier="instructionsNavController" id="VcG-j8-4NI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3B6-hc-gya">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="86b-Oy-Yuo">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="hLG-bO-QYF" kind="relationship" relationship="rootViewController" id="sQC-PI-TzA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bf-Sv-A7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="595"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1366433186_Perspective Button - Go.png" width="128" height="128"/>
@@ -504,8 +627,6 @@ Cgo
         <class className="STSceneVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STSceneVC.h"/>
             <relationships>
-                <relationship kind="action" name="STSceneClickCancel:" candidateClass="UIButton"/>
-                <relationship kind="action" name="STSelectionButtons:"/>
                 <relationship kind="outlet" name="STCardForCurrentScene" candidateClass="STCardView"/>
                 <relationship kind="outlet" name="STLatestScoreLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="STModeLabel" candidateClass="UILabel"/>
@@ -519,10 +640,7 @@ Cgo
         <class className="STScoreVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STScoreVC.h"/>
             <relationships>
-                <relationship kind="action" name="editPushed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="sortByDate:"/>
                 <relationship kind="action" name="sortByScore:"/>
-                <relationship kind="action" name="sortByTime:"/>
                 <relationship kind="outlet" name="STScoreTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
@@ -540,7 +658,6 @@ Cgo
         <class className="STViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STViewController.h"/>
             <relationships>
-                <relationship kind="action" name="startTestButtonPressed:"/>
                 <relationship kind="outlet" name="STCorrectScoreLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="elapsedSecondsLabel" candidateClass="UILabel"/>
             </relationships>
