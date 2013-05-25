@@ -33,7 +33,7 @@
 }
 
 
-+ (NSArray *)allSTScores
++ (NSArray *)allSTScoresFromNSUserDefaults
 {
     NSMutableArray *allSTScores = [[NSMutableArray alloc] init];
     
@@ -44,7 +44,31 @@
     return allSTScores;
 }
 
+// replace entirely NSUserDefaults ALL_RESULTS_KEY with the equivalent dictionary tree from the NSArray newScores
 
++ (void) setAllSTUserDefaultScores: (NSArray *) newScores
+{
+    // assumes newScores is an array of dictionaries, each of which contains a score in the format returned by the method - (id) asPropertyList below
+    NSMutableDictionary *newScoreDictionary = [[NSMutableDictionary alloc] init];
+    
+    //zip through the newScores array, re-creating a new dictionary with keys/values that correspond to the elements of the array.
+    //We need to do this because the ALL_RESULTS_KEY in the NSUSerDefaults dictionary expects a dictionary, not an array.
+    for (id aScore in newScores){
+        if ([aScore isKindOfClass:[STScores class]])
+        {
+            STScores *myScore = aScore;
+            
+      
+            NSDate *startKey = myScore.start;
+            
+            [newScoreDictionary setObject:[myScore asPropertyList] forKey:[startKey description]];
+        }
+    }
+    
+     [[NSUserDefaults standardUserDefaults] setObject:newScoreDictionary forKey:ALL_RESULTS_KEY];
+    
+        [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 
 - (id) initFromPropertyList:(id)plist
@@ -75,7 +99,7 @@
     if (!mutableSTScoresFromUserDefaults)
         mutableSTScoresFromUserDefaults = [[NSMutableDictionary alloc] init];
     
-    
+    //add a new item to the dictionary using key=start and value= the current contents of this STScores object.
     mutableSTScoresFromUserDefaults[[self.start description]] = [self asPropertyList];
     
     [[NSUserDefaults standardUserDefaults] setObject:mutableSTScoresFromUserDefaults forKey:ALL_RESULTS_KEY];
@@ -132,18 +156,12 @@
     return self;
 }
 
-//- (NSTimeInterval) duration
-//{
-//    if (!_duration) {
-//        _duration = 0;
-//    }
-//    return _duration ; //[self.end timeIntervalSinceDate:self.start];
-//}
+
 
 - (void) setDuration:(NSTimeInterval)duration
 {
     _duration = duration;
-    //[self synchronize];
+ 
 }
 
 - (void) setScore:(int)score

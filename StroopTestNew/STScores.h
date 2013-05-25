@@ -13,7 +13,7 @@
 
 @property uint latestScore;
 
-+ (NSArray *) allSTScores; // of STScore
++ (NSArray *) allSTScoresFromNSUserDefaults; // of STScore
 
 @property (readonly, nonatomic) NSDate *start;
 @property (readonly, nonatomic) NSDate *end;
@@ -29,5 +29,7 @@
 - (NSComparisonResult)compareScoreToSTScores:(STScores *)otherResult;
 - (NSComparisonResult)compareEndDateToSTScores:(STScores *)otherResult;
 - (NSComparisonResult)compareDurationToSTScores:(STScores *)otherResult;
+
++ (void) setAllSTUserDefaultScores: (NSArray *) newScores;
 
 @end

@@ -15,6 +15,7 @@
 
 //@property (weak, nonatomic) IBOutlet UITextView *STScoreDisplayTextView;
 @property (strong, nonatomic) NSArray *allSTScores;
+@property  (strong, nonatomic) NSArray *resultArray;
 @property (nonatomic) SEL sortSelector; 
 @end
 
@@ -23,9 +24,50 @@
 - (IBAction)editPushed:(UIButton *)sender {
     if (self.STScoreTableView.isEditing)
         [self.STScoreTableView setEditing:NO];
-        else [self.STScoreTableView setEditing:YES  ];
+    else if ([self.resultArray count]>0){
+        
+    [self.STScoreTableView setEditing:YES  ];
+    }
+    
+   [self updateUI];
     
 }
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  //   STScores *result = self.resultArray [indexPath.row];
+    NSMutableArray *rowsToDelete = [[NSMutableArray alloc] init];
+
+        NSMutableArray *newScoreArray = [[NSMutableArray alloc] init];
+
+    for ( uint i =0; i<[self.resultArray count] ; i++) {
+        if (i==indexPath.row) {
+            // add this row to rowsToDelete array
+            [rowsToDelete addObject:[NSNumber numberWithUnsignedInt:i]];
+            
+        } else [newScoreArray addObject:self.resultArray[i]];
+        
+    }
+    
+    self.resultArray = [[NSArray alloc] initWithArray:newScoreArray];
+    self.allSTScores = self.resultArray;
+    NSLog(@"commit edit");
+    [self deleteRowsAtIndexPaths:rowsToDelete withRowAnimation:UITableViewRowAnimationFade];
+    
+    [STScores setAllSTUserDefaultScores:self.resultArray];
+
+  
+    
+}
+- (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation
+{
+
+    NSLog(@"deleting row");
+        [self.STScoreTableView setEditing:NO  ];
+    [self updateUI];
+ 
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -52,7 +94,7 @@
     
     
   //  cell.textLabel.font = [UIFont systemFontOfSize:14.0];//[[[UIFont alloc] init]fontWithSize:[UIFont smallSystemFontSize]];
-    cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
+   cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
     cell.textLabel.text = [self titleForRow:indexPath.row];
     cell.textLabel.textColor = [UIColor redColor];
 
@@ -64,6 +106,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+    if (self.STScoreTableView.isEditing)
+    {
+        return [UIFont systemFontSize]+22;
+    }
+    else
+
     return [UIFont smallSystemFontSize]+6;  //16.0;
 }
 
@@ -73,8 +122,11 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterShortStyle];          
     [formatter setTimeStyle:NSDateFormatterShortStyle];
-    NSArray *resultArray = [[STScores allSTScores] sortedArrayUsingSelector:self.sortSelector];
-    STScores *result = resultArray [ row]; //self.allSTScores[row];
+   //
+     self.resultArray = [[STScores allSTScoresFromNSUserDefaults] sortedArrayUsingSelector:self.sortSelector];
+    assert(self.resultArray);
+    
+    STScores *result = self.resultArray [ row]; //self.allSTScores[row];
     
     NSString *titleString = [[NSString alloc]
                              initWithFormat:@"%-5d|        %16@ |       %5f",result.score,[formatter stringFromDate:result.end],result.duration];
@@ -101,18 +153,18 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
 - (void) updateUI
 {
 
-    NSString *displayText = @"";
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init]; // added after lecture
-    [formatter setDateStyle:NSDateFormatterShortStyle];          // added after lecture
-    [formatter setTimeStyle:NSDateFormatterShortStyle];          // added after lecture
-    // for (STScores *result in [STScores allSTScores]) { // version in lecture
-    for (STScores *result in [[STScores allSTScores] sortedArrayUsingSelector:self.sortSelector]) { // sorted
-        // displayText = [displayText stringByAppendingFormat:@"Score: %d (%@, %0g)\n", result.score, result.end,result.duration]; // version in lecture
-        displayText = [displayText stringByAppendingFormat:@"Score: %d (%@, %0g)\n", result.score, [formatter stringFromDate:result.end], result.duration];  // formatted date
-    }
+//    NSString *displayText = @"";
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init]; 
+//    [formatter setDateStyle:NSDateFormatterShortStyle];          
+//    [formatter setTimeStyle:NSDateFormatterShortStyle];          
+//
+//    for (STScores *result in [[STScores allSTScoresFromNSUserDefaults] sortedArrayUsingSelector:self.sortSelector]) {
+//        
+//        displayText = [displayText stringByAppendingFormat:@"Score: %d (%@, %0g)\n", result.score, [formatter stringFromDate:result.end], result.duration];  // formatted date
+//    }
   //  self.STScoreDisplayTextView.text = displayText;
     
-    
+    [self.STScoreTableView reloadData]; 
 }
 
 #pragma mark - Sorting
@@ -133,7 +185,7 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
 {
     _sortSelector = sortSelector;
     [self updateUI];
-     [self.STScoreTableView reloadData];   
+  //   [self.STScoreTableView reloadData];
 }
 
 
@@ -142,16 +194,16 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.allSTScores = [STScores allSTScores];
+    self.allSTScores = [STScores allSTScoresFromNSUserDefaults];
     [self updateUI];
-    [self.STScoreTableView reloadData];
+//    [self.STScoreTableView reloadData];
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [self updateUI];
-        [self.STScoreTableView reloadData];
+//        [self.STScoreTableView reloadData];
 }
 
 
