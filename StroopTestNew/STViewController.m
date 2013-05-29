@@ -59,7 +59,7 @@
     
     
     
-    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Time's up! Score=%d",self.stroopTest.currentScore];
+    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Latest Result=%d",self.stroopTest.currentScore];
     if (duration>0.1){
         self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %f",duration];
     }
@@ -180,6 +180,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.elapsedSecondsLabel.text = @" ";
+    self.STCorrectScoreLabel.text = @" ";
+    
     [self initializeSettingsIfNecessary];
 
     

@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *STMaxScoreLabel;
 // @property (weak, nonatomic) IBOutlet UIStepper *;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *STTimerSegmentControl;
+@property (weak, nonatomic) IBOutlet UILabel *STSettingsVersionLabel;
 
 @property (weak, nonatomic) IBOutlet UIStepper *STMaxScoreAdjustStepper;
 @property uint STMaxScore;
@@ -53,6 +54,17 @@
     
 }
 
+- (IBAction)STSettingsSwipeLeft:(UISwipeGestureRecognizer *)sender {
+            self.STSettingsVersionLabel.text = [NSString stringWithFormat:@"Version %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+    
+}
+
+- (IBAction)STSettingsSwipeGesture:(UISwipeGestureRecognizer *)sender {
+    
+    self.STSettingsVersionLabel.text = [NSString stringWithFormat:@"Thanks for downloading!"];
+}
+
+
 
 - (void) setSTMaxScore:(uint)STMaxScore
 {
@@ -90,6 +102,7 @@
     self.STTimerSegmentControl.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     
     self.STMaxScoreLabel.text = [[NSString alloc] initWithFormat:@"%d",self.STMaxScore];
+    self.STSettingsVersionLabel.text = [NSString stringWithFormat:@"Version %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
 }
 
 - (void)didReceiveMemoryWarning

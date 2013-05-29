@@ -48,6 +48,9 @@
     
     NSArray *aColor = self.scene.card.shuffledColors[thisButton];
     
+    NSLog(@"tapped color=%@", self.scene.card.color);
+    
+  //  if ([self.scene.card.color isMatch: aColor[0]]){
     if (self.scene.card.color == aColor[0]){
        self.latestScore++;
         [self.delegate StroopTestScorePlusOne];

@@ -18,5 +18,7 @@
 @interface STColors : UIColor
 + (NSArray *) colorAndColorNamesArray;
 + (NSString *) colorAsString:(STColors *)aColor;
-@property (weak, nonatomic) STColors *randomUIColor ;
+- (BOOL) isMatch: (STColors *)withColor;
+
+@property (strong, nonatomic) STColors *randomUIColor ;
 @end

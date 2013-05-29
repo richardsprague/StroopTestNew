@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FE7D230A175066B20092757E /* STGeneric.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D2309175066B20092757E /* STGeneric.png */; };
-		FE7D230C17506B810092757E /* STGenericA.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D230B17506B810092757E /* STGenericA.png */; };
 		FE7D230E17506C4F0092757E /* STGenericB.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D230D17506C4F0092757E /* STGenericB.png */; };
+		FE7D23121755790B0092757E /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23111755790A0092757E /* ReadMe.txt */; };
+		FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23131755795A0092757E /* 1369802710_button_cancel.png */; };
+		FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D231517557A980092757E /* 1369803046_cancel.png */; };
 		FE909FD11724C36A00A3030E /* STScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */; };
 		FE909FD41724C7FF00A3030E /* STScoreTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD31724C7FE00A3030E /* STScoreTableView.m */; };
 		FE9A3E2D1702067800716EA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2C1702067800716EA4 /* UIKit.framework */; };
@@ -57,8 +59,10 @@
 
 /* Begin PBXFileReference section */
 		FE7D2309175066B20092757E /* STGeneric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGeneric.png; sourceTree = "<group>"; };
-		FE7D230B17506B810092757E /* STGenericA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGenericA.png; sourceTree = "<group>"; };
 		FE7D230D17506C4F0092757E /* STGenericB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGenericB.png; sourceTree = "<group>"; };
+		FE7D23111755790A0092757E /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		FE7D23131755795A0092757E /* 1369802710_button_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1369802710_button_cancel.png; sourceTree = "<group>"; };
+		FE7D231517557A980092757E /* 1369803046_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1369803046_cancel.png; sourceTree = "<group>"; };
 		FE909FCF1724C36900A3030E /* STScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableViewCell.h; sourceTree = "<group>"; };
 		FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScoreTableViewCell.m; sourceTree = "<group>"; };
 		FE909FD21724C7FE00A3030E /* STScoreTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableView.h; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 				FE9A3E3B1702067800716EA4 /* STAppDelegate.h */,
 				FE9A3E3C1702067800716EA4 /* STAppDelegate.m */,
 				FE9A3E441702067800716EA4 /* MainStoryboard.storyboard */,
+				FE7D23111755790A0092757E /* ReadMe.txt */,
 				FE9A3E92170370B900716EA4 /* View */,
 				FE9A3E8917035B8100716EA4 /* STScoreVC.h */,
 				FE9A3E8A17035B8100716EA4 /* STScoreVC.m */,
@@ -196,8 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				FE7D2309175066B20092757E /* STGeneric.png */,
+				FE7D231517557A980092757E /* 1369803046_cancel.png */,
+				FE7D23131755795A0092757E /* 1369802710_button_cancel.png */,
 				FE7D230D17506C4F0092757E /* STGenericB.png */,
-				FE7D230B17506B810092757E /* STGenericA.png */,
 				FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */,
 				FEF9F52117220D7600C42FEF /* 1366432723_play.png */,
 				FE9A3E341702067800716EA4 /* StroopTestNew-Info.plist */,
@@ -345,8 +351,10 @@
 				FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */,
 				FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */,
 				FE7D230A175066B20092757E /* STGeneric.png in Resources */,
-				FE7D230C17506B810092757E /* STGenericA.png in Resources */,
 				FE7D230E17506C4F0092757E /* STGenericB.png in Resources */,
+				FE7D23121755790B0092757E /* ReadMe.txt in Resources */,
+				FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */,
+				FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
