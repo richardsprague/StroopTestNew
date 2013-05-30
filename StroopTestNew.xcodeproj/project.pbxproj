@@ -12,6 +12,16 @@
 		FE7D23121755790B0092757E /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23111755790A0092757E /* ReadMe.txt */; };
 		FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23131755795A0092757E /* 1369802710_button_cancel.png */; };
 		FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D231517557A980092757E /* 1369803046_cancel.png */; };
+		FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */; };
+		FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23191757E0300092757E /* Stroop Icon114x114.png */; };
+		FE7D231E1757F2A60092757E /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D231D1757F2A60092757E /* Ensembio Launch640x1096.png */; };
+		FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23251757F4110092757E /* StroopIcon57x57.png */; };
+		FE7D232A1757F5650092757E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23291757F5640092757E /* Default.png */; };
+		FE7D233C1757FA110092757E /* StroopLaunch320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23391757FA110092757E /* StroopLaunch320x480.png */; };
+		FE7D233D1757FA110092757E /* StroopLaunch640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D233A1757FA110092757E /* StroopLaunch640x960.png */; };
+		FE7D233E1757FA110092757E /* StroopLaunch640x1136.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D233B1757FA110092757E /* StroopLaunch640x1136.png */; };
+		FE7D23401757FA340092757E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D233F1757FA340092757E /* Default@2x.png */; };
+		FE7D23421757FA400092757E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23411757FA400092757E /* Default-568h@2x.png */; };
 		FE909FD11724C36A00A3030E /* STScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */; };
 		FE909FD41724C7FF00A3030E /* STScoreTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD31724C7FE00A3030E /* STScoreTableView.m */; };
 		FE9A3E2D1702067800716EA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2C1702067800716EA4 /* UIKit.framework */; };
@@ -20,9 +30,6 @@
 		FE9A3E371702067800716EA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE9A3E351702067800716EA4 /* InfoPlist.strings */; };
 		FE9A3E391702067800716EA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E381702067800716EA4 /* main.m */; };
 		FE9A3E3D1702067800716EA4 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E3C1702067800716EA4 /* STAppDelegate.m */; };
-		FE9A3E3F1702067800716EA4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9A3E3E1702067800716EA4 /* Default.png */; };
-		FE9A3E411702067800716EA4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9A3E401702067800716EA4 /* Default@2x.png */; };
-		FE9A3E431702067800716EA4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9A3E421702067800716EA4 /* Default-568h@2x.png */; };
 		FE9A3E461702067800716EA4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9A3E441702067800716EA4 /* MainStoryboard.storyboard */; };
 		FE9A3E491702067800716EA4 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E481702067800716EA4 /* STViewController.m */; };
 		FE9A3E511702067800716EA4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E501702067800716EA4 /* SenTestingKit.framework */; };
@@ -63,6 +70,16 @@
 		FE7D23111755790A0092757E /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		FE7D23131755795A0092757E /* 1369802710_button_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1369802710_button_cancel.png; sourceTree = "<group>"; };
 		FE7D231517557A980092757E /* 1369803046_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1369803046_cancel.png; sourceTree = "<group>"; };
+		FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ensembio Logo 114x114.png"; path = "../Ensembio Logo 114x114.png"; sourceTree = "<group>"; };
+		FE7D23191757E0300092757E /* Stroop Icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stroop Icon114x114.png"; path = "../Stroop Icon114x114.png"; sourceTree = "<group>"; };
+		FE7D231D1757F2A60092757E /* Ensembio Launch640x1096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ensembio Launch640x1096.png"; path = "../../../Ensembio/Corporation/Ensembio Launch640x1096.png"; sourceTree = "<group>"; };
+		FE7D23251757F4110092757E /* StroopIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StroopIcon57x57.png; path = ../StroopIcon57x57.png; sourceTree = "<group>"; };
+		FE7D23291757F5640092757E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		FE7D23391757FA110092757E /* StroopLaunch320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch320x480.png; sourceTree = "<group>"; };
+		FE7D233A1757FA110092757E /* StroopLaunch640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x960.png; sourceTree = "<group>"; };
+		FE7D233B1757FA110092757E /* StroopLaunch640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x1136.png; sourceTree = "<group>"; };
+		FE7D233F1757FA340092757E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		FE7D23411757FA400092757E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FE909FCF1724C36900A3030E /* STScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableViewCell.h; sourceTree = "<group>"; };
 		FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScoreTableViewCell.m; sourceTree = "<group>"; };
 		FE909FD21724C7FE00A3030E /* STScoreTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableView.h; sourceTree = "<group>"; };
@@ -77,9 +94,6 @@
 		FE9A3E3A1702067800716EA4 /* StroopTestNew-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StroopTestNew-Prefix.pch"; sourceTree = "<group>"; };
 		FE9A3E3B1702067800716EA4 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
 		FE9A3E3C1702067800716EA4 /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
-		FE9A3E3E1702067800716EA4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		FE9A3E401702067800716EA4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		FE9A3E421702067800716EA4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FE9A3E451702067800716EA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FE9A3E471702067800716EA4 /* STViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
 		FE9A3E481702067800716EA4 /* STViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
@@ -111,7 +125,7 @@
 		FE9A3E90170370B200716EA4 /* STCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCardView.m; sourceTree = "<group>"; };
 		FE9A3E93170393B900716EA4 /* STSelectionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSelectionsView.h; sourceTree = "<group>"; };
 		FE9A3E94170393B900716EA4 /* STSelectionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSelectionsView.m; sourceTree = "<group>"; };
-		FEBEB80D1714D9B1006CE864 /* StroopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLogo.png; sourceTree = "<group>"; };
+		FEBEB80D1714D9B1006CE864 /* StroopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StroopLogo.png; path = ../StroopLogo.png; sourceTree = "<group>"; };
 		FECDBE97174C2EB900B4C960 /* STInstructionsNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STInstructionsNavViewController.h; path = ../STInstructionsNavViewController.h; sourceTree = "<group>"; };
 		FECDBE98174C2EB900B4C960 /* STInstructionsNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STInstructionsNavViewController.m; path = ../STInstructionsNavViewController.m; sourceTree = "<group>"; };
 		FEF9F52117220D7600C42FEF /* 1366432723_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1366432723_play.png; sourceTree = "<group>"; };
@@ -145,7 +159,6 @@
 		FE9A3E201702067800716EA4 = {
 			isa = PBXGroup;
 			children = (
-				FEBEB80D1714D9B1006CE864 /* StroopLogo.png */,
 				FE9A3E321702067800716EA4 /* StroopTestNew */,
 				FE9A3E561702067800716EA4 /* StroopTestNewTests */,
 				FE9A3E2B1702067800716EA4 /* Frameworks */,
@@ -200,6 +213,17 @@
 		FE9A3E331702067800716EA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FE7D23191757E0300092757E /* Stroop Icon114x114.png */,
+				FE7D23391757FA110092757E /* StroopLaunch320x480.png */,
+				FE7D233A1757FA110092757E /* StroopLaunch640x960.png */,
+				FE7D233B1757FA110092757E /* StroopLaunch640x1136.png */,
+				FE7D23411757FA400092757E /* Default-568h@2x.png */,
+				FE7D233F1757FA340092757E /* Default@2x.png */,
+				FE7D23291757F5640092757E /* Default.png */,
+				FE7D23251757F4110092757E /* StroopIcon57x57.png */,
+				FE7D231D1757F2A60092757E /* Ensembio Launch640x1096.png */,
+				FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */,
+				FEBEB80D1714D9B1006CE864 /* StroopLogo.png */,
 				FE7D2309175066B20092757E /* STGeneric.png */,
 				FE7D231517557A980092757E /* 1369803046_cancel.png */,
 				FE7D23131755795A0092757E /* 1369802710_button_cancel.png */,
@@ -210,9 +234,6 @@
 				FE9A3E351702067800716EA4 /* InfoPlist.strings */,
 				FE9A3E381702067800716EA4 /* main.m */,
 				FE9A3E3A1702067800716EA4 /* StroopTestNew-Prefix.pch */,
-				FE9A3E3E1702067800716EA4 /* Default.png */,
-				FE9A3E401702067800716EA4 /* Default@2x.png */,
-				FE9A3E421702067800716EA4 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -343,9 +364,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE9A3E371702067800716EA4 /* InfoPlist.strings in Resources */,
-				FE9A3E3F1702067800716EA4 /* Default.png in Resources */,
-				FE9A3E411702067800716EA4 /* Default@2x.png in Resources */,
-				FE9A3E431702067800716EA4 /* Default-568h@2x.png in Resources */,
 				FE9A3E461702067800716EA4 /* MainStoryboard.storyboard in Resources */,
 				FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */,
 				FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */,
@@ -355,6 +373,16 @@
 				FE7D23121755790B0092757E /* ReadMe.txt in Resources */,
 				FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */,
 				FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */,
+				FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */,
+				FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */,
+				FE7D231E1757F2A60092757E /* Ensembio Launch640x1096.png in Resources */,
+				FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */,
+				FE7D232A1757F5650092757E /* Default.png in Resources */,
+				FE7D233C1757FA110092757E /* StroopLaunch320x480.png in Resources */,
+				FE7D233D1757FA110092757E /* StroopLaunch640x960.png in Resources */,
+				FE7D233E1757FA110092757E /* StroopLaunch640x1136.png in Resources */,
+				FE7D23401757FA340092757E /* Default@2x.png in Resources */,
+				FE7D23421757FA400092757E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
