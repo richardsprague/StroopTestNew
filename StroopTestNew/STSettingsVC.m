@@ -15,6 +15,10 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *STTimerSegmentControl;
 @property (weak, nonatomic) IBOutlet UILabel *STSettingsVersionLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *STTestTimesLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *STTestDurationLabel;
+
 @property (weak, nonatomic) IBOutlet UIStepper *STMaxScoreAdjustStepper;
 @property uint STMaxScore;
 
@@ -29,6 +33,7 @@
 }
 
 
+
 - (IBAction)STTimerSegmentedControlClicked:(UISegmentedControl *)sender {
     
     
@@ -38,9 +43,20 @@
         [[NSUserDefaults standardUserDefaults] setFloat:STTIMER_DEFAULT forKey:STMAXTIMER_KEY];
         [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:STMODE_KEY];
         
-    } else         [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:STMODE_KEY];
-    
-    
+        self.STMaxScoreLabel.Enabled = NO;
+               self.STTestTimesLabel.Enabled = NO;
+               self.STMaxScoreAdjustStepper.enabled = NO;
+        self.STMaxScoreAdjustStepper.alpha = 0.5;
+        
+    } else         {
+        
+    [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:STMODE_KEY];
+           self.STMaxScoreLabel.Enabled = YES;
+         self.STTestTimesLabel.Enabled = YES;
+        self.STMaxScoreAdjustStepper.enabled = YES;
+        self.STMaxScoreAdjustStepper.alpha = 1.0;
+}
+
 
 }
 
@@ -100,6 +116,14 @@
     
     self.STMaxScoreAdjustStepper.value =  (double) self.STMaxScore;
     self.STTimerSegmentControl.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    
+    if (self.STTimerSegmentControl.selectedSegmentIndex!=0){
+        
+        self.STMaxScoreLabel.Enabled = NO;
+        self.STTestTimesLabel.Enabled = NO;
+        self.STMaxScoreAdjustStepper.enabled = NO;
+        self.STMaxScoreAdjustStepper.alpha = 0.5;
+    }
     
     self.STMaxScoreLabel.text = [[NSString alloc] initWithFormat:@"%d",self.STMaxScore];
     self.STSettingsVersionLabel.text = [NSString stringWithFormat:@"Version %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];

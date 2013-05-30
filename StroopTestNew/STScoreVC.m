@@ -95,7 +95,11 @@
   //  cell.textLabel.font = [UIFont systemFontOfSize:14.0];//[[[UIFont alloc] init]fontWithSize:[UIFont smallSystemFontSize]];
    cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
     cell.textLabel.text = [self titleForRow:indexPath.row];
+    cell.textLabel.textAlignment = NSTextAlignmentLeft ;
+    cell.textLabel.adjustsLetterSpacingToFitWidth=YES;
+    
     cell.textLabel.textColor = [UIColor redColor];
+
 
     //cell.detailTextLabel.text = [self titleForRow:indexPath.row];
     
@@ -127,8 +131,13 @@
     
     STScores *result = self.resultArray [ row]; //self.allSTScores[row];
     
+    NSString *scoreSubString = [[NSString alloc] initWithFormat:@"%d",result.score];
+    NSString *dateSubString = [[NSString alloc] initWithFormat:@"%@", [formatter stringFromDate:result.end] ];
+    NSString *durationSubString = [[NSString alloc] initWithFormat:@"%3.1f",result.duration];
+    
+    
     NSString *titleString = [[NSString alloc]
-                             initWithFormat:@"%-5d|        %16@ |       %5f",result.score,[formatter stringFromDate:result.end],result.duration];
+                             initWithFormat:@"%10s%36s%20s",[scoreSubString UTF8String], [dateSubString UTF8String],[durationSubString UTF8String]];
     
     
     return titleString;
