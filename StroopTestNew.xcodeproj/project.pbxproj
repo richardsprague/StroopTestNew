@@ -80,6 +80,7 @@
 		FE7D233B1757FA110092757E /* StroopLaunch640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x1136.png; sourceTree = "<group>"; };
 		FE7D233F1757FA340092757E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		FE7D23411757FA400092757E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		FE7D2343175805BC0092757E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FE909FCF1724C36900A3030E /* STScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableViewCell.h; sourceTree = "<group>"; };
 		FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScoreTableViewCell.m; sourceTree = "<group>"; };
 		FE909FD21724C7FE00A3030E /* STScoreTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableView.h; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 		FE9A3E201702067800716EA4 = {
 			isa = PBXGroup;
 			children = (
+				FE7D2343175805BC0092757E /* Default@2x.png */,
 				FE9A3E321702067800716EA4 /* StroopTestNew */,
 				FE9A3E561702067800716EA4 /* StroopTestNewTests */,
 				FE9A3E2B1702067800716EA4 /* Frameworks */,
@@ -553,10 +555,14 @@
 		FE9A3E631702067800716EA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ensembio, Inc (4RZ2RJUXC8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNew/StroopTestNew-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
