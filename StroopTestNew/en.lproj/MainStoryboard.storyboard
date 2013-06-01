@@ -686,67 +686,6 @@ Cg
         <image name="1369803046_cancel.png" width="32" height="32"/>
         <image name="Ensembio Logo 114x114.png" width="114" height="114"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="STCardView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/STCardView.h"/>
-        </class>
-        <class className="STSceneVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/STSceneVC.h"/>
-            <relationships>
-                <relationship kind="action" name="STSceneClickCancel:" candidateClass="UIButton"/>
-                <relationship kind="action" name="STSelectionButtons:"/>
-                <relationship kind="outlet" name="STCardForCurrentScene" candidateClass="STCardView"/>
-                <relationship kind="outlet" name="STLatestScoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="STModeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="STSecsLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="STSelectionButtons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="STScoreTableView" superclassName="UITableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/STScoreTableView.h"/>
-        </class>
-        <class className="STScoreTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/STScoreTableViewCell.h"/>
-        </class>
-        <class className="STScoreVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/STScoreVC.h"/>
-            <relationships>
-                <relationship kind="action" name="editPushed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="sortByDate:"/>
-                <relationship kind="action" name="sortByScore:"/>
-                <relationship kind="action" name="sortByTime:"/>
-                <relationship kind="outlet" name="STScoreTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="STSettingsVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/STSettingsVC.h"/>
-            <relationships>
-                <relationship kind="action" name="STMaxScoreAdjustStepper:"/>
-                <relationship kind="action" name="STResetScores:" candidateClass="UIButton"/>
-                <relationship kind="action" name="STSettingsSwipeGesture:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="action" name="STSettingsSwipeLeft:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="action" name="STTimerSegmentedControlClicked:" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="STMaxScoreAdjustStepper" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="STMaxScoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="STSettingsVersionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="STTestDurationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="STTestTimesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="STTimerSegmentControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="STViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/STViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="InstructionsButtonPressed:"/>
-                <relationship kind="action" name="startTestButtonPressed:"/>
-                <relationship kind="outlet" name="STCorrectScoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="elapsedSecondsLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

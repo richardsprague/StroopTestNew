@@ -44,6 +44,7 @@
         [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:STMODE_KEY];
         
         self.STMaxScoreLabel.Enabled = NO;
+        self.STTestDurationLabel.enabled = YES;
                self.STTestTimesLabel.Enabled = NO;
                self.STMaxScoreAdjustStepper.enabled = NO;
         self.STMaxScoreAdjustStepper.alpha = 0.5;
@@ -53,6 +54,7 @@
     [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:STMODE_KEY];
            self.STMaxScoreLabel.Enabled = YES;
          self.STTestTimesLabel.Enabled = YES;
+        self.STTestDurationLabel.enabled = NO;
         self.STMaxScoreAdjustStepper.enabled = YES;
         self.STMaxScoreAdjustStepper.alpha = 1.0;
 }
@@ -120,10 +122,13 @@
     if (self.STTimerSegmentControl.selectedSegmentIndex!=0){
         
         self.STMaxScoreLabel.Enabled = NO;
+        self.STTestDurationLabel.enabled = YES;
         self.STTestTimesLabel.Enabled = NO;
         self.STMaxScoreAdjustStepper.enabled = NO;
         self.STMaxScoreAdjustStepper.alpha = 0.5;
+    } else { self.STTestDurationLabel.enabled = NO;
     }
+    
     
     self.STMaxScoreLabel.text = [[NSString alloc] initWithFormat:@"%d",self.STMaxScore];
     self.STSettingsVersionLabel.text = [NSString stringWithFormat:@"Version %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
