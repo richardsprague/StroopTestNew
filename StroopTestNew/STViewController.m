@@ -17,6 +17,9 @@
 @property (strong, nonatomic) STTest *stroopTest;
 @property (strong, nonatomic) STSceneVC *nextView;
 @property (strong, nonatomic) NSTimer *timerForTest;
+@property NSFileManager *fileManager;
+@property NSURL *userURL;
+@property NSURL *myFileURL;
 
 @end
 
@@ -27,6 +30,20 @@
 - (void) initializeSettingsIfNecessary
 {
    // int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    
+    self.fileManager = [NSFileManager defaultManager];
+    
+    NSArray *urls = [self.fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    
+    NSArray *defaultsAsArray = [[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues];
+  
+    
+    self.userURL = urls[0];
+    self.myFileURL = [self.userURL URLByAppendingPathComponent:@"stroopResultsFile"];
+    
+    
+    [defaultsAsArray writeToURL:self.myFileURL atomically:YES];
+    
     
 }
 
@@ -61,8 +78,9 @@
     
     self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Latest Result=%d",self.stroopTest.currentScore];
     if (duration>0.1){
-        self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %f",duration];
+        self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %.2f",duration];
     }
+    [[[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues] writeToURL:self.myFileURL atomically:YES];
     
 }
 

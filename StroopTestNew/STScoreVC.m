@@ -137,7 +137,7 @@
     
     
     NSString *titleString = [[NSString alloc]
-                             initWithFormat:@"%10s%36s%20s",[scoreSubString UTF8String], [dateSubString UTF8String],[durationSubString UTF8String]];
+                             initWithFormat:@"%10s%36s%18s",[scoreSubString UTF8String], [dateSubString UTF8String],[durationSubString UTF8String]];
     
     
     return titleString;

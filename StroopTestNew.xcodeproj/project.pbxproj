@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */; };
 		FE7D230A175066B20092757E /* STGeneric.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D2309175066B20092757E /* STGeneric.png */; };
 		FE7D230E17506C4F0092757E /* STGenericB.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D230D17506C4F0092757E /* STGenericB.png */; };
 		FE7D23121755790B0092757E /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23111755790A0092757E /* ReadMe.txt */; };
@@ -14,7 +15,6 @@
 		FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D231517557A980092757E /* 1369803046_cancel.png */; };
 		FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */; };
 		FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23191757E0300092757E /* Stroop Icon114x114.png */; };
-		FE7D231E1757F2A60092757E /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D231D1757F2A60092757E /* Ensembio Launch640x1096.png */; };
 		FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23251757F4110092757E /* StroopIcon57x57.png */; };
 		FE7D232A1757F5650092757E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23291757F5640092757E /* Default.png */; };
 		FE7D233C1757FA110092757E /* StroopLaunch320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23391757FA110092757E /* StroopLaunch320x480.png */; };
@@ -65,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Launch640x1096.png"; sourceTree = "<group>"; };
 		FE7D2309175066B20092757E /* STGeneric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGeneric.png; sourceTree = "<group>"; };
 		FE7D230D17506C4F0092757E /* STGenericB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGenericB.png; sourceTree = "<group>"; };
 		FE7D23111755790A0092757E /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		FE7D231517557A980092757E /* 1369803046_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1369803046_cancel.png; sourceTree = "<group>"; };
 		FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ensembio Logo 114x114.png"; path = "../Ensembio Logo 114x114.png"; sourceTree = "<group>"; };
 		FE7D23191757E0300092757E /* Stroop Icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stroop Icon114x114.png"; path = "../Stroop Icon114x114.png"; sourceTree = "<group>"; };
-		FE7D231D1757F2A60092757E /* Ensembio Launch640x1096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ensembio Launch640x1096.png"; path = "../../../Ensembio/Corporation/Ensembio Launch640x1096.png"; sourceTree = "<group>"; };
 		FE7D23251757F4110092757E /* StroopIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StroopIcon57x57.png; path = ../StroopIcon57x57.png; sourceTree = "<group>"; };
 		FE7D23291757F5640092757E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		FE7D23391757FA110092757E /* StroopLaunch320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch320x480.png; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 				FE7D23411757FA400092757E /* Default-568h@2x.png */,
 				FE7D23291757F5640092757E /* Default.png */,
 				FE7D23251757F4110092757E /* StroopIcon57x57.png */,
-				FE7D231D1757F2A60092757E /* Ensembio Launch640x1096.png */,
+				FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */,
 				FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */,
 				FEBEB80D1714D9B1006CE864 /* StroopLogo.png */,
 				FE7D2309175066B20092757E /* STGeneric.png */,
@@ -339,6 +339,11 @@
 				CLASSPREFIX = ST;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Richard Sprague";
+				TargetAttributes = {
+					FE9A3E281702067800716EA4 = {
+						DevelopmentTeam = 4RZ2RJUXC8;
+					};
+				};
 			};
 			buildConfigurationList = FE9A3E241702067800716EA4 /* Build configuration list for PBXProject "StroopTestNew" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -375,7 +380,6 @@
 				FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */,
 				FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */,
 				FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */,
-				FE7D231E1757F2A60092757E /* Ensembio Launch640x1096.png in Resources */,
 				FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */,
 				FE7D232A1757F5650092757E /* Default.png in Resources */,
 				FE7D233C1757FA110092757E /* StroopLaunch320x480.png in Resources */,
@@ -383,6 +387,7 @@
 				FE7D233E1757FA110092757E /* StroopLaunch640x1136.png in Resources */,
 				FE7D23421757FA400092757E /* Default-568h@2x.png in Resources */,
 				FE7D2348175A5EF90092757E /* Default@2x.png in Resources */,
+				FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,10 +547,13 @@
 		FE9A3E621702067800716EA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNew/StroopTestNew-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -553,8 +561,8 @@
 		FE9A3E631702067800716EA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ensembio, Inc (4RZ2RJUXC8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNew/StroopTestNew-Info.plist";

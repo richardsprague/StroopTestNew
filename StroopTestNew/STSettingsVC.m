@@ -28,6 +28,8 @@
 
 
 @synthesize STMaxScore = _STMaxScore;
+
+
 - (IBAction)STResetScores:(UIButton *)sender {
     [[NSUserDefaults standardUserDefaults] setObject:NULL forKey:ALL_RESULTS_KEY];
 }
