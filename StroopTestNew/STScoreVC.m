@@ -228,6 +228,7 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  //  [self updateUI];
 	// Do any additional setup after loading the view.
 }
 

@@ -9,21 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>StroopIcon 80x80</string>
-				<string>StroopIcon58x58</string>
-				<string>StroopIcon29x29</string>
-				<string>StroopIcon120x120</string>
-				<string>Stroop Images</string>
-				<string>Stroop Icon114x114</string>
-				<string>StroopIcon57x57</string>
-			</array>
-		</dict>
-	</dict>
+	<dict/>
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
 	<key>CFBundleIdentifier</key>

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */; };
-		FE51222718A80569003392CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE51222618A80569003392CC /* Images.xcassets */; };
+		FE4D741018A91D54005185BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4D740F18A91D54005185BC /* Default-568h@2x.png */; };
+		FE4D741218A9801C005185BC /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4D741118A9801C005185BC /* Images-2.xcassets */; };
 		FE51224018A85797003392CC /* home-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51223F18A85797003392CC /* home-7.png */; };
 		FE51224218A857BD003392CC /* Chart_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224118A857BD003392CC /* Chart_Up@2x.png */; };
 		FE51224418A85CAE003392CC /* settings60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224318A85CAE003392CC /* settings60x60.png */; };
@@ -22,9 +23,6 @@
 		FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */; };
 		FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23191757E0300092757E /* Stroop Icon114x114.png */; };
 		FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23251757F4110092757E /* StroopIcon57x57.png */; };
-		FE7D232A1757F5650092757E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23291757F5640092757E /* Default.png */; };
-		FE7D23421757FA400092757E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23411757FA400092757E /* Default-568h@2x.png */; };
-		FE7D2348175A5EF90092757E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D2347175A5EF90092757E /* Default@2x.png */; };
 		FE909FD11724C36A00A3030E /* STScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */; };
 		FE909FD41724C7FF00A3030E /* STScoreTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD31724C7FE00A3030E /* STScoreTableView.m */; };
 		FE9A3E2D1702067800716EA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2C1702067800716EA4 /* UIKit.framework */; };
@@ -69,7 +67,8 @@
 
 /* Begin PBXFileReference section */
 		FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Launch640x1096.png"; sourceTree = "<group>"; };
-		FE51222618A80569003392CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Stroop/Images.xcassets; sourceTree = "<group>"; };
+		FE4D740F18A91D54005185BC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FE4D741118A9801C005185BC /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "Stroop/Images-2.xcassets"; sourceTree = "<group>"; };
 		FE51222918A8349F003392CC /* Ensembio Logo120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Logo120x120.png"; sourceTree = "<group>"; };
 		FE51222A18A8349F003392CC /* Stroop Icon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stroop Icon60x60.png"; sourceTree = "<group>"; };
 		FE51222B18A8349F003392CC /* StroopIcon 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StroopIcon 80x80.png"; sourceTree = "<group>"; };
@@ -88,9 +87,9 @@
 		FE51223918A8435D003392CC /* StroopIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon57x57.png; sourceTree = "<group>"; };
 		FE51223A18A8435D003392CC /* StroopIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon58x58.png; sourceTree = "<group>"; };
 		FE51223B18A8435D003392CC /* StroopIcon59x59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon59x59.png; sourceTree = "<group>"; };
-		FE51223C18A8435D003392CC /* StroopLaunch320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch320x480.png; sourceTree = "<group>"; };
-		FE51223D18A8435D003392CC /* StroopLaunch640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x1136.png; sourceTree = "<group>"; };
-		FE51223E18A8435D003392CC /* StroopLaunch640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x960.png; sourceTree = "<group>"; };
+		FE51223C18A8435D003392CC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FE51223D18A8435D003392CC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FE51223E18A8435D003392CC /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		FE51223F18A85797003392CC /* home-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-7.png"; sourceTree = "<group>"; };
 		FE51224118A857BD003392CC /* Chart_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chart_Up@2x.png"; sourceTree = "<group>"; };
 		FE51224318A85CAE003392CC /* settings60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings60x60.png; sourceTree = "<group>"; };
@@ -104,9 +103,6 @@
 		FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ensembio Logo 114x114.png"; path = "../Ensembio Logo 114x114.png"; sourceTree = "<group>"; };
 		FE7D23191757E0300092757E /* Stroop Icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stroop Icon114x114.png"; path = "../Stroop Icon114x114.png"; sourceTree = "<group>"; };
 		FE7D23251757F4110092757E /* StroopIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StroopIcon57x57.png; path = ../StroopIcon57x57.png; sourceTree = "<group>"; };
-		FE7D23291757F5640092757E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		FE7D23411757FA400092757E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		FE7D2347175A5EF90092757E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FE909FCF1724C36900A3030E /* STScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableViewCell.h; sourceTree = "<group>"; };
 		FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScoreTableViewCell.m; sourceTree = "<group>"; };
 		FE909FD21724C7FE00A3030E /* STScoreTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableView.h; sourceTree = "<group>"; };
@@ -217,9 +213,9 @@
 				FE51223918A8435D003392CC /* StroopIcon57x57.png */,
 				FE51223A18A8435D003392CC /* StroopIcon58x58.png */,
 				FE51223B18A8435D003392CC /* StroopIcon59x59.png */,
-				FE51223C18A8435D003392CC /* StroopLaunch320x480.png */,
-				FE51223D18A8435D003392CC /* StroopLaunch640x1136.png */,
-				FE51223E18A8435D003392CC /* StroopLaunch640x960.png */,
+				FE51223C18A8435D003392CC /* Default.png */,
+				FE51223D18A8435D003392CC /* Default-568h@2x.png */,
+				FE51223E18A8435D003392CC /* Default~iphone.png */,
 			);
 			name = "Stroop Images";
 			path = "StroopTestNew/Stroop Images";
@@ -228,10 +224,10 @@
 		FE9A3E201702067800716EA4 = {
 			isa = PBXGroup;
 			children = (
+				FE4D741118A9801C005185BC /* Images-2.xcassets */,
+				FE4D740F18A91D54005185BC /* Default-568h@2x.png */,
 				FE51223218A8435D003392CC /* Stroop Images */,
 				FE51222818A8349F003392CC /* Stroop Images */,
-				FE51222618A80569003392CC /* Images.xcassets */,
-				FE7D2347175A5EF90092757E /* Default@2x.png */,
 				FE9A3E321702067800716EA4 /* StroopTestNew */,
 				FE9A3E561702067800716EA4 /* StroopTestNewTests */,
 				FE9A3E2B1702067800716EA4 /* Frameworks */,
@@ -287,8 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				FE7D23191757E0300092757E /* Stroop Icon114x114.png */,
-				FE7D23411757FA400092757E /* Default-568h@2x.png */,
-				FE7D23291757F5640092757E /* Default.png */,
 				FE7D23251757F4110092757E /* StroopIcon57x57.png */,
 				FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */,
 				FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */,
@@ -446,19 +440,17 @@
 				FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */,
 				FE7D230A175066B20092757E /* STGeneric.png in Resources */,
 				FE7D230E17506C4F0092757E /* STGenericB.png in Resources */,
+				FE4D741218A9801C005185BC /* Images-2.xcassets in Resources */,
 				FE51224618A85D46003392CC /* config30x30.png in Resources */,
 				FE7D23121755790B0092757E /* ReadMe.txt in Resources */,
 				FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */,
 				FE51224018A85797003392CC /* home-7.png in Resources */,
-				FE51222718A80569003392CC /* Images.xcassets in Resources */,
+				FE4D741018A91D54005185BC /* Default-568h@2x.png in Resources */,
 				FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */,
 				FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */,
 				FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */,
 				FE51224218A857BD003392CC /* Chart_Up@2x.png in Resources */,
 				FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */,
-				FE7D232A1757F5650092757E /* Default.png in Resources */,
-				FE7D23421757FA400092757E /* Default-568h@2x.png in Resources */,
-				FE7D2348175A5EF90092757E /* Default@2x.png in Resources */,
 				FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,6 +611,8 @@
 		FE9A3E621702067800716EA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -634,6 +628,8 @@
 		FE9A3E631702067800716EA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
