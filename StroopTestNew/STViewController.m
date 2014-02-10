@@ -68,18 +68,26 @@
 - (void) STUpdateScore
 {
     NSTimeInterval duration = self.stroopTest.elapsedTime;
+    uint currentScore = self.stroopTest.currentScore;
     
     //warning!  You must set duration and score in this order
    self.testResult.duration = duration;
     self.testResult.score = self.stroopTest.currentScore;
     self.testResult = nil;
     
+    int currentMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     
+    if (currentMode==0) {
     
     self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Latest Result=%d",self.stroopTest.currentScore];
     if (duration>0.1){
         self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %.2f",duration];
     }
+    }
+    else {self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Score: %d",currentScore];
+        
+    }
+    
     [[[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues] writeToURL:self.myFileURL atomically:YES];
     
 }

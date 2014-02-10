@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */; };
 		FE51222718A80569003392CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE51222618A80569003392CC /* Images.xcassets */; };
+		FE51224018A85797003392CC /* home-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51223F18A85797003392CC /* home-7.png */; };
+		FE51224218A857BD003392CC /* Chart_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224118A857BD003392CC /* Chart_Up@2x.png */; };
+		FE51224418A85CAE003392CC /* settings60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224318A85CAE003392CC /* settings60x60.png */; };
+		FE51224618A85D46003392CC /* config30x30.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224518A85D46003392CC /* config30x30.png */; };
+		FE51224818A863B1003392CC /* StroopStartButton114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224718A863B1003392CC /* StroopStartButton114x114.png */; };
 		FE7D230A175066B20092757E /* STGeneric.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D2309175066B20092757E /* STGeneric.png */; };
 		FE7D230E17506C4F0092757E /* STGenericB.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D230D17506C4F0092757E /* STGenericB.png */; };
 		FE7D23121755790B0092757E /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23111755790A0092757E /* ReadMe.txt */; };
@@ -86,6 +91,11 @@
 		FE51223C18A8435D003392CC /* StroopLaunch320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch320x480.png; sourceTree = "<group>"; };
 		FE51223D18A8435D003392CC /* StroopLaunch640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x1136.png; sourceTree = "<group>"; };
 		FE51223E18A8435D003392CC /* StroopLaunch640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x960.png; sourceTree = "<group>"; };
+		FE51223F18A85797003392CC /* home-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-7.png"; sourceTree = "<group>"; };
+		FE51224118A857BD003392CC /* Chart_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chart_Up@2x.png"; sourceTree = "<group>"; };
+		FE51224318A85CAE003392CC /* settings60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings60x60.png; sourceTree = "<group>"; };
+		FE51224518A85D46003392CC /* config30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config30x30.png; sourceTree = "<group>"; };
+		FE51224718A863B1003392CC /* StroopStartButton114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopStartButton114x114.png; sourceTree = "<group>"; };
 		FE7D2309175066B20092757E /* STGeneric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGeneric.png; sourceTree = "<group>"; };
 		FE7D230D17506C4F0092757E /* STGenericB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGenericB.png; sourceTree = "<group>"; };
 		FE7D23111755790A0092757E /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
@@ -179,6 +189,11 @@
 				FE51222918A8349F003392CC /* Ensembio Logo120x120.png */,
 				FE51222A18A8349F003392CC /* Stroop Icon60x60.png */,
 				FE51222B18A8349F003392CC /* StroopIcon 80x80.png */,
+				FE51224318A85CAE003392CC /* settings60x60.png */,
+				FE51224718A863B1003392CC /* StroopStartButton114x114.png */,
+				FE51224118A857BD003392CC /* Chart_Up@2x.png */,
+				FE51224518A85D46003392CC /* config30x30.png */,
+				FE51223F18A85797003392CC /* home-7.png */,
 				FE51222C18A8349F003392CC /* StroopIcon114x114.png */,
 				FE51222D18A8349F003392CC /* StroopIcon120x120.png */,
 				FE51222E18A8349F003392CC /* StroopIcon29x29.png */,
@@ -423,18 +438,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE9A3E371702067800716EA4 /* InfoPlist.strings in Resources */,
+				FE51224818A863B1003392CC /* StroopStartButton114x114.png in Resources */,
 				FE9A3E461702067800716EA4 /* MainStoryboard.storyboard in Resources */,
 				FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */,
 				FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */,
+				FE51224418A85CAE003392CC /* settings60x60.png in Resources */,
 				FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */,
 				FE7D230A175066B20092757E /* STGeneric.png in Resources */,
 				FE7D230E17506C4F0092757E /* STGenericB.png in Resources */,
+				FE51224618A85D46003392CC /* config30x30.png in Resources */,
 				FE7D23121755790B0092757E /* ReadMe.txt in Resources */,
 				FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */,
+				FE51224018A85797003392CC /* home-7.png in Resources */,
 				FE51222718A80569003392CC /* Images.xcassets in Resources */,
 				FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */,
 				FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */,
 				FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */,
+				FE51224218A857BD003392CC /* Chart_Up@2x.png in Resources */,
 				FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */,
 				FE7D232A1757F5650092757E /* Default.png in Resources */,
 				FE7D23421757FA400092757E /* Default-568h@2x.png in Resources */,
