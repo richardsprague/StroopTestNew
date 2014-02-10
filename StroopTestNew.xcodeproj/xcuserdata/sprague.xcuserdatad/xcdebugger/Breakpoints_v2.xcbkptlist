@@ -57,12 +57,12 @@
                   symbolName = "+[STScores setAllSTUserDefaultScores:]"
                   moduleName = "Stroop"
                   urlString = "file:///Users/sprague/SkyDrive/iOS/StroopTestNew/StroopTestNew/STScores.m"
-                  timestampString = "409692891.316184"
+                  timestampString = "413680877.251942"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "56"
                   endingLineNumber = "56"
-                  offsetFromSymbolStart = "105">
+                  offsetFromSymbolStart = "92">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -71,12 +71,40 @@
                   symbolName = "+[STScores setAllSTUserDefaultScores:]"
                   moduleName = "Stroop"
                   urlString = "file:///Users/sprague/SkyDrive/iOS/StroopTestNew/StroopTestNew/STScores.m"
-                  timestampString = "409692891.316559"
+                  timestampString = "413680877.252404"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "56"
                   endingLineNumber = "56"
-                  offsetFromSymbolStart = "275">
+                  offsetFromSymbolStart = "222">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[STScores setAllSTUserDefaultScores:]"
+                  moduleName = "Stroop"
+                  urlString = "file:///Users/sprague/SkyDrive/iOS/StroopTestNew/StroopTestNew/STScores.m"
+                  timestampString = "413680877.252762"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "230">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[STScores setAllSTUserDefaultScores:]"
+                  moduleName = "Stroop"
+                  urlString = "file:///Users/sprague/SkyDrive/iOS/StroopTestNew/StroopTestNew/STScores.m"
+                  timestampString = "413680877.253155"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "238">
                </Location>
             </Locations>
          </BreakpointContent>

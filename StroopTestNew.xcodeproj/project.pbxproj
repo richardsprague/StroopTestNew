@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */; };
+		FE51222718A80569003392CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE51222618A80569003392CC /* Images.xcassets */; };
 		FE7D230A175066B20092757E /* STGeneric.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D2309175066B20092757E /* STGeneric.png */; };
 		FE7D230E17506C4F0092757E /* STGenericB.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D230D17506C4F0092757E /* STGenericB.png */; };
 		FE7D23121755790B0092757E /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23111755790A0092757E /* ReadMe.txt */; };
@@ -17,9 +18,6 @@
 		FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23191757E0300092757E /* Stroop Icon114x114.png */; };
 		FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23251757F4110092757E /* StroopIcon57x57.png */; };
 		FE7D232A1757F5650092757E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23291757F5640092757E /* Default.png */; };
-		FE7D233C1757FA110092757E /* StroopLaunch320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23391757FA110092757E /* StroopLaunch320x480.png */; };
-		FE7D233D1757FA110092757E /* StroopLaunch640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D233A1757FA110092757E /* StroopLaunch640x960.png */; };
-		FE7D233E1757FA110092757E /* StroopLaunch640x1136.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D233B1757FA110092757E /* StroopLaunch640x1136.png */; };
 		FE7D23421757FA400092757E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23411757FA400092757E /* Default-568h@2x.png */; };
 		FE7D2348175A5EF90092757E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D2347175A5EF90092757E /* Default@2x.png */; };
 		FE909FD11724C36A00A3030E /* STScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */; };
@@ -66,6 +64,28 @@
 
 /* Begin PBXFileReference section */
 		FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Launch640x1096.png"; sourceTree = "<group>"; };
+		FE51222618A80569003392CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Stroop/Images.xcassets; sourceTree = "<group>"; };
+		FE51222918A8349F003392CC /* Ensembio Logo120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Logo120x120.png"; sourceTree = "<group>"; };
+		FE51222A18A8349F003392CC /* Stroop Icon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stroop Icon60x60.png"; sourceTree = "<group>"; };
+		FE51222B18A8349F003392CC /* StroopIcon 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StroopIcon 80x80.png"; sourceTree = "<group>"; };
+		FE51222C18A8349F003392CC /* StroopIcon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon114x114.png; sourceTree = "<group>"; };
+		FE51222D18A8349F003392CC /* StroopIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon120x120.png; sourceTree = "<group>"; };
+		FE51222E18A8349F003392CC /* StroopIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon29x29.png; sourceTree = "<group>"; };
+		FE51222F18A8349F003392CC /* StroopIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon57x57.png; sourceTree = "<group>"; };
+		FE51223018A8349F003392CC /* StroopIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon58x58.png; sourceTree = "<group>"; };
+		FE51223118A8349F003392CC /* StroopIcon59x59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon59x59.png; sourceTree = "<group>"; };
+		FE51223318A8435D003392CC /* Ensembio Logo120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Logo120x120.png"; sourceTree = "<group>"; };
+		FE51223418A8435D003392CC /* Stroop Icon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stroop Icon60x60.png"; sourceTree = "<group>"; };
+		FE51223518A8435D003392CC /* StroopIcon 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StroopIcon 80x80.png"; sourceTree = "<group>"; };
+		FE51223618A8435D003392CC /* StroopIcon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon114x114.png; sourceTree = "<group>"; };
+		FE51223718A8435D003392CC /* StroopIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon120x120.png; sourceTree = "<group>"; };
+		FE51223818A8435D003392CC /* StroopIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon29x29.png; sourceTree = "<group>"; };
+		FE51223918A8435D003392CC /* StroopIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon57x57.png; sourceTree = "<group>"; };
+		FE51223A18A8435D003392CC /* StroopIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon58x58.png; sourceTree = "<group>"; };
+		FE51223B18A8435D003392CC /* StroopIcon59x59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon59x59.png; sourceTree = "<group>"; };
+		FE51223C18A8435D003392CC /* StroopLaunch320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch320x480.png; sourceTree = "<group>"; };
+		FE51223D18A8435D003392CC /* StroopLaunch640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x1136.png; sourceTree = "<group>"; };
+		FE51223E18A8435D003392CC /* StroopLaunch640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x960.png; sourceTree = "<group>"; };
 		FE7D2309175066B20092757E /* STGeneric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGeneric.png; sourceTree = "<group>"; };
 		FE7D230D17506C4F0092757E /* STGenericB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGenericB.png; sourceTree = "<group>"; };
 		FE7D23111755790A0092757E /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
@@ -75,9 +95,6 @@
 		FE7D23191757E0300092757E /* Stroop Icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stroop Icon114x114.png"; path = "../Stroop Icon114x114.png"; sourceTree = "<group>"; };
 		FE7D23251757F4110092757E /* StroopIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StroopIcon57x57.png; path = ../StroopIcon57x57.png; sourceTree = "<group>"; };
 		FE7D23291757F5640092757E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		FE7D23391757FA110092757E /* StroopLaunch320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch320x480.png; sourceTree = "<group>"; };
-		FE7D233A1757FA110092757E /* StroopLaunch640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x960.png; sourceTree = "<group>"; };
-		FE7D233B1757FA110092757E /* StroopLaunch640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x1136.png; sourceTree = "<group>"; };
 		FE7D23411757FA400092757E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FE7D2347175A5EF90092757E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FE909FCF1724C36900A3030E /* STScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableViewCell.h; sourceTree = "<group>"; };
@@ -156,9 +173,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE51222818A8349F003392CC /* Stroop Images */ = {
+			isa = PBXGroup;
+			children = (
+				FE51222918A8349F003392CC /* Ensembio Logo120x120.png */,
+				FE51222A18A8349F003392CC /* Stroop Icon60x60.png */,
+				FE51222B18A8349F003392CC /* StroopIcon 80x80.png */,
+				FE51222C18A8349F003392CC /* StroopIcon114x114.png */,
+				FE51222D18A8349F003392CC /* StroopIcon120x120.png */,
+				FE51222E18A8349F003392CC /* StroopIcon29x29.png */,
+				FE51222F18A8349F003392CC /* StroopIcon57x57.png */,
+				FE51223018A8349F003392CC /* StroopIcon58x58.png */,
+				FE51223118A8349F003392CC /* StroopIcon59x59.png */,
+			);
+			name = "Stroop Images";
+			path = "StroopTestNew/Stroop Images";
+			sourceTree = "<group>";
+		};
+		FE51223218A8435D003392CC /* Stroop Images */ = {
+			isa = PBXGroup;
+			children = (
+				FE51223318A8435D003392CC /* Ensembio Logo120x120.png */,
+				FE51223418A8435D003392CC /* Stroop Icon60x60.png */,
+				FE51223518A8435D003392CC /* StroopIcon 80x80.png */,
+				FE51223618A8435D003392CC /* StroopIcon114x114.png */,
+				FE51223718A8435D003392CC /* StroopIcon120x120.png */,
+				FE51223818A8435D003392CC /* StroopIcon29x29.png */,
+				FE51223918A8435D003392CC /* StroopIcon57x57.png */,
+				FE51223A18A8435D003392CC /* StroopIcon58x58.png */,
+				FE51223B18A8435D003392CC /* StroopIcon59x59.png */,
+				FE51223C18A8435D003392CC /* StroopLaunch320x480.png */,
+				FE51223D18A8435D003392CC /* StroopLaunch640x1136.png */,
+				FE51223E18A8435D003392CC /* StroopLaunch640x960.png */,
+			);
+			name = "Stroop Images";
+			path = "StroopTestNew/Stroop Images";
+			sourceTree = "<group>";
+		};
 		FE9A3E201702067800716EA4 = {
 			isa = PBXGroup;
 			children = (
+				FE51223218A8435D003392CC /* Stroop Images */,
+				FE51222818A8349F003392CC /* Stroop Images */,
+				FE51222618A80569003392CC /* Images.xcassets */,
 				FE7D2347175A5EF90092757E /* Default@2x.png */,
 				FE9A3E321702067800716EA4 /* StroopTestNew */,
 				FE9A3E561702067800716EA4 /* StroopTestNewTests */,
@@ -215,9 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				FE7D23191757E0300092757E /* Stroop Icon114x114.png */,
-				FE7D23391757FA110092757E /* StroopLaunch320x480.png */,
-				FE7D233A1757FA110092757E /* StroopLaunch640x960.png */,
-				FE7D233B1757FA110092757E /* StroopLaunch640x1136.png */,
 				FE7D23411757FA400092757E /* Default-568h@2x.png */,
 				FE7D23291757F5640092757E /* Default.png */,
 				FE7D23251757F4110092757E /* StroopIcon57x57.png */,
@@ -377,14 +431,12 @@
 				FE7D230E17506C4F0092757E /* STGenericB.png in Resources */,
 				FE7D23121755790B0092757E /* ReadMe.txt in Resources */,
 				FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */,
+				FE51222718A80569003392CC /* Images.xcassets in Resources */,
 				FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */,
 				FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */,
 				FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */,
 				FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */,
 				FE7D232A1757F5650092757E /* Default.png in Resources */,
-				FE7D233C1757FA110092757E /* StroopLaunch320x480.png in Resources */,
-				FE7D233D1757FA110092757E /* StroopLaunch640x960.png in Resources */,
-				FE7D233E1757FA110092757E /* StroopLaunch640x1136.png in Resources */,
 				FE7D23421757FA400092757E /* Default-568h@2x.png in Resources */,
 				FE7D2348175A5EF90092757E /* Default@2x.png in Resources */,
 				FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */,
@@ -552,6 +604,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNew/StroopTestNew-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -566,6 +619,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNew/StroopTestNew-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
