@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */; };
-		FE4D741018A91D54005185BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4D740F18A91D54005185BC /* Default-568h@2x.png */; };
 		FE4D741218A9801C005185BC /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4D741118A9801C005185BC /* Images-2.xcassets */; };
 		FE51224018A85797003392CC /* home-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51223F18A85797003392CC /* home-7.png */; };
 		FE51224218A857BD003392CC /* Chart_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224118A857BD003392CC /* Chart_Up@2x.png */; };
@@ -66,7 +65,6 @@
 
 /* Begin PBXFileReference section */
 		FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Launch640x1096.png"; sourceTree = "<group>"; };
-		FE4D740F18A91D54005185BC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FE4D741118A9801C005185BC /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "Stroop/Images-2.xcassets"; sourceTree = "<group>"; };
 		FE51222918A8349F003392CC /* Ensembio Logo120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Logo120x120.png"; sourceTree = "<group>"; };
 		FE51222A18A8349F003392CC /* Stroop Icon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stroop Icon60x60.png"; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				FE4D741118A9801C005185BC /* Images-2.xcassets */,
-				FE4D740F18A91D54005185BC /* Default-568h@2x.png */,
 				FE51223218A8435D003392CC /* Stroop Images */,
 				FE51222818A8349F003392CC /* Stroop Images */,
 				FE9A3E321702067800716EA4 /* StroopTestNew */,
@@ -440,7 +437,6 @@
 				FE7D23121755790B0092757E /* ReadMe.txt in Resources */,
 				FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */,
 				FE51224018A85797003392CC /* home-7.png in Resources */,
-				FE4D741018A91D54005185BC /* Default-568h@2x.png in Resources */,
 				FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */,
 				FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */,
 				FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */,
