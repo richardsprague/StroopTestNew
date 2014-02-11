@@ -350,7 +350,7 @@ Cg
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WvK-Sj-KP3" customClass="STScoreTableView">
-                                <rect key="frame" x="0.0" y="31" width="320" height="357"/>
+                                <rect key="frame" x="0.0" y="31" width="320" height="333"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="STScoreTableRow" id="I8b-qw-ndS" customClass="STScoreTableViewCell">
@@ -368,7 +368,7 @@ Cg
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jd8-pM-mHb">
-                                <rect key="frame" x="20" y="396" width="33" height="27"/>
+                                <rect key="frame" x="20" y="372" width="33" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="Score">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -382,7 +382,7 @@ Cg
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ard-4S-yef">
-                                <rect key="frame" x="138" y="396" width="44" height="27"/>
+                                <rect key="frame" x="138" y="372" width="44" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="Date">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -396,7 +396,7 @@ Cg
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47h-hr-2m8">
-                                <rect key="frame" x="250" y="396" width="50" height="27"/>
+                                <rect key="frame" x="250" y="372" width="50" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="Seconds">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -414,6 +414,7 @@ Cg
                     </view>
                     <tabBarItem key="tabBarItem" title="Results" image="Chart_Up.png" id="2wu-Nj-zlQ"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="STScoreTableView" destination="WvK-Sj-KP3" id="ozJ-7E-Thh"/>
                     </connections>
@@ -476,25 +477,13 @@ Cg
                                     <action selector="STTimerSegmentedControlClicked:" destination="bDI-RE-ySY" eventType="valueChanged" id="Brw-7N-PiZ"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" contentMode="left" text="Version" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQj-AD-6JR">
-                                <rect key="frame" x="20" y="344" width="280" height="87"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="87" id="JlI-Vs-1Pg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="uOe-Wf-SVY" appends="YES" id="Eim-23-HIs"/>
-                                    <outletCollection property="gestureRecognizers" destination="zL7-7b-VVu" appends="YES" id="g9i-aS-PxD"/>
-                                    <outletCollection property="gestureRecognizers" destination="zL7-7b-VVu" appends="YES" id="Mmn-se-CGG"/>
-                                </connections>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8X-8K-AFx">
-                                <rect key="frame" x="20" y="202" width="112" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8X-8K-AFx">
+                                <rect key="frame" x="20" y="202" width="96" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="xYh-9h-s7Y"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Reset all results">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -503,20 +492,37 @@ Cg
                                     <action selector="STResetScores:" destination="bDI-RE-ySY" eventType="touchUpInside" id="hk8-db-GOH"/>
                                 </connections>
                             </button>
+                            <label clipsSubviews="YES" contentMode="left" text="Version" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQj-AD-6JR">
+                                <rect key="frame" x="136" y="202" width="164" height="247"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="OTh-W0-btF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zL7-7b-VVu" appends="YES" id="g9i-aS-PxD"/>
+                                    <outletCollection property="gestureRecognizers" destination="uOe-Wf-SVY" appends="YES" id="Eim-23-HIs"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="kfx-RC-QHA" firstAttribute="centerY" secondItem="DAx-t3-K1I" secondAttribute="centerY" id="7Bu-GQ-tR4"/>
+                            <constraint firstAttribute="bottom" secondItem="HQj-AD-6JR" secondAttribute="bottom" constant="31" id="8fQ-UU-93n"/>
+                            <constraint firstItem="HQj-AD-6JR" firstAttribute="top" secondItem="Zlg-bk-Sg9" secondAttribute="bottom" constant="182" id="Dcy-cf-guu"/>
                             <constraint firstItem="kfx-RC-QHA" firstAttribute="top" secondItem="K5P-HH-WBA" secondAttribute="bottom" constant="8" symbolic="YES" id="G2z-GF-CPj"/>
                             <constraint firstItem="kfx-RC-QHA" firstAttribute="leading" secondItem="l8J-Ju-NnW" secondAttribute="leading" constant="-12" id="HwU-u6-mh9"/>
                             <constraint firstItem="Odi-YT-q1G" firstAttribute="leading" secondItem="K5P-HH-WBA" secondAttribute="leading" id="KV4-hL-80V"/>
-                            <constraint firstAttribute="trailing" secondItem="HQj-AD-6JR" secondAttribute="trailing" constant="20" symbolic="YES" id="Ltb-xS-Tap"/>
-                            <constraint firstItem="xq5-sj-qaO" firstAttribute="top" secondItem="HQj-AD-6JR" secondAttribute="bottom" id="OzR-Dx-T4E"/>
+                            <constraint firstAttribute="trailing" secondItem="HQj-AD-6JR" secondAttribute="trailing" constant="20" symbolic="YES" id="OJr-e1-6P6"/>
+                            <constraint firstItem="L8X-8K-AFx" firstAttribute="trailing" secondItem="DAx-t3-K1I" secondAttribute="trailing" id="Upi-yY-ss0"/>
                             <constraint firstItem="Odi-YT-q1G" firstAttribute="leading" secondItem="l8J-Ju-NnW" secondAttribute="leading" constant="20" symbolic="YES" id="Uwz-DQ-sA1"/>
-                            <constraint firstItem="HQj-AD-6JR" firstAttribute="leading" secondItem="l8J-Ju-NnW" secondAttribute="leading" constant="20" symbolic="YES" id="Vwb-Rq-5cE"/>
                             <constraint firstItem="kfx-RC-QHA" firstAttribute="centerY" secondItem="bTT-uA-fGk" secondAttribute="centerY" id="aXG-PW-NCs"/>
                             <constraint firstItem="K5P-HH-WBA" firstAttribute="top" secondItem="Odi-YT-q1G" secondAttribute="bottom" constant="8" symbolic="YES" id="eaR-mo-c1x"/>
+                            <constraint firstItem="L8X-8K-AFx" firstAttribute="leading" secondItem="DAx-t3-K1I" secondAttribute="leading" id="em2-iI-PUw"/>
+                            <constraint firstItem="L8X-8K-AFx" firstAttribute="top" secondItem="kfx-RC-QHA" secondAttribute="bottom" constant="67" id="hJP-JE-quo"/>
                             <constraint firstItem="Odi-YT-q1G" firstAttribute="top" secondItem="Zlg-bk-Sg9" secondAttribute="bottom" constant="20" symbolic="YES" id="ju1-Cu-e3q"/>
                             <constraint firstItem="bTT-uA-fGk" firstAttribute="leading" secondItem="DAx-t3-K1I" secondAttribute="trailing" constant="8" symbolic="YES" id="ndk-yb-K1m"/>
                             <constraint firstItem="DAx-t3-K1I" firstAttribute="leading" secondItem="K5P-HH-WBA" secondAttribute="leading" id="pYf-J9-2op"/>
@@ -537,14 +543,14 @@ Cg
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cb1-O3-UKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="uOe-Wf-SVY">
-                    <connections>
-                        <action selector="STSettingsSwipeLeft:" destination="bDI-RE-ySY" id="Fbg-ec-ddR"/>
-                    </connections>
-                </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="zL7-7b-VVu">
                     <connections>
                         <action selector="STSettingsSwipeGesture:" destination="bDI-RE-ySY" id="fRk-oi-dPF"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="uOe-Wf-SVY">
+                    <connections>
+                        <action selector="STSettingsSwipeLeft:" destination="bDI-RE-ySY" id="Fbg-ec-ddR"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

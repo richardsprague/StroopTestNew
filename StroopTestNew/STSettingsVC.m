@@ -75,12 +75,13 @@
 }
 
 - (IBAction)STSettingsSwipeLeft:(UISwipeGestureRecognizer *)sender {
+   // NSLog(@"swipe left");
             self.STSettingsVersionLabel.text = [NSString stringWithFormat:@"Version %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
     
 }
 
 - (IBAction)STSettingsSwipeGesture:(UISwipeGestureRecognizer *)sender {
-    
+   // NSLog(@"swipe gesture");
     self.STSettingsVersionLabel.text = [NSString stringWithFormat:@"Thanks for downloading!"];
 }
 
@@ -119,6 +120,7 @@
 	// Do any additional setup after loading the view.
     
     self.STMaxScoreAdjustStepper.value =  (double) self.STMaxScore;
+    self.STSettingsVersionLabel.text = @"" ;
     self.STTimerSegmentControl.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     
     if (self.STTimerSegmentControl.selectedSegmentIndex!=0){
@@ -133,7 +135,7 @@
     
     
     self.STMaxScoreLabel.text = [[NSString alloc] initWithFormat:@"%d",self.STMaxScore];
-    self.STSettingsVersionLabel.text = [NSString stringWithFormat:@"Version %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+  //  self.STSettingsVersionLabel.text = [NSString stringWithFormat:@"Version %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
 }
 
 - (void)didReceiveMemoryWarning
