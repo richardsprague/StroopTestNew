@@ -12,7 +12,7 @@
 
 @interface STViewController ()<STSceneProtocol>
 @property (weak, nonatomic) IBOutlet UILabel *elapsedSecondsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *STCorrectScoreLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *STCorrectScoreLabel;
 @property (strong, nonatomic) STScores *testResult;
 @property (strong, nonatomic) STTest *stroopTest;
 @property (strong, nonatomic) STSceneVC *nextView;
@@ -79,10 +79,10 @@
     
     if (currentMode==0) {
     
-    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Latest Result=%d",self.stroopTest.currentScore];
-    if (duration>0.1){
-        self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %.2f",duration];
-    }
+   //     self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Latest Result=%d",self.stroopTest.currentScore];
+        if (duration>0.1){
+            self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %.2f",duration];
+        }
     }
     else {self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Score: %d",currentScore];
         
@@ -95,7 +95,7 @@
 - (void) StroopTestScorePlusOne
 {
     self.stroopTest.currentScore++;
-        self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Score: %d",self.stroopTest.currentScore];
+   //     self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Score: %d",self.stroopTest.currentScore];
   
         uint userDefaultNumTests;
     userDefaultNumTests = [[NSUserDefaults standardUserDefaults] integerForKey:STMAXSCORE_KEY];
@@ -122,7 +122,7 @@
 - (void) cancelTest
 {
     [ self.timerForTest invalidate];
-    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Cancelled"];
+    self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Cancelled"];
     
 }
 
@@ -207,7 +207,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.elapsedSecondsLabel.text = @" ";
-    self.STCorrectScoreLabel.text = @" ";
+  //  self.STCorrectScoreLabel.text = @" ";
     
     [self initializeSettingsIfNecessary];
 
