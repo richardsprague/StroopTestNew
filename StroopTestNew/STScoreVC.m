@@ -9,6 +9,12 @@
 #import "STScoreVC.h"
 #import "STScores.h"
 
+// tags needed so I can talk to UI elements in the custom tableviewcell
+// these constants remain inside this file because they won't be used elsewhere
+#define SCORELABELTAG 101
+#define DATELABELTAG 102
+#define DURATIONLABELTAG 103
+
 @interface STScoreVC ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *STScoreTableView;
@@ -21,6 +27,7 @@
 
 @implementation STScoreVC
 
+/* vestigial code removed Feb2014
 - (IBAction)editPushed:(UIButton *)sender {
     if (self.STScoreTableView.isEditing)
         [self.STScoreTableView setEditing:NO];
@@ -32,6 +39,7 @@
    [self updateUI];
     
 }
+*/
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -56,7 +64,7 @@
     
     [STScores setAllSTUserDefaultScores:self.resultArray];
 
-  
+    [self updateUI];
     
 }
 - (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation
@@ -93,13 +101,29 @@
 
     
   //  cell.textLabel.font = [UIFont systemFontOfSize:14.0];//[[[UIFont alloc] init]fontWithSize:[UIFont smallSystemFontSize]];
-   cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
-    cell.textLabel.text = [self titleForRow:indexPath.row];
+
+   // cell.textLabel.text = [self titleForRow:indexPath.row];
+    NSDictionary *titleDict = [self titleForRow:indexPath.row];
+    
+ /* original code pre-Feb2014
+    cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
+  // need that UTF8 conversion so it can be handled as a Char -- %s won't display NSString
+    NSString *titleString =[[NSString alloc] initWithFormat:@"%10s%36s%18s",[[titleDict objectForKey:@"scoreString"] UTF8String],[[titleDict objectForKey:@"dateString"] UTF8String],[[titleDict objectForKey:@"durationString"]UTF8String] ];
+
+    cell.textLabel.text = titleString;
+    
     cell.textLabel.textAlignment = NSTextAlignmentLeft ;
     cell.textLabel.adjustsLetterSpacingToFitWidth=YES;
     
     cell.textLabel.textColor = [UIColor redColor];
-
+*/
+    UILabel *cellScoreLabel = (UILabel *)[cell.contentView viewWithTag:SCORELABELTAG];
+    UILabel *cellDateLabel =(UILabel *)[cell.contentView viewWithTag:DATELABELTAG];
+    UILabel *cellDurationLabel =(UILabel *)[cell.contentView viewWithTag:DURATIONLABELTAG];
+    
+    cellScoreLabel.text = [titleDict objectForKey:@"scoreString"];
+    cellDateLabel.text = [titleDict objectForKey:@"dateString"];
+    cellDurationLabel.text = [titleDict objectForKey:@"durationString"];
 
     //cell.detailTextLabel.text = [self titleForRow:indexPath.row];
     
@@ -107,6 +131,7 @@
     return cell;
 }
 
+// this is needed to squeeze more rows on a screen.
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
@@ -119,7 +144,13 @@
     return [UIFont smallSystemFontSize]+6;  //16.0;
 }
 
-- (NSString *)titleForRow:(NSUInteger)row
+
+//- (NSString *)titleForRow:(NSUInteger)row
+// original pre-Feb2014 version returned a string carefully padded with blanks to simulate columns.
+// Upgraded to return, instead, a dictionary with separate strings representing each item I want to display on the cell.
+// this function is kept alone for backward compatibility reasons.  If you were doing it over, you'd probably just put these substrings inline in the main cellForRowAtIndexPath method above.
+
+- (NSDictionary *) titleForRow:(NSUInteger) row
 {
    // NSString *displayText = @"";
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -136,11 +167,12 @@
     NSString *durationSubString = [[NSString alloc] initWithFormat:@"%3.1f",result.duration];
     
     
-    NSString *titleString = [[NSString alloc]
-                             initWithFormat:@"%10s%36s%18s",[scoreSubString UTF8String], [dateSubString UTF8String],[durationSubString UTF8String]];
+  //  NSString *titleString = [[NSString alloc] initWithFormat:@"%10s%36s%18s",[scoreSubString UTF8String], [dateSubString UTF8String],[durationSubString UTF8String]];
+    NSDictionary *titleDict = [[NSDictionary alloc] initWithObjectsAndKeys:scoreSubString ,@"scoreString",dateSubString,@"dateString",durationSubString,@"durationString", nil];
     
     
-    return titleString;
+//    return titleString;
+    return titleDict;
     
     //[SCORE_KEY] description]]; // description because could be NSNull
 }
@@ -228,6 +260,7 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.STScoreTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
   //  [self updateUI];
 	// Do any additional setup after loading the view.
 }
