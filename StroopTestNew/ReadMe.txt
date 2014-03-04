@@ -2,6 +2,7 @@
 Version 1.2 (Feb2014)
 
 * Results page looks much better: uses custom tableviewcell labels.
+* Instructions now uses unwind segue
 
 
 

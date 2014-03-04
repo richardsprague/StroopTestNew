@@ -8,6 +8,7 @@
 
 #import "STViewController.h"
 #import "STTest.h"
+#import "ZBConnectionDelegate.h"
 
 
 @interface STViewController ()<STSceneProtocol>
@@ -17,6 +18,10 @@
 @property (strong, nonatomic) STTest *stroopTest;
 @property (strong, nonatomic) STSceneVC *nextView;
 @property (strong, nonatomic) NSTimer *timerForTest;
+
+@property (strong, nonatomic) ZBConnectionDelegate *ZBConnection;
+
+
 @property NSFileManager *fileManager;
 @property NSURL *userURL;
 @property NSURL *myFileURL;
@@ -27,9 +32,18 @@
 
 @synthesize stroopTest = _stroopTest;
 
+- (ZBConnectionDelegate *) getZBConnection{
+    if (!self.ZBConnection) { self.ZBConnection = [[ZBConnectionDelegate alloc] init];}
+    
+    return self.ZBConnection;
+}
+
 - (void) initializeSettingsIfNecessary
 {
    // int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+  
+    
+
     
     self.fileManager = [NSFileManager defaultManager];
     
@@ -40,6 +54,9 @@
     
     self.userURL = urls[0];
     self.myFileURL = [self.userURL URLByAppendingPathComponent:@"stroopResultsFile"];
+    
+ // writes the current defaults to the disk on setup.  Not particularly useful, I guess, unless somehow the current disk file was missing or corrupted.
+    // Instead, this should READ from the disk and put the results into NSDefault
     
     
     [defaultsAsArray writeToURL:self.myFileURL atomically:YES];
@@ -62,6 +79,19 @@
         self.stroopTest = _stroopTest;
     }
     return _stroopTest;
+    
+}
+
+
+
+- (void) ZBAddNewEvent {
+    
+    NSLog(@"Added new event to Zenobase and returned: %@",self.ZBConnection.ZBJsonResults);
+    
+}
+
+- (void) STAddNewEvent {
+    
     
 }
 
@@ -88,7 +118,31 @@
         
     }
     
+    // we save the entire defaults file to disk every time we update the score.  Not the most efficient design ever.
+    // This should update it incremently to disk.
+    
     [[[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues] writeToURL:self.myFileURL atomically:YES];
+    
+    
+        self.ZBConnection = [[ZBConnectionDelegate alloc] init];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ZBAddNewEvent) name:RECEIVED_JSON_FROM_ZENOBASE object:nil];
+    
+    NSDictionary *newScore = @{
+                               @"count" : [NSNumber numberWithInt:currentScore] ,
+                              @"duration": [NSNumber numberWithFloat:duration]};
+    
+    
+    
+  //  NSString *ScoreLabel = [[NSString alloc] initWithFormat:@"%d",currentScore];
+    
+ //   NSDictionary *newScore = [NSDictionary dictionaryWithObjectsAndKeys:[[NSNumber alloc] initWithInt:currentScore],@"count",nil];
+    
+    NSString *newEventLabel =[[NSUserDefaults standardUserDefaults]
+                              objectForKey: ST_ID_IN_ZENOBASE];
+    
+    [self.ZBConnection addNewEventToBucket: newEventLabel
+                                            withEvent:newScore];
     
 }
 
@@ -173,6 +227,11 @@
     
 }
 
+// simple action method so the instructions can unwind back to this, the main screen
+
+- (IBAction) unwindToMainMenu: (UIStoryboardSegue*)sender {
+    
+}
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -200,6 +259,12 @@
         
     [self STUpdateScore];
         [self.nextView dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    
+
+    
 }
 
 - (void)viewDidLoad

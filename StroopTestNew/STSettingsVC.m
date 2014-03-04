@@ -29,6 +29,12 @@
 
 @synthesize STMaxScore = _STMaxScore;
 
+// simple action method so the settings screen can unwind back to this, the main screen
+
+- (IBAction) unwindToSettingsScreen: (UIStoryboardSegue*)sender {
+    
+}
+
 
 - (IBAction)STResetScores:(UIButton *)sender {
     [[NSUserDefaults standardUserDefaults] setObject:NULL forKey:ALL_RESULTS_KEY];
