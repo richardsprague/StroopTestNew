@@ -57,15 +57,26 @@
 }
 
 
-- (NSMutableArray *) shuffle: (NSMutableArray *) anArray
+- (NSArray *) shuffle: (NSMutableArray *) anArray
 {
-    for (uint i=0;i<[anArray count];i++){
-        int nElements = anArray.count -i;
-        int n = arc4random_uniform(nElements) + i;
-        [anArray exchangeObjectAtIndex:i withObjectAtIndex:n ];
-        
+//    for (NSUInteger i=0;i<[anArray count];i++){
+//        NSUInteger nElements = anArray.count -i;
+//        int n = arc4random_uniform(nElements) + i;
+//        [anArray exchangeObjectAtIndex:i withObjectAtIndex:n ];
+//        
+//    }
+    
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:anArray];
+    NSUInteger count = [mutableArray count];
+    // See http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
+    if (count > 1) {
+        for (NSUInteger i = count - 1; i > 0; --i) {
+            [mutableArray exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform((int32_t)(i + 1))];
+        }
     }
-    return anArray;
+    
+    NSArray *randomArray = [NSArray arrayWithArray:mutableArray];
+    return randomArray;
 }
 
 @end

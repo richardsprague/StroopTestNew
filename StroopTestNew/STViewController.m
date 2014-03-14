@@ -9,6 +9,7 @@
 #import "STViewController.h"
 #import "STTest.h"
 #import "ZBConnectionDelegate.h"
+#import "StroopData.h" // the Core Data store
 
 
 @interface STViewController ()<STSceneProtocol>
@@ -20,6 +21,8 @@
 @property (strong, nonatomic) NSTimer *timerForTest;
 
 @property (strong, nonatomic) ZBConnectionDelegate *ZBConnection;
+
+@property (strong, nonatomic) NSManagedObjectContext *context;
 
 
 @property NSFileManager *fileManager;
@@ -49,7 +52,7 @@
     
     NSArray *urls = [self.fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
     
-    NSArray *defaultsAsArray = [[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues];
+  //  NSArray *defaultsAsArray = [[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues];
   
     
     self.userURL = urls[0];
@@ -59,8 +62,17 @@
     // Instead, this should READ from the disk and put the results into NSDefault
     
     
-    [defaultsAsArray writeToURL:self.myFileURL atomically:YES];
+ //   [defaultsAsArray writeToURL:self.myFileURL atomically:YES];
+
+    NSString *textToWrite = [[NSString alloc] initWithFormat:@"date,%@,score,%d,duration,%f,\n",[NSDate date], 0,0.0];
+    NSError *err;
     
+    bool success = [textToWrite writeToURL:self.myFileURL atomically:YES encoding: NSUnicodeStringEncoding error:&err];
+    if (!success) {
+        NSLog(@"Error on first write: %@",err.description);
+    }
+    
+
     
 }
 
@@ -99,13 +111,44 @@
 {
     NSTimeInterval duration = self.stroopTest.elapsedTime;
     uint currentScore = self.stroopTest.currentScore;
+
     
     //warning!  You must set duration and score in this order
-   self.testResult.duration = duration;
-    self.testResult.score = self.stroopTest.currentScore;
-    self.testResult = nil;
     
-    int currentMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+  // the act of initalizing testResult saves it to NSUserDefaults
+//   self.testResult.duration = duration;
+//    
+//    
+//    self.testResult.score = self.stroopTest.currentScore;
+//    self.testResult = nil;
+    
+    NSInteger currentMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    
+    NSManagedObjectContext *localContext = [self managedObjectContext];
+    
+    if (!localContext)
+    {NSLog(@"No context!  Problem updating score");}
+    else
+    {
+        StroopData *thisScore = [NSEntityDescription insertNewObjectForEntityForName:@"StroopData" inManagedObjectContext:localContext];
+        
+        if (!thisScore) { NSLog(@"no StroopData entity found");
+            
+        }
+        else {
+            thisScore.duration= [NSNumber numberWithDouble:duration];
+        thisScore.score = [NSNumber numberWithInt:currentScore];
+        thisScore.date = [NSDate date];
+        
+        
+        thisScore.playMode =  [NSNumber numberWithInteger:currentMode];
+        }
+    }
+    
+
+    
+ 
+    
     
     if (currentMode==0) {
     
@@ -121,7 +164,17 @@
     // we save the entire defaults file to disk every time we update the score.  Not the most efficient design ever.
     // This should update it incremently to disk.
     
-    [[[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues] writeToURL:self.myFileURL atomically:YES];
+   // [[[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues] writeToURL:self.myFileURL atomically:YES];
+    
+    NSError *err;
+    NSString *contents = [NSString stringWithContentsOfURL:self.myFileURL encoding: NSUnicodeStringEncoding error:&err];
+    NSString *textToWrite = [[NSString alloc] initWithFormat:@"date,%@,score,%d,duration,%f,\n",[NSDate date], currentScore,duration];
+    contents = [contents stringByAppendingString:textToWrite];
+    bool success = [contents writeToURL:self.myFileURL atomically:YES encoding: NSUnicodeStringEncoding error:&err];
+    if (!success) {
+        NSLog(@"Error %@ writing to file", err);
+        
+    }
     
     
         self.ZBConnection = [[ZBConnectionDelegate alloc] init];
@@ -146,19 +199,20 @@
     
 }
 
+// Increment the score and stop if you're at Max Score.
 - (void) StroopTestScorePlusOne
 {
     self.stroopTest.currentScore++;
    //     self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Score: %d",self.stroopTest.currentScore];
   
-        uint userDefaultNumTests;
+        NSInteger userDefaultNumTests;
     userDefaultNumTests = [[NSUserDefaults standardUserDefaults] integerForKey:STMAXSCORE_KEY];
     
     
     if (userDefaultNumTests==0) userDefaultNumTests=3;
 
     
-    int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    NSInteger STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     
     
     if (!STMode) {   // STMode=0 means continue to max score
@@ -201,7 +255,7 @@
 - (IBAction)startTestButtonPressed:(id)sender {
 
     
-    int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    NSInteger STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
 
     
     if (!(STMode==0)) {
@@ -232,6 +286,17 @@
 - (IBAction) unwindToMainMenu: (UIStoryboardSegue*)sender {
     
 }
+
+- (NSManagedObjectContext *) managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]){
+        context = [delegate managedObjectContext];
+    }
+    
+    return context;
+}
+
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -270,6 +335,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.context = [self managedObjectContext];
+    
+    if (!self.context) {NSLog(@"serious error: no context found on app launch");}
+        
 	// Do any additional setup after loading the view, typically from a nib.
     self.elapsedSecondsLabel.text = @" ";
   //  self.STCorrectScoreLabel.text = @" ";

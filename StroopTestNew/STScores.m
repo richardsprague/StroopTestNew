@@ -11,7 +11,7 @@
 @interface STScores()
 
 @property (readwrite, nonatomic) NSDate *start;
-@property (readwrite, nonatomic) NSDate *end;
+//@property (readwrite, nonatomic) NSDate *end;
 
 
 @end

@@ -30,4 +30,6 @@
 @interface STSettings : NSObject
 @property (nonatomic) uint latestScore;
 
++ (BOOL) isScoreMode;
++ (NSUInteger) whichTimerMode;
 @end

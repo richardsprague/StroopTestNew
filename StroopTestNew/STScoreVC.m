@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 Richard Sprague. All rights reserved.
 //
 
+#import "STSettings.h"
 #import "STScoreVC.h"
-#import "STScores.h"
+#import "StroopData.h"
+#import "StroopData+MOC.h"
+
 
 // tags needed so I can talk to UI elements in the custom tableviewcell
 // these constants remain inside this file because they won't be used elsewhere
@@ -15,77 +18,55 @@
 #define DATELABELTAG 102
 #define DURATIONLABELTAG 103
 
-@interface STScoreVC ()<UITableViewDataSource, UITableViewDelegate>
+@interface STScoreVC ()<UITableViewDataSource, UITableViewDelegate,  NSFetchedResultsControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *secondsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *scoreLabel;
 @property (weak, nonatomic) IBOutlet UITableView *STScoreTableView;
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
+@property (strong, nonatomic) NSManagedObjectContext *context;
 
 //@property (weak, nonatomic) IBOutlet UITextView *STScoreDisplayTextView;
 @property (strong, nonatomic) NSArray *allSTScores;
-@property  (strong, nonatomic) NSArray *resultArray;
-@property (nonatomic) SEL sortSelector; 
+@property  (strong, nonatomic) NSArray *resultArray;  // a new array, created after deleting a row, stored back into NSUSerDefaults as the updated list of scores.
+//@property (nonatomic) SEL sortSelector;
 @end
 
 @implementation STScoreVC
 
-/* vestigial code removed Feb2014
-- (IBAction)editPushed:(UIButton *)sender {
-    if (self.STScoreTableView.isEditing)
-        [self.STScoreTableView setEditing:NO];
-    else if ([self.resultArray count]>0){
-        
-    [self.STScoreTableView setEditing:YES  ];
-    }
-    
-   [self updateUI];
-    
-}
-*/
+
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  //   STScores *result = self.resultArray [indexPath.row];
-    NSMutableArray *rowsToDelete = [[NSMutableArray alloc] init];
 
-        NSMutableArray *newScoreArray = [[NSMutableArray alloc] init];
-
-    for ( uint i =0; i<[self.resultArray count] ; i++) {
-        if (i==indexPath.row) {
-            // add this row to rowsToDelete array
-            [rowsToDelete addObject:[NSNumber numberWithUnsignedInt:i]];
-            
-        } else [newScoreArray addObject:self.resultArray[i]];
-        
-    }
     
-    self.resultArray = [[NSArray alloc] initWithArray:newScoreArray];
-    self.allSTScores = self.resultArray;
-    NSLog(@"commit edit");
-    [self deleteRowsAtIndexPaths:rowsToDelete withRowAnimation:UITableViewRowAnimationFade];
-    
-    [STScores setAllSTUserDefaultScores:self.resultArray];
+    StroopData *item =[self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self.context deleteObject:item];
 
     [self updateUI];
     
 }
-- (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation
-{
-
-    NSLog(@"deleting row");
-        [self.STScoreTableView setEditing:NO  ];
-    [self updateUI];
- 
-}
+//- (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation
+//{
+//
+//    NSLog(@"deleting row");
+//        [self.STScoreTableView setEditing:NO  ];
+//    [self updateUI];
+// 
+//}
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return [[self.fetchedResultsController sections] count]; //1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     // Return the number of rows in the section.
     // Usually the number of items in your array (the one that holds your list)
-    return [self.allSTScores count];
+    return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects]; //[self.allSTScores count];
 }
 
 
@@ -99,34 +80,50 @@
     
     // Configure the cell...
 
-    
-  //  cell.textLabel.font = [UIFont systemFontOfSize:14.0];//[[[UIFont alloc] init]fontWithSize:[UIFont smallSystemFontSize]];
-
-   // cell.textLabel.text = [self titleForRow:indexPath.row];
-    NSDictionary *titleDict = [self titleForRow:indexPath.row];
-    
- /* original code pre-Feb2014
-    cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
-  // need that UTF8 conversion so it can be handled as a Char -- %s won't display NSString
-    NSString *titleString =[[NSString alloc] initWithFormat:@"%10s%36s%18s",[[titleDict objectForKey:@"scoreString"] UTF8String],[[titleDict objectForKey:@"dateString"] UTF8String],[[titleDict objectForKey:@"durationString"]UTF8String] ];
-
-    cell.textLabel.text = titleString;
-    
-    cell.textLabel.textAlignment = NSTextAlignmentLeft ;
-    cell.textLabel.adjustsLetterSpacingToFitWidth=YES;
-    
-    cell.textLabel.textColor = [UIColor redColor];
-*/
+     
+    // prepare the labels on the parts of the cells
     UILabel *cellScoreLabel = (UILabel *)[cell.contentView viewWithTag:SCORELABELTAG];
     UILabel *cellDateLabel =(UILabel *)[cell.contentView viewWithTag:DATELABELTAG];
     UILabel *cellDurationLabel =(UILabel *)[cell.contentView viewWithTag:DURATIONLABELTAG];
     
-    cellScoreLabel.text = [titleDict objectForKey:@"scoreString"];
-    cellDateLabel.text = [titleDict objectForKey:@"dateString"];
-    cellDurationLabel.text = [titleDict objectForKey:@"durationString"];
-
-    //cell.detailTextLabel.text = [self titleForRow:indexPath.row];
+/*****************/
+     StroopData *item  = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
+    
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    NSString *scoreSubString = [[NSString alloc] initWithFormat:@"%d",[item.score intValue]];
+    NSString *dateSubString = [[NSString alloc] initWithFormat:@"%@", [NSDateFormatter localizedStringFromDate:item.date dateStyle:(NSDateFormatterShortStyle) timeStyle:NSDateFormatterShortStyle] ];
+    NSString *durationSubString = [[NSString alloc] initWithFormat:@"%3.2f",[item.duration doubleValue]];
+    
+    NSUInteger mode = [STSettings whichTimerMode];
+    
+    if (mode) { // we're in a timer mode, so display that don't bother displaying the "seconds" list.
+        
+        self.secondsLabel.titleLabel.text = [[NSString alloc] initWithFormat:@"time:%2.1lu",(unsigned long)mode];
+        self.scoreLabel.titleLabel.text = [[NSString alloc] initWithFormat:@"Score"];
+
+         cellScoreLabel.text = scoreSubString;
+        cellDurationLabel.alpha = 0.0;
+        cellScoreLabel.alpha = 1.0;
+        
+    } else { // we're in Score mode, so don't populate cells that have scores, but display the score in the score button.
+        cellScoreLabel.alpha =0.0;
+        cellDurationLabel.text = durationSubString;
+        cellDurationLabel.alpha = 1.0;
+        self.scoreLabel.titleLabel.text = [[NSString alloc] initWithFormat:@"%lu",(unsigned long)[[NSUserDefaults standardUserDefaults] integerForKey:STMAXSCORE_KEY]];
+        self.secondsLabel.titleLabel.text = [[NSString alloc] initWithFormat:@"Seconds"];
+    }
+   
+    cellDateLabel.text = dateSubString;
+
+
+    
+/*****************/
+
     
     return cell;
 }
@@ -142,120 +139,110 @@
     else
 
     return [UIFont smallSystemFontSize]+6;  //16.0;
+    [self updateUI];
 }
 
 
-//- (NSString *)titleForRow:(NSUInteger)row
-// original pre-Feb2014 version returned a string carefully padded with blanks to simulate columns.
-// Upgraded to return, instead, a dictionary with separate strings representing each item I want to display on the cell.
-// this function is kept alone for backward compatibility reasons.  If you were doing it over, you'd probably just put these substrings inline in the main cellForRowAtIndexPath method above.
-
-- (NSDictionary *) titleForRow:(NSUInteger) row
-{
-   // NSString *displayText = @"";
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterShortStyle];          
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-   //
-     self.resultArray = [[STScores allSTScoresFromNSUserDefaults] sortedArrayUsingSelector:self.sortSelector];
-    assert(self.resultArray);
-    
-    STScores *result = self.resultArray [ row]; //self.allSTScores[row];
-    
-    NSString *scoreSubString = [[NSString alloc] initWithFormat:@"%d",result.score];
-    NSString *dateSubString = [[NSString alloc] initWithFormat:@"%@", [formatter stringFromDate:result.end] ];
-    NSString *durationSubString = [[NSString alloc] initWithFormat:@"%3.1f",result.duration];
-    
-    
-  //  NSString *titleString = [[NSString alloc] initWithFormat:@"%10s%36s%18s",[scoreSubString UTF8String], [dateSubString UTF8String],[durationSubString UTF8String]];
-    NSDictionary *titleDict = [[NSDictionary alloc] initWithObjectsAndKeys:scoreSubString ,@"scoreString",dateSubString,@"dateString",durationSubString,@"durationString", nil];
-    
-    
-//    return titleString;
-    return titleDict;
-    
-    //[SCORE_KEY] description]]; // description because could be NSNull
-}
 
 
 - (IBAction)sortByDate:(id)sender {
-self.sortSelector = @selector(compareEndDateToSTScores:);
+    
+    [self setFetchedResultsControllerSearchedByString:@"date"];
+    [self updateUI];
+    
+//self.sortSelector = @selector(compareEndDateToSTScores:);
 }
 
 - (IBAction)sortByScore:(id)sender {
-    self.sortSelector = @selector(compareScoreToSTScores:);
+    [self setFetchedResultsControllerSearchedByString:@"score"];
+    [self updateUI];
+    //self.sortSelector = @selector(compareScoreToSTScores:);
 }
 
 - (IBAction)sortByTime:(id)sender {
-    self.sortSelector = @selector(compareDurationToSTScores:);
+    
+    [self setFetchedResultsControllerSearchedByString:@"duration"];
+    [self updateUI];
+    
+//self.sortSelector = @selector(compareDurationToSTScores:);
 }
 
 - (void) updateUI
 {
-
-//    NSString *displayText = @"";
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init]; 
-//    [formatter setDateStyle:NSDateFormatterShortStyle];          
-//    [formatter setTimeStyle:NSDateFormatterShortStyle];          
-//
-//    for (STScores *result in [[STScores allSTScoresFromNSUserDefaults] sortedArrayUsingSelector:self.sortSelector]) {
-//        
-//        displayText = [displayText stringByAppendingFormat:@"Score: %d (%@, %0g)\n", result.score, [formatter stringFromDate:result.end], result.duration];  // formatted date
-//    }
-  //  self.STScoreDisplayTextView.text = displayText;
     
     [self.STScoreTableView reloadData]; 
 }
 
-#pragma mark - Sorting
 
-@synthesize sortSelector = _sortSelector;  // because we implement BOTH setter and getter
 
-// return default sort selector if none set (by score)
-
-- (SEL)sortSelector
-{
-    if (!_sortSelector) _sortSelector = @selector(compareScoreToSTScores:);
-    return _sortSelector;
+- (NSManagedObjectContext *) managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]){
+        context = [delegate managedObjectContext];
+    }
+    
+    return context;
 }
 
-// update the UI when changing the sort selector
-
-- (void)setSortSelector:(SEL)sortSelector
+- (void) setFetchedResultsControllerSearchedByString: (NSString *) sortString
 {
-    _sortSelector = sortSelector;
-    [self updateUI];
-  //   [self.STScoreTableView reloadData];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"StroopData"];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:sortString ascending:NO],
+                                     [NSSortDescriptor sortDescriptorWithKey: @"duration" ascending:YES]];
+    
+    
+    //   self.results = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    // Only get the database records where playMode = current Playmode.
+    
+    id mode = [[NSUserDefaults standardUserDefaults] valueForKey:STMODE_KEY];
+    
+    
+    // filter for everything in the database where attribute ResponseString = responseString
+    NSPredicate *matchesString = [NSPredicate predicateWithFormat:@"%K == %@",@"playMode",mode];
+    
+    
+    [fetchRequest setPredicate:matchesString];
+
+    
+    
+    
+    
+    
+    
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
+    self.fetchedResultsController.delegate = self;
+    
+    NSError *error;
+    bool success = [self.fetchedResultsController performFetch:&error];
+    
+    if (!success) {NSLog(@"no results from Fetch: %@",error.description);}
+    
 }
-
-
-
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.allSTScores = [STScores allSTScoresFromNSUserDefaults];
+    
+    self.context = [self managedObjectContext];
+    
+    [self setFetchedResultsControllerSearchedByString:@"date"];
+    
+    
+    
+ //   self.allSTScores = [STScores allSTScoresFromNSUserDefaults];
     [self updateUI];
-//    [self.STScoreTableView reloadData];
+
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [self updateUI];
-//        [self.STScoreTableView reloadData];
+
 }
 
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -265,10 +252,6 @@ self.sortSelector = @selector(compareEndDateToSTScores:);
 	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end

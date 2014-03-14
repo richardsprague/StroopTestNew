@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Richard Sprague. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface StroopTestNewTests : SenTestCase
+@interface StroopTestNewTests : XCTestCase
 
 @end

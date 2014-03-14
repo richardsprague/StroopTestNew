@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */; };
+		FE13985818D16FF700D77125 /* backup in Resources */ = {isa = PBXBuildFile; fileRef = FE13985718D16FF700D77125 /* backup */; };
+		FE13985B18D21E1500D77125 /* StroopData+MOC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE13985A18D21E1500D77125 /* StroopData+MOC.m */; };
 		FE4D741218A9801C005185BC /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4D741118A9801C005185BC /* Images-2.xcassets */; };
 		FE51224018A85797003392CC /* home-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51223F18A85797003392CC /* home-7.png */; };
 		FE51224218A857BD003392CC /* Chart_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224118A857BD003392CC /* Chart_Up@2x.png */; };
@@ -35,7 +37,6 @@
 		FE9A3E3D1702067800716EA4 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E3C1702067800716EA4 /* STAppDelegate.m */; };
 		FE9A3E461702067800716EA4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9A3E441702067800716EA4 /* MainStoryboard.storyboard */; };
 		FE9A3E491702067800716EA4 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E481702067800716EA4 /* STViewController.m */; };
-		FE9A3E511702067800716EA4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E501702067800716EA4 /* SenTestingKit.framework */; };
 		FE9A3E521702067800716EA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2C1702067800716EA4 /* UIKit.framework */; };
 		FE9A3E531702067800716EA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2E1702067800716EA4 /* Foundation.framework */; };
 		FE9A3E5B1702067800716EA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE9A3E591702067800716EA4 /* InfoPlist.strings */; };
@@ -52,6 +53,9 @@
 		FE9A3E91170370B200716EA4 /* STCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E90170370B200716EA4 /* STCardView.m */; };
 		FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E94170393B900716EA4 /* STSelectionsView.m */; };
 		FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBEB80D1714D9B1006CE864 /* StroopLogo.png */; };
+		FED57F9618D10BFD00B91DEA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED57F9518D10BFD00B91DEA /* CoreData.framework */; };
+		FED57FAB18D12ADF00B91DEA /* ensembioStroop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FED57FA918D12ADF00B91DEA /* ensembioStroop.xcdatamodeld */; };
+		FED57FAE18D12B5F00B91DEA /* StroopData.m in Sources */ = {isa = PBXBuildFile; fileRef = FED57FAD18D12B5F00B91DEA /* StroopData.m */; };
 		FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF9F52117220D7600C42FEF /* 1366432723_play.png */; };
 		FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */; };
 /* End PBXBuildFile section */
@@ -68,6 +72,9 @@
 
 /* Begin PBXFileReference section */
 		FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Launch640x1096.png"; sourceTree = "<group>"; };
+		FE13985718D16FF700D77125 /* backup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = backup; sourceTree = "<group>"; };
+		FE13985918D21E1500D77125 /* StroopData+MOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StroopData+MOC.h"; sourceTree = "<group>"; };
+		FE13985A18D21E1500D77125 /* StroopData+MOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StroopData+MOC.m"; sourceTree = "<group>"; };
 		FE4D741118A9801C005185BC /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "Stroop/Images-2.xcassets"; sourceTree = "<group>"; };
 		FE51222918A8349F003392CC /* Ensembio Logo120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Logo120x120.png"; sourceTree = "<group>"; };
 		FE51222A18A8349F003392CC /* Stroop Icon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stroop Icon60x60.png"; sourceTree = "<group>"; };
@@ -127,7 +134,6 @@
 		FE9A3E471702067800716EA4 /* STViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
 		FE9A3E481702067800716EA4 /* STViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
 		FE9A3E4F1702067800716EA4 /* StroopTestNewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StroopTestNewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE9A3E501702067800716EA4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		FE9A3E581702067800716EA4 /* StroopTestNewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StroopTestNewTests-Info.plist"; sourceTree = "<group>"; };
 		FE9A3E5A1702067800716EA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE9A3E5C1702067800716EA4 /* StroopTestNewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StroopTestNewTests.h; sourceTree = "<group>"; };
@@ -155,6 +161,10 @@
 		FE9A3E93170393B900716EA4 /* STSelectionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSelectionsView.h; sourceTree = "<group>"; };
 		FE9A3E94170393B900716EA4 /* STSelectionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSelectionsView.m; sourceTree = "<group>"; };
 		FEBEB80D1714D9B1006CE864 /* StroopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StroopLogo.png; path = ../StroopLogo.png; sourceTree = "<group>"; };
+		FED57F9518D10BFD00B91DEA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FED57FAA18D12ADF00B91DEA /* ensembioStroop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ensembioStroop.xcdatamodel; sourceTree = "<group>"; };
+		FED57FAC18D12B5F00B91DEA /* StroopData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StroopData.h; path = ../StroopData.h; sourceTree = "<group>"; };
+		FED57FAD18D12B5F00B91DEA /* StroopData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StroopData.m; path = ../StroopData.m; sourceTree = "<group>"; };
 		FEF9F52117220D7600C42FEF /* 1366432723_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1366432723_play.png; sourceTree = "<group>"; };
 		FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1366433186_Perspective Button - Go.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED57F9618D10BFD00B91DEA /* CoreData.framework in Frameworks */,
 				FE9A3E2D1702067800716EA4 /* UIKit.framework in Frameworks */,
 				FE9A3E2F1702067800716EA4 /* Foundation.framework in Frameworks */,
 				FE9A3E311702067800716EA4 /* CoreGraphics.framework in Frameworks */,
@@ -174,7 +185,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE9A3E511702067800716EA4 /* SenTestingKit.framework in Frameworks */,
 				FE9A3E521702067800716EA4 /* UIKit.framework in Frameworks */,
 				FE9A3E531702067800716EA4 /* Foundation.framework in Frameworks */,
 			);
@@ -263,10 +273,10 @@
 		FE9A3E2B1702067800716EA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FED57F9518D10BFD00B91DEA /* CoreData.framework */,
 				FE9A3E2C1702067800716EA4 /* UIKit.framework */,
 				FE9A3E2E1702067800716EA4 /* Foundation.framework */,
 				FE9A3E301702067800716EA4 /* CoreGraphics.framework */,
-				FE9A3E501702067800716EA4 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -275,6 +285,11 @@
 			isa = PBXGroup;
 			children = (
 				FE9148B018C5019800A694B5 /* Zenobase */,
+				FED57FA918D12ADF00B91DEA /* ensembioStroop.xcdatamodeld */,
+				FED57FAC18D12B5F00B91DEA /* StroopData.h */,
+				FED57FAD18D12B5F00B91DEA /* StroopData.m */,
+				FE13985918D21E1500D77125 /* StroopData+MOC.h */,
+				FE13985A18D21E1500D77125 /* StroopData+MOC.m */,
 				FE9A3E3B1702067800716EA4 /* STAppDelegate.h */,
 				FE9A3E3C1702067800716EA4 /* STAppDelegate.m */,
 				FE9A3E441702067800716EA4 /* MainStoryboard.storyboard */,
@@ -282,6 +297,7 @@
 				FE9A3E92170370B900716EA4 /* View */,
 				FE9A3E8917035B8100716EA4 /* STScoreVC.h */,
 				FE9A3E8A17035B8100716EA4 /* STScoreVC.m */,
+				FE13985718D16FF700D77125 /* backup */,
 				FE9A3E7D17024FF200716EA4 /* STSettingsVC.h */,
 				FE9A3E7E17024FF200716EA4 /* STSettingsVC.m */,
 				FE9A3E7A170211F000716EA4 /* STSceneVC.h */,
@@ -406,7 +422,7 @@
 			name = StroopTestNewTests;
 			productName = StroopTestNewTests;
 			productReference = FE9A3E4F1702067800716EA4 /* StroopTestNewTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -415,6 +431,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ST;
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Richard Sprague";
 				TargetAttributes = {
@@ -446,6 +463,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE13985818D16FF700D77125 /* backup in Resources */,
 				FE9A3E371702067800716EA4 /* InfoPlist.strings in Resources */,
 				FE51224818A863B1003392CC /* StroopStartButton114x114.png in Resources */,
 				FE9A3E461702067800716EA4 /* MainStoryboard.storyboard in Resources */,
@@ -515,8 +533,11 @@
 				FE9A3E8B17035B8100716EA4 /* STScoreVC.m in Sources */,
 				FE9A3E8E17036AF000716EA4 /* STTest.m in Sources */,
 				FE9A3E91170370B200716EA4 /* STCardView.m in Sources */,
+				FE13985B18D21E1500D77125 /* StroopData+MOC.m in Sources */,
 				FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */,
 				FE909FD11724C36A00A3030E /* STScoreTableViewCell.m in Sources */,
+				FED57FAE18D12B5F00B91DEA /* StroopData.m in Sources */,
+				FED57FAB18D12ADF00B91DEA /* ensembioStroop.xcdatamodeld in Sources */,
 				FE9148B418C501B100A694B5 /* ZBConnectionDelegate.m in Sources */,
 				FE909FD41724C7FF00A3030E /* STScoreTableView.m in Sources */,
 			);
@@ -664,15 +685,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StroopTestNew.app/StroopTestNew";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNewTests/StroopTestNewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -681,15 +702,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StroopTestNew.app/StroopTestNew";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNewTests/StroopTestNewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -724,6 +745,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FED57FA918D12ADF00B91DEA /* ensembioStroop.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FED57FAA18D12ADF00B91DEA /* ensembioStroop.xcdatamodel */,
+			);
+			currentVersion = FED57FAA18D12ADF00B91DEA /* ensembioStroop.xcdatamodel */;
+			name = ensembioStroop.xcdatamodeld;
+			path = ../ensembioStroop.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FE9A3E211702067800716EA4 /* Project object */;
 }
