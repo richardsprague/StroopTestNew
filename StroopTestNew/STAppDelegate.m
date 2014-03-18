@@ -25,7 +25,7 @@
 
 - (void) documentIsReady {
     if (self.document.documentState == UIDocumentStateNormal){
-        NSLog(@"...ready to start using document");
+        NSLog(@"...ready to start using Core Data document");
         self.STDataContext = self.document.managedObjectContext;
         self.managedObjectContext = self.STDataContext;
     }

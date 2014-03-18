@@ -133,7 +133,7 @@
 		FE9A3E451702067800716EA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FE9A3E471702067800716EA4 /* STViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
 		FE9A3E481702067800716EA4 /* STViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
-		FE9A3E4F1702067800716EA4 /* StroopTestNewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StroopTestNewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE9A3E4F1702067800716EA4 /* StroopTestNewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StroopTestNewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9A3E581702067800716EA4 /* StroopTestNewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StroopTestNewTests-Info.plist"; sourceTree = "<group>"; };
 		FE9A3E5A1702067800716EA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE9A3E5C1702067800716EA4 /* StroopTestNewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StroopTestNewTests.h; sourceTree = "<group>"; };
@@ -265,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				FE9A3E291702067800716EA4 /* Stroop.app */,
-				FE9A3E4F1702067800716EA4 /* StroopTestNewTests.octest */,
+				FE9A3E4F1702067800716EA4 /* StroopTestNewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -421,7 +421,7 @@
 			);
 			name = StroopTestNewTests;
 			productName = StroopTestNewTests;
-			productReference = FE9A3E4F1702067800716EA4 /* StroopTestNewTests.octest */;
+			productReference = FE9A3E4F1702067800716EA4 /* StroopTestNewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */

@@ -526,21 +526,6 @@ Cg
                                     <action selector="STTimerSegmentedControlClicked:" destination="bDI-RE-ySY" eventType="valueChanged" id="Brw-7N-PiZ"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8X-8K-AFx">
-                                <rect key="frame" x="20" y="202" width="96" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="xYh-9h-s7Y"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Reset all results">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="STResetScores:" destination="bDI-RE-ySY" eventType="touchUpInside" id="hk8-db-GOH"/>
-                                </connections>
-                            </button>
                             <label clipsSubviews="YES" contentMode="left" text="Version" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQj-AD-6JR">
                                 <rect key="frame" x="136" y="202" width="164" height="335"/>
                                 <gestureRecognizers/>
@@ -555,16 +540,6 @@ Cg
                                     <outletCollection property="gestureRecognizers" destination="uOe-Wf-SVY" appends="YES" id="Eim-23-HIs"/>
                                 </connections>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPS-qv-y7T">
-                                <rect key="frame" x="236" y="189" width="52" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Zenobase.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Lfu-iJ-eA5" kind="modal" id="hjN-VH-xoz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -576,12 +551,9 @@ Cg
                             <constraint firstItem="kfx-RC-QHA" firstAttribute="leading" secondItem="l8J-Ju-NnW" secondAttribute="leading" constant="-12" id="HwU-u6-mh9"/>
                             <constraint firstItem="Odi-YT-q1G" firstAttribute="leading" secondItem="K5P-HH-WBA" secondAttribute="leading" id="KV4-hL-80V"/>
                             <constraint firstAttribute="trailing" secondItem="HQj-AD-6JR" secondAttribute="trailing" constant="20" symbolic="YES" id="OJr-e1-6P6"/>
-                            <constraint firstItem="L8X-8K-AFx" firstAttribute="trailing" secondItem="DAx-t3-K1I" secondAttribute="trailing" id="Upi-yY-ss0"/>
                             <constraint firstItem="Odi-YT-q1G" firstAttribute="leading" secondItem="l8J-Ju-NnW" secondAttribute="leading" constant="20" symbolic="YES" id="Uwz-DQ-sA1"/>
                             <constraint firstItem="kfx-RC-QHA" firstAttribute="centerY" secondItem="bTT-uA-fGk" secondAttribute="centerY" id="aXG-PW-NCs"/>
                             <constraint firstItem="K5P-HH-WBA" firstAttribute="top" secondItem="Odi-YT-q1G" secondAttribute="bottom" constant="8" symbolic="YES" id="eaR-mo-c1x"/>
-                            <constraint firstItem="L8X-8K-AFx" firstAttribute="leading" secondItem="DAx-t3-K1I" secondAttribute="leading" id="em2-iI-PUw"/>
-                            <constraint firstItem="L8X-8K-AFx" firstAttribute="top" secondItem="kfx-RC-QHA" secondAttribute="bottom" constant="67" id="hJP-JE-quo"/>
                             <constraint firstItem="Odi-YT-q1G" firstAttribute="top" secondItem="Zlg-bk-Sg9" secondAttribute="bottom" constant="20" symbolic="YES" id="ju1-Cu-e3q"/>
                             <constraint firstItem="bTT-uA-fGk" firstAttribute="leading" secondItem="DAx-t3-K1I" secondAttribute="trailing" constant="8" symbolic="YES" id="ndk-yb-K1m"/>
                             <constraint firstItem="DAx-t3-K1I" firstAttribute="leading" secondItem="K5P-HH-WBA" secondAttribute="leading" id="pYf-J9-2op"/>
@@ -599,6 +571,7 @@ Cg
                         <outlet property="STTestDurationLabel" destination="Odi-YT-q1G" id="55i-ca-Ibq"/>
                         <outlet property="STTestTimesLabel" destination="DAx-t3-K1I" id="4g9-Gl-7vq"/>
                         <outlet property="STTimerSegmentControl" destination="K5P-HH-WBA" id="Vbm-Lm-77A"/>
+                        <segue destination="Lfu-iJ-eA5" kind="modal" identifier="zenoBaseSegue" id="XVt-E1-wA5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cb1-O3-UKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -730,7 +703,6 @@ Cg
         <image name="1369803046_cancel.png" width="32" height="32"/>
         <image name="Chart_Up.png" width="25" height="21"/>
         <image name="StartButton" width="114" height="114"/>
-        <image name="Zenobase.png" width="114" height="114"/>
         <image name="config30x30.png" width="30" height="30"/>
         <image name="home-7.png" width="30" height="30"/>
     </resources>

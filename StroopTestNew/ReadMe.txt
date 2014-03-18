@@ -3,6 +3,9 @@ Version 1.2 (Feb2014)
 
 * Results page looks much better: uses custom tableviewcell labels.
 * Instructions now uses unwind segue
+* All results are saved to a much more efficient Core Data file
+* Results are also saved to a real CSV file, easily readable in Excel
+
 
 
 

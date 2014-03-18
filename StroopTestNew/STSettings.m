@@ -52,6 +52,16 @@
 - (id) init
 {
     self = [super init];
+    
+    if (![[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY]) {
+        // no key set for STMODE, so
+        //set STMODE_KEY to score mode (0)
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:STMODE_KEY];
+        
+        
+    }
+    // else just leave the default settings alone.
+    
     return self;
 }
 

@@ -8,7 +8,7 @@
 
 #import "STViewController.h"
 #import "STTest.h"
-#import "ZBConnectionDelegate.h"
+//#import "ZBConnectionDelegate.h"  //Zenobase support deleted from current version
 #import "StroopData.h" // the Core Data store
 
 
@@ -20,14 +20,13 @@
 @property (strong, nonatomic) STSceneVC *nextView;
 @property (strong, nonatomic) NSTimer *timerForTest;
 
-@property (strong, nonatomic) ZBConnectionDelegate *ZBConnection;
+// Zenobase support is deleted from current version
+//@property (strong, nonatomic) ZBConnectionDelegate *ZBConnection;
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
 
 
-@property NSFileManager *fileManager;
-@property NSURL *userURL;
-@property NSURL *myFileURL;
+
 
 @end
 
@@ -35,43 +34,49 @@
 
 @synthesize stroopTest = _stroopTest;
 
+
+
+/*
+ // This section works but is deleted from current version (Zenobase)
 - (ZBConnectionDelegate *) getZBConnection{
     if (!self.ZBConnection) { self.ZBConnection = [[ZBConnectionDelegate alloc] init];}
     
     return self.ZBConnection;
 }
+*/
+
+
+-(NSString *)dataFilePath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(
+                                                         NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return [documentsDirectory stringByAppendingPathComponent:@"stroopResultsFile.csv"];
+}
 
 - (void) initializeSettingsIfNecessary
 {
-   // int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
-  
     
+// you only do this once per user, because results are all stored in NSUserDefaults.  Just initialize this the very first time you launch the app.
+    
+    STSettings *OverallSettings = [[STSettings alloc] init ];
+    if (!OverallSettings) { NSLog(@"problem initializing settings");}
 
-    
-    self.fileManager = [NSFileManager defaultManager];
-    
-    NSArray *urls = [self.fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
-    
-  //  NSArray *defaultsAsArray = [[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues];
-  
-    
-    self.userURL = urls[0];
-    self.myFileURL = [self.userURL URLByAppendingPathComponent:@"stroopResultsFile"];
-    
- // writes the current defaults to the disk on setup.  Not particularly useful, I guess, unless somehow the current disk file was missing or corrupted.
-    // Instead, this should READ from the disk and put the results into NSDefault
+//If the CSV file doesn't exist yet, create one and write a header row.
     
     
- //   [defaultsAsArray writeToURL:self.myFileURL atomically:YES];
-
-    NSString *textToWrite = [[NSString alloc] initWithFormat:@"date,%@,score,%d,duration,%f,\n",[NSDate date], 0,0.0];
-    NSError *err;
-    
-    bool success = [textToWrite writeToURL:self.myFileURL atomically:YES encoding: NSUnicodeStringEncoding error:&err];
-    if (!success) {
-        NSLog(@"Error on first write: %@",err.description);
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self dataFilePath]]) {
+        [[NSFileManager defaultManager] createFileAtPath: [self dataFilePath] contents:nil attributes:nil];
+        NSLog(@"new results file created");
+        NSString *textToWrite = [[NSString alloc] initWithFormat:@"date,score,duration,mode,comment\n"];
+        NSFileHandle *handle;
+        handle = [NSFileHandle fileHandleForWritingAtPath: [self dataFilePath] ];
+        //say to handle where's the file fo write
+ //       [handle truncateFileAtOffset:[handle seekToEndOfFile]];
+        //position handle cursor to the end of file
+        [handle writeData:[textToWrite dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        
     }
-    
 
     
 }
@@ -94,16 +99,31 @@
     
 }
 
-
+/*
+ // Zenobase suport: this section works but is deleted from current version
 
 - (void) ZBAddNewEvent {
     
     NSLog(@"Added new event to Zenobase and returned: %@",self.ZBConnection.ZBJsonResults);
     
 }
+ 
+*/
 
 - (void) STAddNewEvent {
     
+    
+}
+
+- (void) saveToDisk: (NSDate *) date score: (uint) currentScore duration: (NSTimeInterval) duration  mode: (uint) currentMode {
+    
+    NSString *textToWrite = [[NSString alloc] initWithFormat:@"%@,%d,%f,%d\n",[NSDate date], currentScore,duration,currentMode];
+    NSFileHandle *handle;
+    handle = [NSFileHandle fileHandleForWritingAtPath: [self dataFilePath] ];
+    //say to handle where's the file fo write
+    [handle truncateFileAtOffset:[handle seekToEndOfFile]];
+    //position handle cursor to the end of file
+    [handle writeData:[textToWrite dataUsingEncoding:NSUTF8StringEncoding]];
     
 }
 
@@ -113,14 +133,7 @@
     uint currentScore = self.stroopTest.currentScore;
 
     
-    //warning!  You must set duration and score in this order
-    
-  // the act of initalizing testResult saves it to NSUserDefaults
-//   self.testResult.duration = duration;
-//    
-//    
-//    self.testResult.score = self.stroopTest.currentScore;
-//    self.testResult = nil;
+
     
     NSInteger currentMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     
@@ -161,21 +174,14 @@
         
     }
     
-    // we save the entire defaults file to disk every time we update the score.  Not the most efficient design ever.
-    // This should update it incremently to disk.
+   //save the latest score to disk.
+    // [self.saveToDisk date: score: duration: mode:
     
-   // [[[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues] writeToURL:self.myFileURL atomically:YES];
+    [self saveToDisk:[NSDate date] score:currentScore duration:duration mode:(uint)currentMode];
     
-    NSError *err;
-    NSString *contents = [NSString stringWithContentsOfURL:self.myFileURL encoding: NSUnicodeStringEncoding error:&err];
-    NSString *textToWrite = [[NSString alloc] initWithFormat:@"date,%@,score,%d,duration,%f,\n",[NSDate date], currentScore,duration];
-    contents = [contents stringByAppendingString:textToWrite];
-    bool success = [contents writeToURL:self.myFileURL atomically:YES encoding: NSUnicodeStringEncoding error:&err];
-    if (!success) {
-        NSLog(@"Error %@ writing to file", err);
-        
-    }
-    
+
+/****
+ // Zenobase support :: this section works but is deleted from current version.
     
         self.ZBConnection = [[ZBConnectionDelegate alloc] init];
     
@@ -187,15 +193,12 @@
     
     
     
-  //  NSString *ScoreLabel = [[NSString alloc] initWithFormat:@"%d",currentScore];
-    
- //   NSDictionary *newScore = [NSDictionary dictionaryWithObjectsAndKeys:[[NSNumber alloc] initWithInt:currentScore],@"count",nil];
-    
     NSString *newEventLabel =[[NSUserDefaults standardUserDefaults]
                               objectForKey: ST_ID_IN_ZENOBASE];
     
-    [self.ZBConnection addNewEventToBucket: newEventLabel
-                                            withEvent:newScore];
+   [self.ZBConnection addNewEventToBucket: newEventLabel withEvent:newScore];
+ 
+****/
     
 }
 

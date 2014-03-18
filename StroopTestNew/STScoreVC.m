@@ -230,8 +230,6 @@
     [self setFetchedResultsControllerSearchedByString:@"date"];
     
     
-    
- //   self.allSTScores = [STScores allSTScoresFromNSUserDefaults];
     [self updateUI];
 
 }
@@ -248,7 +246,7 @@
 {
     [super viewDidLoad];
     [self.STScoreTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-  //  [self updateUI];
+    [self updateUI];
 	// Do any additional setup after loading the view.
 }
 
