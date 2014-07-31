@@ -8,15 +8,25 @@
 
 #import "STViewController.h"
 #import "STTest.h"
+//#import "ZBConnectionDelegate.h"  //Zenobase support deleted from current version
+#import "StroopData.h" // the Core Data store
 
 
 @interface STViewController ()<STSceneProtocol>
 @property (weak, nonatomic) IBOutlet UILabel *elapsedSecondsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *STCorrectScoreLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *STCorrectScoreLabel;
 @property (strong, nonatomic) STScores *testResult;
 @property (strong, nonatomic) STTest *stroopTest;
 @property (strong, nonatomic) STSceneVC *nextView;
 @property (strong, nonatomic) NSTimer *timerForTest;
+
+// Zenobase support is deleted from current version
+//@property (strong, nonatomic) ZBConnectionDelegate *ZBConnection;
+
+@property (strong, nonatomic) NSManagedObjectContext *context;
+
+
+
 
 @end
 
@@ -24,9 +34,50 @@
 
 @synthesize stroopTest = _stroopTest;
 
+
+
+/*
+ // This section works but is deleted from current version (Zenobase)
+- (ZBConnectionDelegate *) getZBConnection{
+    if (!self.ZBConnection) { self.ZBConnection = [[ZBConnectionDelegate alloc] init];}
+    
+    return self.ZBConnection;
+}
+*/
+
+
+-(NSString *)dataFilePath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(
+                                                         NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return [documentsDirectory stringByAppendingPathComponent:@"stroopResultsFile.csv"];
+}
+
 - (void) initializeSettingsIfNecessary
 {
-   // int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    
+// you only do this once per user, because results are all stored in NSUserDefaults.  Just initialize this the very first time you launch the app.
+    
+    STSettings *OverallSettings = [[STSettings alloc] init ];
+    if (!OverallSettings) { NSLog(@"problem initializing settings");}
+
+//If the CSV file doesn't exist yet, create one and write a header row.
+    
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self dataFilePath]]) {
+        [[NSFileManager defaultManager] createFileAtPath: [self dataFilePath] contents:nil attributes:nil];
+        NSLog(@"new results file created");
+        NSString *textToWrite = [[NSString alloc] initWithFormat:@"date,score,duration,mode,comment\n"];
+        NSFileHandle *handle;
+        handle = [NSFileHandle fileHandleForWritingAtPath: [self dataFilePath] ];
+        //say to handle where's the file fo write
+ //       [handle truncateFileAtOffset:[handle seekToEndOfFile]];
+        //position handle cursor to the end of file
+        [handle writeData:[textToWrite dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        
+    }
+
     
 }
 
@@ -48,37 +99,123 @@
     
 }
 
-- (void) STUpdateScore
-{
-    NSTimeInterval duration = self.stroopTest.elapsedTime;
+/*
+ // Zenobase suport: this section works but is deleted from current version
+
+- (void) ZBAddNewEvent {
     
-    //warning!  You must set duration and score in this order
-   self.testResult.duration = duration;
-    self.testResult.score = self.stroopTest.currentScore;
-    self.testResult = nil;
+    NSLog(@"Added new event to Zenobase and returned: %@",self.ZBConnection.ZBJsonResults);
     
+}
+ 
+*/
+
+- (void) STAddNewEvent {
     
-    
-    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Latest Result=%d",self.stroopTest.currentScore];
-    if (duration>0.1){
-        self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %f",duration];
-    }
     
 }
 
+- (void) saveToDisk: (NSDate *) date score: (uint) currentScore duration: (NSTimeInterval) duration  mode: (uint) currentMode {
+    
+    NSString *textToWrite = [[NSString alloc] initWithFormat:@"%@,%d,%f,%d\n",[NSDate date], currentScore,duration,currentMode];
+    NSFileHandle *handle;
+    handle = [NSFileHandle fileHandleForWritingAtPath: [self dataFilePath] ];
+    //say to handle where's the file fo write
+    [handle truncateFileAtOffset:[handle seekToEndOfFile]];
+    //position handle cursor to the end of file
+    [handle writeData:[textToWrite dataUsingEncoding:NSUTF8StringEncoding]];
+    
+}
+
+- (void) STUpdateScore
+{
+    NSTimeInterval duration = self.stroopTest.elapsedTime;
+    uint currentScore = self.stroopTest.currentScore;
+
+    
+
+    
+    NSInteger currentMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    
+    NSManagedObjectContext *localContext = [self managedObjectContext];
+    
+    if (!localContext)
+    {NSLog(@"No context!  Problem updating score");}
+    else
+    {
+        StroopData *thisScore = [NSEntityDescription insertNewObjectForEntityForName:@"StroopData" inManagedObjectContext:localContext];
+        
+        if (!thisScore) { NSLog(@"no StroopData entity found");
+            
+        }
+        else {
+            thisScore.duration= [NSNumber numberWithDouble:duration];
+        thisScore.score = [NSNumber numberWithInt:currentScore];
+        thisScore.date = [NSDate date];
+        
+        
+        thisScore.playMode =  [NSNumber numberWithInteger:currentMode];
+        }
+    }
+    
+
+    
+ 
+    
+    
+    if (currentMode==0) {
+    
+   //     self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Latest Result=%d",self.stroopTest.currentScore];
+        if (duration>0.1){
+            self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Seconds: %.2f",duration];
+        }
+    }
+    else {self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Score: %d",currentScore];
+        
+    }
+    
+   //save the latest score to disk.
+    // [self.saveToDisk date: score: duration: mode:
+    
+    [self saveToDisk:[NSDate date] score:currentScore duration:duration mode:(uint)currentMode];
+    
+
+/****
+ // Zenobase support :: this section works but is deleted from current version.
+    
+        self.ZBConnection = [[ZBConnectionDelegate alloc] init];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ZBAddNewEvent) name:RECEIVED_JSON_FROM_ZENOBASE object:nil];
+    
+    NSDictionary *newScore = @{
+                               @"count" : [NSNumber numberWithInt:currentScore] ,
+                              @"duration": [NSNumber numberWithFloat:duration]};
+    
+    
+    
+    NSString *newEventLabel =[[NSUserDefaults standardUserDefaults]
+                              objectForKey: ST_ID_IN_ZENOBASE];
+    
+   [self.ZBConnection addNewEventToBucket: newEventLabel withEvent:newScore];
+ 
+****/
+    
+}
+
+// Increment the score and stop if you're at Max Score.
 - (void) StroopTestScorePlusOne
 {
     self.stroopTest.currentScore++;
-        self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Score: %d",self.stroopTest.currentScore];
+   //     self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Score: %d",self.stroopTest.currentScore];
   
-        uint userDefaultNumTests;
+        NSInteger userDefaultNumTests;
     userDefaultNumTests = [[NSUserDefaults standardUserDefaults] integerForKey:STMAXSCORE_KEY];
     
     
     if (userDefaultNumTests==0) userDefaultNumTests=3;
 
     
-    int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    NSInteger STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     
     
     if (!STMode) {   // STMode=0 means continue to max score
@@ -96,7 +233,7 @@
 - (void) cancelTest
 {
     [ self.timerForTest invalidate];
-    self.STCorrectScoreLabel.text = [[NSString alloc] initWithFormat:@"Cancelled"];
+    self.elapsedSecondsLabel.text = [[NSString alloc] initWithFormat:@"Cancelled"];
     
 }
 
@@ -121,7 +258,7 @@
 - (IBAction)startTestButtonPressed:(id)sender {
 
     
-    int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+    NSInteger STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
 
     
     if (!(STMode==0)) {
@@ -145,6 +282,22 @@
     }
     
     
+}
+
+// simple action method so the instructions can unwind back to this, the main screen
+
+- (IBAction) unwindToMainMenu: (UIStoryboardSegue*)sender {
+    
+}
+
+- (NSManagedObjectContext *) managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]){
+        context = [delegate managedObjectContext];
+    }
+    
+    return context;
 }
 
 
@@ -176,12 +329,23 @@
         [self.nextView dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    
+
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.context = [self managedObjectContext];
+    
+    if (!self.context) {NSLog(@"serious error: no context found on app launch");}
+        
 	// Do any additional setup after loading the view, typically from a nib.
     self.elapsedSecondsLabel.text = @" ";
-    self.STCorrectScoreLabel.text = @" ";
+  //  self.STCorrectScoreLabel.text = @" ";
     
     [self initializeSettingsIfNecessary];
 

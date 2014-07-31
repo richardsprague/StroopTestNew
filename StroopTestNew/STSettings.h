@@ -16,6 +16,9 @@
 #define DURATION_KEY @"Duration"
 
 
+#define ST_LABEL_IN_ZENOBASE @"Stroop"
+#define ST_ID_IN_ZENOBASE @"StroopID"
+
 #define STMAXSCORE_KEY @"MaxScore"
 #define STMAXSCORE_DEFAULT 3
 #define STMAXTIMER_KEY @"MaxTime"
@@ -27,4 +30,6 @@
 @interface STSettings : NSObject
 @property (nonatomic) uint latestScore;
 
++ (BOOL) isScoreMode;
++ (NSUInteger) whichTimerMode;
 @end

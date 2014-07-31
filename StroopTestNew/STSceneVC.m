@@ -43,7 +43,7 @@
 - (IBAction)STSelectionButtons:(id)sender {
 
     
-    uint thisButton = [self.STSelectionButtons indexOfObject:sender];
+    NSInteger thisButton = [self.STSelectionButtons indexOfObject:sender];
     
     
     NSArray *aColor = self.scene.card.shuffledColors[thisButton];
@@ -125,13 +125,15 @@
 
     assert(self.scene); // the scene had better have been created before getting here.
     
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY]==0) {
+        self.STModeLabel.text = [[NSString alloc] initWithFormat:@"%@",@"score"];
+    } else self.STModeLabel.text = [[NSString alloc] initWithFormat:@"%@",@"time"];
     
-    self.STModeLabel.text = [[NSString alloc] initWithFormat:@"mode:%d",[[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY]];
     
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(STSecondsPassed) userInfo:nil repeats:YES];
     
-    int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
-    self.STModeLabel.text = [[NSString alloc] initWithFormat:@"mode:%d",STMode];
+//    int STMode = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
+//    self.STModeLabel.text = [[NSString alloc] initWithFormat:@"mode:%d",STMode];
     
     self.startTime = [[NSDate alloc] init];
 
