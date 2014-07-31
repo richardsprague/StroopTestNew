@@ -16,7 +16,7 @@
 + (NSArray *) allSTScoresFromNSUserDefaults; // of STScore
 
 @property (readonly, nonatomic) NSDate *start;
-@property (readonly, nonatomic) NSDate *end;
+@property (strong, nonatomic) NSDate *end;
 @property (nonatomic) NSTimeInterval duration;
 @property (nonatomic) int score;
 

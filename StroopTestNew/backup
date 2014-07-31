@@ -1,0 +1,106 @@
+/* vestigial code removed Feb2014
+- (IBAction)editPushed:(UIButton *)sender {
+    if (self.STScoreTableView.isEditing)
+        [self.STScoreTableView setEditing:NO];
+    else if ([self.resultArray count]>0){
+        
+    [self.STScoreTableView setEditing:YES  ];
+    }
+    
+   [self updateUI];
+    
+}
+*/
+
+
+
+  
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+    
+  //  cell.textLabel.font = [UIFont systemFontOfSize:14.0];//[[[UIFont alloc] init]fontWithSize:[UIFont smallSystemFontSize]];
+
+   // cell.textLabel.text = [self titleForRow:indexPath.row];
+  
+
+ // March12:delete this: //   NSDictionary *titleDict = [self titleForRow:indexPath.row];
+    
+ /* original code pre-Feb2014
+    cell.textLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
+  // need that UTF8 conversion so it can be handled as a Char -- %s won't display NSString
+    NSString *titleString =[[NSString alloc] initWithFormat:@"%10s%36s%18s",[[titleDict objectForKey:@"scoreString"] UTF8String],[[titleDict objectForKey:@"dateString"] UTF8String],[[titleDict objectForKey:@"durationString"]UTF8String] ];
+
+    cell.textLabel.text = titleString;
+    
+    cell.textLabel.textAlignment = NSTextAlignmentLeft ;
+    cell.textLabel.adjustsLetterSpacingToFitWidth=YES;
+    
+    cell.textLabel.textColor = [UIColor redColor];
+*/
+
+
+    
+    
+    /* delete March 12:
+    cellScoreLabel.text = [titleDict objectForKey:@"scoreString"];
+    cellDateLabel.text = [titleDict objectForKey:@"dateString"];
+    cellDurationLabel.text = [titleDict objectForKey:@"durationString"];
+
+    //cell.detailTextLabel.text = [self titleForRow:indexPath.row];
+    */
+ 
+    
+       //- (NSString *)titleForRow:(NSUInteger)row
+// original pre-Feb2014 version returned a string carefully padded with blanks to simulate columns.
+// Upgraded to return, instead, a dictionary with separate strings representing each item I want to display on the cell.
+// this function is kept alone for backward compatibility reasons.  If you were doing it over, you'd probably just put these substrings inline in the main cellForRowAtIndexPath method above.
+
+- (NSDictionary *) titleForRow:(NSUInteger) row
+{
+   // NSString *displayText = @"";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterShortStyle];          
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+   //
+     self.resultArray = [[STScores allSTScoresFromNSUserDefaults] sortedArrayUsingSelector:self.sortSelector];
+    assert(self.resultArray);
+    
+    STScores *result = self.resultArray [ row]; //self.allSTScores[row];
+    
+    NSString *scoreSubString = [[NSString alloc] initWithFormat:@"%d",result.score];
+    NSString *dateSubString = [[NSString alloc] initWithFormat:@"%@", [formatter stringFromDate:result.end] ];
+    NSString *durationSubString = [[NSString alloc] initWithFormat:@"%3.1f",result.duration];
+    
+    
+  //  NSString *titleString = [[NSString alloc] initWithFormat:@"%10s%36s%18s",[scoreSubString UTF8String], [dateSubString UTF8String],[durationSubString UTF8String]];
+    NSDictionary *titleDict = [[NSDictionary alloc] initWithObjectsAndKeys:scoreSubString ,@"scoreString",dateSubString,@"dateString",durationSubString,@"durationString", nil];
+    
+    
+//    return titleString;
+    return titleDict;
+    
+    //[SCORE_KEY] description]]; // description because could be NSNull
+}
+   
+   
+       #pragma mark - Sorting
+
+@synthesize sortSelector = _sortSelector;  // because we implement BOTH setter and getter
+
+// return default sort selector if none set (by score)
+
+- (SEL)sortSelector
+{
+    if (!_sortSelector) _sortSelector = @selector(compareScoreToSTScores:);
+    return _sortSelector;
+}
+
+// update the UI when changing the sort selector
+
+- (void)setSortSelector:(SEL)sortSelector
+{
+    _sortSelector = sortSelector;
+    [self updateUI];
+  //   [self.STScoreTableView reloadData];
+}
+    
+    

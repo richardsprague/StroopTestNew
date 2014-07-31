@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */; };
+		FE13985818D16FF700D77125 /* backup in Resources */ = {isa = PBXBuildFile; fileRef = FE13985718D16FF700D77125 /* backup */; };
+		FE13985B18D21E1500D77125 /* StroopData+MOC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE13985A18D21E1500D77125 /* StroopData+MOC.m */; };
+		FE4D741218A9801C005185BC /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4D741118A9801C005185BC /* Images-2.xcassets */; };
+		FE51224018A85797003392CC /* home-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51223F18A85797003392CC /* home-7.png */; };
+		FE51224218A857BD003392CC /* Chart_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224118A857BD003392CC /* Chart_Up@2x.png */; };
+		FE51224418A85CAE003392CC /* settings60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224318A85CAE003392CC /* settings60x60.png */; };
+		FE51224618A85D46003392CC /* config30x30.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224518A85D46003392CC /* config30x30.png */; };
+		FE51224818A863B1003392CC /* StroopStartButton114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224718A863B1003392CC /* StroopStartButton114x114.png */; };
 		FE7D230A175066B20092757E /* STGeneric.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D2309175066B20092757E /* STGeneric.png */; };
 		FE7D230E17506C4F0092757E /* STGenericB.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D230D17506C4F0092757E /* STGenericB.png */; };
 		FE7D23121755790B0092757E /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23111755790A0092757E /* ReadMe.txt */; };
@@ -14,16 +23,12 @@
 		FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D231517557A980092757E /* 1369803046_cancel.png */; };
 		FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */; };
 		FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23191757E0300092757E /* Stroop Icon114x114.png */; };
-		FE7D231E1757F2A60092757E /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D231D1757F2A60092757E /* Ensembio Launch640x1096.png */; };
 		FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23251757F4110092757E /* StroopIcon57x57.png */; };
-		FE7D232A1757F5650092757E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23291757F5640092757E /* Default.png */; };
-		FE7D233C1757FA110092757E /* StroopLaunch320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23391757FA110092757E /* StroopLaunch320x480.png */; };
-		FE7D233D1757FA110092757E /* StroopLaunch640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D233A1757FA110092757E /* StroopLaunch640x960.png */; };
-		FE7D233E1757FA110092757E /* StroopLaunch640x1136.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D233B1757FA110092757E /* StroopLaunch640x1136.png */; };
-		FE7D23401757FA340092757E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D233F1757FA340092757E /* Default@2x.png */; };
-		FE7D23421757FA400092757E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23411757FA400092757E /* Default-568h@2x.png */; };
 		FE909FD11724C36A00A3030E /* STScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */; };
 		FE909FD41724C7FF00A3030E /* STScoreTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE909FD31724C7FE00A3030E /* STScoreTableView.m */; };
+		FE9148B418C501B100A694B5 /* ZBConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9148B318C501B100A694B5 /* ZBConnectionDelegate.m */; };
+		FE9148BA18C5030900A694B5 /* ZBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9148B918C5030900A694B5 /* ZBSettingsViewController.m */; };
+		FE9148BC18C5037700A694B5 /* Zenobase.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9148BB18C5037700A694B5 /* Zenobase.png */; };
 		FE9A3E2D1702067800716EA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2C1702067800716EA4 /* UIKit.framework */; };
 		FE9A3E2F1702067800716EA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2E1702067800716EA4 /* Foundation.framework */; };
 		FE9A3E311702067800716EA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E301702067800716EA4 /* CoreGraphics.framework */; };
@@ -32,7 +37,6 @@
 		FE9A3E3D1702067800716EA4 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E3C1702067800716EA4 /* STAppDelegate.m */; };
 		FE9A3E461702067800716EA4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9A3E441702067800716EA4 /* MainStoryboard.storyboard */; };
 		FE9A3E491702067800716EA4 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E481702067800716EA4 /* STViewController.m */; };
-		FE9A3E511702067800716EA4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E501702067800716EA4 /* SenTestingKit.framework */; };
 		FE9A3E521702067800716EA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2C1702067800716EA4 /* UIKit.framework */; };
 		FE9A3E531702067800716EA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9A3E2E1702067800716EA4 /* Foundation.framework */; };
 		FE9A3E5B1702067800716EA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE9A3E591702067800716EA4 /* InfoPlist.strings */; };
@@ -49,7 +53,9 @@
 		FE9A3E91170370B200716EA4 /* STCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E90170370B200716EA4 /* STCardView.m */; };
 		FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9A3E94170393B900716EA4 /* STSelectionsView.m */; };
 		FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBEB80D1714D9B1006CE864 /* StroopLogo.png */; };
-		FECDBE99174C2EB900B4C960 /* STInstructionsNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECDBE98174C2EB900B4C960 /* STInstructionsNavViewController.m */; };
+		FED57F9618D10BFD00B91DEA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED57F9518D10BFD00B91DEA /* CoreData.framework */; };
+		FED57FAB18D12ADF00B91DEA /* ensembioStroop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FED57FA918D12ADF00B91DEA /* ensembioStroop.xcdatamodeld */; };
+		FED57FAE18D12B5F00B91DEA /* StroopData.m in Sources */ = {isa = PBXBuildFile; fileRef = FED57FAD18D12B5F00B91DEA /* StroopData.m */; };
 		FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF9F52117220D7600C42FEF /* 1366432723_play.png */; };
 		FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */; };
 /* End PBXBuildFile section */
@@ -65,6 +71,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Launch640x1096.png"; sourceTree = "<group>"; };
+		FE13985718D16FF700D77125 /* backup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = backup; sourceTree = "<group>"; };
+		FE13985918D21E1500D77125 /* StroopData+MOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StroopData+MOC.h"; sourceTree = "<group>"; };
+		FE13985A18D21E1500D77125 /* StroopData+MOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StroopData+MOC.m"; sourceTree = "<group>"; };
+		FE4D741118A9801C005185BC /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "Stroop/Images-2.xcassets"; sourceTree = "<group>"; };
+		FE51222918A8349F003392CC /* Ensembio Logo120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Logo120x120.png"; sourceTree = "<group>"; };
+		FE51222A18A8349F003392CC /* Stroop Icon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stroop Icon60x60.png"; sourceTree = "<group>"; };
+		FE51222B18A8349F003392CC /* StroopIcon 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StroopIcon 80x80.png"; sourceTree = "<group>"; };
+		FE51222C18A8349F003392CC /* StroopIcon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon114x114.png; sourceTree = "<group>"; };
+		FE51222D18A8349F003392CC /* StroopIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon120x120.png; sourceTree = "<group>"; };
+		FE51222E18A8349F003392CC /* StroopIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon29x29.png; sourceTree = "<group>"; };
+		FE51222F18A8349F003392CC /* StroopIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon57x57.png; sourceTree = "<group>"; };
+		FE51223018A8349F003392CC /* StroopIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon58x58.png; sourceTree = "<group>"; };
+		FE51223118A8349F003392CC /* StroopIcon59x59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon59x59.png; sourceTree = "<group>"; };
+		FE51223318A8435D003392CC /* Ensembio Logo120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Logo120x120.png"; sourceTree = "<group>"; };
+		FE51223418A8435D003392CC /* Stroop Icon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stroop Icon60x60.png"; sourceTree = "<group>"; };
+		FE51223518A8435D003392CC /* StroopIcon 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StroopIcon 80x80.png"; sourceTree = "<group>"; };
+		FE51223618A8435D003392CC /* StroopIcon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon114x114.png; sourceTree = "<group>"; };
+		FE51223718A8435D003392CC /* StroopIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon120x120.png; sourceTree = "<group>"; };
+		FE51223818A8435D003392CC /* StroopIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon29x29.png; sourceTree = "<group>"; };
+		FE51223918A8435D003392CC /* StroopIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon57x57.png; sourceTree = "<group>"; };
+		FE51223A18A8435D003392CC /* StroopIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon58x58.png; sourceTree = "<group>"; };
+		FE51223B18A8435D003392CC /* StroopIcon59x59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopIcon59x59.png; sourceTree = "<group>"; };
+		FE51223C18A8435D003392CC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FE51223D18A8435D003392CC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FE51223E18A8435D003392CC /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
+		FE51223F18A85797003392CC /* home-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-7.png"; sourceTree = "<group>"; };
+		FE51224118A857BD003392CC /* Chart_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chart_Up@2x.png"; sourceTree = "<group>"; };
+		FE51224318A85CAE003392CC /* settings60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings60x60.png; sourceTree = "<group>"; };
+		FE51224518A85D46003392CC /* config30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config30x30.png; sourceTree = "<group>"; };
+		FE51224718A863B1003392CC /* StroopStartButton114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopStartButton114x114.png; sourceTree = "<group>"; };
 		FE7D2309175066B20092757E /* STGeneric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGeneric.png; sourceTree = "<group>"; };
 		FE7D230D17506C4F0092757E /* STGenericB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGenericB.png; sourceTree = "<group>"; };
 		FE7D23111755790A0092757E /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
@@ -72,19 +109,17 @@
 		FE7D231517557A980092757E /* 1369803046_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1369803046_cancel.png; sourceTree = "<group>"; };
 		FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ensembio Logo 114x114.png"; path = "../Ensembio Logo 114x114.png"; sourceTree = "<group>"; };
 		FE7D23191757E0300092757E /* Stroop Icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stroop Icon114x114.png"; path = "../Stroop Icon114x114.png"; sourceTree = "<group>"; };
-		FE7D231D1757F2A60092757E /* Ensembio Launch640x1096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ensembio Launch640x1096.png"; path = "../../../Ensembio/Corporation/Ensembio Launch640x1096.png"; sourceTree = "<group>"; };
 		FE7D23251757F4110092757E /* StroopIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StroopIcon57x57.png; path = ../StroopIcon57x57.png; sourceTree = "<group>"; };
-		FE7D23291757F5640092757E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		FE7D23391757FA110092757E /* StroopLaunch320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch320x480.png; sourceTree = "<group>"; };
-		FE7D233A1757FA110092757E /* StroopLaunch640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x960.png; sourceTree = "<group>"; };
-		FE7D233B1757FA110092757E /* StroopLaunch640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopLaunch640x1136.png; sourceTree = "<group>"; };
-		FE7D233F1757FA340092757E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		FE7D23411757FA400092757E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		FE7D2343175805BC0092757E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FE909FCF1724C36900A3030E /* STScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableViewCell.h; sourceTree = "<group>"; };
 		FE909FD01724C36A00A3030E /* STScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScoreTableViewCell.m; sourceTree = "<group>"; };
 		FE909FD21724C7FE00A3030E /* STScoreTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScoreTableView.h; sourceTree = "<group>"; };
 		FE909FD31724C7FE00A3030E /* STScoreTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScoreTableView.m; sourceTree = "<group>"; };
+		FE9148B118C501B100A694B5 /* ZBConnectionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBConnectionProtocol.h; sourceTree = "<group>"; };
+		FE9148B218C501B100A694B5 /* ZBConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBConnectionDelegate.h; sourceTree = "<group>"; };
+		FE9148B318C501B100A694B5 /* ZBConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBConnectionDelegate.m; sourceTree = "<group>"; };
+		FE9148B818C5030900A694B5 /* ZBSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBSettingsViewController.h; sourceTree = "<group>"; };
+		FE9148B918C5030900A694B5 /* ZBSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBSettingsViewController.m; sourceTree = "<group>"; };
+		FE9148BB18C5037700A694B5 /* Zenobase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zenobase.png; sourceTree = "<group>"; };
 		FE9A3E291702067800716EA4 /* Stroop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stroop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9A3E2C1702067800716EA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE9A3E2E1702067800716EA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,8 +133,7 @@
 		FE9A3E451702067800716EA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FE9A3E471702067800716EA4 /* STViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
 		FE9A3E481702067800716EA4 /* STViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
-		FE9A3E4F1702067800716EA4 /* StroopTestNewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StroopTestNewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE9A3E501702067800716EA4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FE9A3E4F1702067800716EA4 /* StroopTestNewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StroopTestNewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9A3E581702067800716EA4 /* StroopTestNewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StroopTestNewTests-Info.plist"; sourceTree = "<group>"; };
 		FE9A3E5A1702067800716EA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE9A3E5C1702067800716EA4 /* StroopTestNewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StroopTestNewTests.h; sourceTree = "<group>"; };
@@ -127,8 +161,10 @@
 		FE9A3E93170393B900716EA4 /* STSelectionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSelectionsView.h; sourceTree = "<group>"; };
 		FE9A3E94170393B900716EA4 /* STSelectionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSelectionsView.m; sourceTree = "<group>"; };
 		FEBEB80D1714D9B1006CE864 /* StroopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StroopLogo.png; path = ../StroopLogo.png; sourceTree = "<group>"; };
-		FECDBE97174C2EB900B4C960 /* STInstructionsNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STInstructionsNavViewController.h; path = ../STInstructionsNavViewController.h; sourceTree = "<group>"; };
-		FECDBE98174C2EB900B4C960 /* STInstructionsNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STInstructionsNavViewController.m; path = ../STInstructionsNavViewController.m; sourceTree = "<group>"; };
+		FED57F9518D10BFD00B91DEA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FED57FAA18D12ADF00B91DEA /* ensembioStroop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ensembioStroop.xcdatamodel; sourceTree = "<group>"; };
+		FED57FAC18D12B5F00B91DEA /* StroopData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StroopData.h; path = ../StroopData.h; sourceTree = "<group>"; };
+		FED57FAD18D12B5F00B91DEA /* StroopData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StroopData.m; path = ../StroopData.m; sourceTree = "<group>"; };
 		FEF9F52117220D7600C42FEF /* 1366432723_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1366432723_play.png; sourceTree = "<group>"; };
 		FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1366433186_Perspective Button - Go.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED57F9618D10BFD00B91DEA /* CoreData.framework in Frameworks */,
 				FE9A3E2D1702067800716EA4 /* UIKit.framework in Frameworks */,
 				FE9A3E2F1702067800716EA4 /* Foundation.framework in Frameworks */,
 				FE9A3E311702067800716EA4 /* CoreGraphics.framework in Frameworks */,
@@ -148,7 +185,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE9A3E511702067800716EA4 /* SenTestingKit.framework in Frameworks */,
 				FE9A3E521702067800716EA4 /* UIKit.framework in Frameworks */,
 				FE9A3E531702067800716EA4 /* Foundation.framework in Frameworks */,
 			);
@@ -157,10 +193,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE51222818A8349F003392CC /* Stroop Images */ = {
+			isa = PBXGroup;
+			children = (
+				FE51222918A8349F003392CC /* Ensembio Logo120x120.png */,
+				FE51222A18A8349F003392CC /* Stroop Icon60x60.png */,
+				FE51222B18A8349F003392CC /* StroopIcon 80x80.png */,
+				FE51224318A85CAE003392CC /* settings60x60.png */,
+				FE51224718A863B1003392CC /* StroopStartButton114x114.png */,
+				FE51224118A857BD003392CC /* Chart_Up@2x.png */,
+				FE51224518A85D46003392CC /* config30x30.png */,
+				FE51223F18A85797003392CC /* home-7.png */,
+				FE51222C18A8349F003392CC /* StroopIcon114x114.png */,
+				FE51222D18A8349F003392CC /* StroopIcon120x120.png */,
+				FE51222E18A8349F003392CC /* StroopIcon29x29.png */,
+				FE51222F18A8349F003392CC /* StroopIcon57x57.png */,
+				FE51223018A8349F003392CC /* StroopIcon58x58.png */,
+				FE51223118A8349F003392CC /* StroopIcon59x59.png */,
+			);
+			name = "Stroop Images";
+			path = "StroopTestNew/Stroop Images";
+			sourceTree = "<group>";
+		};
+		FE51223218A8435D003392CC /* Stroop Images */ = {
+			isa = PBXGroup;
+			children = (
+				FE51223318A8435D003392CC /* Ensembio Logo120x120.png */,
+				FE51223418A8435D003392CC /* Stroop Icon60x60.png */,
+				FE51223518A8435D003392CC /* StroopIcon 80x80.png */,
+				FE51223618A8435D003392CC /* StroopIcon114x114.png */,
+				FE51223718A8435D003392CC /* StroopIcon120x120.png */,
+				FE51223818A8435D003392CC /* StroopIcon29x29.png */,
+				FE51223918A8435D003392CC /* StroopIcon57x57.png */,
+				FE51223A18A8435D003392CC /* StroopIcon58x58.png */,
+				FE51223B18A8435D003392CC /* StroopIcon59x59.png */,
+				FE51223C18A8435D003392CC /* Default.png */,
+				FE51223D18A8435D003392CC /* Default-568h@2x.png */,
+				FE51223E18A8435D003392CC /* Default~iphone.png */,
+			);
+			name = "Stroop Images";
+			path = "StroopTestNew/Stroop Images";
+			sourceTree = "<group>";
+		};
+		FE9148B018C5019800A694B5 /* Zenobase */ = {
+			isa = PBXGroup;
+			children = (
+				FE9148BB18C5037700A694B5 /* Zenobase.png */,
+				FE9148B818C5030900A694B5 /* ZBSettingsViewController.h */,
+				FE9148B918C5030900A694B5 /* ZBSettingsViewController.m */,
+				FE9148B118C501B100A694B5 /* ZBConnectionProtocol.h */,
+				FE9148B218C501B100A694B5 /* ZBConnectionDelegate.h */,
+				FE9148B318C501B100A694B5 /* ZBConnectionDelegate.m */,
+			);
+			name = Zenobase;
+			sourceTree = "<group>";
+		};
 		FE9A3E201702067800716EA4 = {
 			isa = PBXGroup;
 			children = (
-				FE7D2343175805BC0092757E /* Default@2x.png */,
+				FE4D741118A9801C005185BC /* Images-2.xcassets */,
+				FE51223218A8435D003392CC /* Stroop Images */,
+				FE51222818A8349F003392CC /* Stroop Images */,
 				FE9A3E321702067800716EA4 /* StroopTestNew */,
 				FE9A3E561702067800716EA4 /* StroopTestNewTests */,
 				FE9A3E2B1702067800716EA4 /* Frameworks */,
@@ -172,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				FE9A3E291702067800716EA4 /* Stroop.app */,
-				FE9A3E4F1702067800716EA4 /* StroopTestNewTests.octest */,
+				FE9A3E4F1702067800716EA4 /* StroopTestNewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,10 +273,10 @@
 		FE9A3E2B1702067800716EA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FED57F9518D10BFD00B91DEA /* CoreData.framework */,
 				FE9A3E2C1702067800716EA4 /* UIKit.framework */,
 				FE9A3E2E1702067800716EA4 /* Foundation.framework */,
 				FE9A3E301702067800716EA4 /* CoreGraphics.framework */,
-				FE9A3E501702067800716EA4 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -191,6 +284,12 @@
 		FE9A3E321702067800716EA4 /* StroopTestNew */ = {
 			isa = PBXGroup;
 			children = (
+				FE9148B018C5019800A694B5 /* Zenobase */,
+				FED57FA918D12ADF00B91DEA /* ensembioStroop.xcdatamodeld */,
+				FED57FAC18D12B5F00B91DEA /* StroopData.h */,
+				FED57FAD18D12B5F00B91DEA /* StroopData.m */,
+				FE13985918D21E1500D77125 /* StroopData+MOC.h */,
+				FE13985A18D21E1500D77125 /* StroopData+MOC.m */,
 				FE9A3E3B1702067800716EA4 /* STAppDelegate.h */,
 				FE9A3E3C1702067800716EA4 /* STAppDelegate.m */,
 				FE9A3E441702067800716EA4 /* MainStoryboard.storyboard */,
@@ -198,12 +297,11 @@
 				FE9A3E92170370B900716EA4 /* View */,
 				FE9A3E8917035B8100716EA4 /* STScoreVC.h */,
 				FE9A3E8A17035B8100716EA4 /* STScoreVC.m */,
+				FE13985718D16FF700D77125 /* backup */,
 				FE9A3E7D17024FF200716EA4 /* STSettingsVC.h */,
 				FE9A3E7E17024FF200716EA4 /* STSettingsVC.m */,
 				FE9A3E7A170211F000716EA4 /* STSceneVC.h */,
 				FE9A3E7B170211F000716EA4 /* STSceneVC.m */,
-				FECDBE97174C2EB900B4C960 /* STInstructionsNavViewController.h */,
-				FECDBE98174C2EB900B4C960 /* STInstructionsNavViewController.m */,
 				FE9A3E6A17020A0200716EA4 /* Model */,
 				FE9A3E471702067800716EA4 /* STViewController.h */,
 				FE9A3E481702067800716EA4 /* STViewController.m */,
@@ -216,14 +314,8 @@
 			isa = PBXGroup;
 			children = (
 				FE7D23191757E0300092757E /* Stroop Icon114x114.png */,
-				FE7D23391757FA110092757E /* StroopLaunch320x480.png */,
-				FE7D233A1757FA110092757E /* StroopLaunch640x960.png */,
-				FE7D233B1757FA110092757E /* StroopLaunch640x1136.png */,
-				FE7D23411757FA400092757E /* Default-568h@2x.png */,
-				FE7D233F1757FA340092757E /* Default@2x.png */,
-				FE7D23291757F5640092757E /* Default.png */,
 				FE7D23251757F4110092757E /* StroopIcon57x57.png */,
-				FE7D231D1757F2A60092757E /* Ensembio Launch640x1096.png */,
+				FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */,
 				FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */,
 				FEBEB80D1714D9B1006CE864 /* StroopLogo.png */,
 				FE7D2309175066B20092757E /* STGeneric.png */,
@@ -329,8 +421,8 @@
 			);
 			name = StroopTestNewTests;
 			productName = StroopTestNewTests;
-			productReference = FE9A3E4F1702067800716EA4 /* StroopTestNewTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = FE9A3E4F1702067800716EA4 /* StroopTestNewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -339,8 +431,14 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ST;
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Richard Sprague";
+				TargetAttributes = {
+					FE9A3E281702067800716EA4 = {
+						DevelopmentTeam = 4RZ2RJUXC8;
+					};
+				};
 			};
 			buildConfigurationList = FE9A3E241702067800716EA4 /* Build configuration list for PBXProject "StroopTestNew" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -365,26 +463,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE13985818D16FF700D77125 /* backup in Resources */,
 				FE9A3E371702067800716EA4 /* InfoPlist.strings in Resources */,
+				FE51224818A863B1003392CC /* StroopStartButton114x114.png in Resources */,
 				FE9A3E461702067800716EA4 /* MainStoryboard.storyboard in Resources */,
 				FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */,
 				FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */,
+				FE51224418A85CAE003392CC /* settings60x60.png in Resources */,
 				FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */,
 				FE7D230A175066B20092757E /* STGeneric.png in Resources */,
 				FE7D230E17506C4F0092757E /* STGenericB.png in Resources */,
+				FE4D741218A9801C005185BC /* Images-2.xcassets in Resources */,
+				FE51224618A85D46003392CC /* config30x30.png in Resources */,
 				FE7D23121755790B0092757E /* ReadMe.txt in Resources */,
 				FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */,
+				FE51224018A85797003392CC /* home-7.png in Resources */,
 				FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */,
 				FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */,
 				FE7D231A1757E0300092757E /* Stroop Icon114x114.png in Resources */,
-				FE7D231E1757F2A60092757E /* Ensembio Launch640x1096.png in Resources */,
+				FE51224218A857BD003392CC /* Chart_Up@2x.png in Resources */,
+				FE9148BC18C5037700A694B5 /* Zenobase.png in Resources */,
 				FE7D23261757F4110092757E /* StroopIcon57x57.png in Resources */,
-				FE7D232A1757F5650092757E /* Default.png in Resources */,
-				FE7D233C1757FA110092757E /* StroopLaunch320x480.png in Resources */,
-				FE7D233D1757FA110092757E /* StroopLaunch640x960.png in Resources */,
-				FE7D233E1757FA110092757E /* StroopLaunch640x1136.png in Resources */,
-				FE7D23401757FA340092757E /* Default@2x.png in Resources */,
-				FE7D23421757FA400092757E /* Default-568h@2x.png in Resources */,
+				FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,16 +526,20 @@
 				FE9A3E7017020A3E00716EA4 /* STSettings.m in Sources */,
 				FE9A3E7317020A5000716EA4 /* STScene.m in Sources */,
 				FE9A3E7617020A5B00716EA4 /* STCard.m in Sources */,
+				FE9148BA18C5030900A694B5 /* ZBSettingsViewController.m in Sources */,
 				FE9A3E7C170211F100716EA4 /* STSceneVC.m in Sources */,
 				FE9A3E7F17024FF200716EA4 /* STSettingsVC.m in Sources */,
 				FE9A3E82170255EC00716EA4 /* STColors.m in Sources */,
 				FE9A3E8B17035B8100716EA4 /* STScoreVC.m in Sources */,
 				FE9A3E8E17036AF000716EA4 /* STTest.m in Sources */,
 				FE9A3E91170370B200716EA4 /* STCardView.m in Sources */,
+				FE13985B18D21E1500D77125 /* StroopData+MOC.m in Sources */,
 				FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */,
 				FE909FD11724C36A00A3030E /* STScoreTableViewCell.m in Sources */,
+				FED57FAE18D12B5F00B91DEA /* StroopData.m in Sources */,
+				FED57FAB18D12ADF00B91DEA /* ensembioStroop.xcdatamodeld in Sources */,
+				FE9148B418C501B100A694B5 /* ZBConnectionDelegate.m in Sources */,
 				FE909FD41724C7FF00A3030E /* STScoreTableView.m in Sources */,
-				FECDBE99174C2EB900B4C960 /* STInstructionsNavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,10 +648,16 @@
 		FE9A3E621702067800716EA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNew/StroopTestNew-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -555,11 +665,14 @@
 		FE9A3E631702067800716EA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ensembio, Inc (4RZ2RJUXC8)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNew/StroopTestNew-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -572,15 +685,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StroopTestNew.app/StroopTestNew";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNewTests/StroopTestNewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -589,15 +702,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StroopTestNew.app/StroopTestNew";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNewTests/StroopTestNewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -632,6 +745,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FED57FA918D12ADF00B91DEA /* ensembioStroop.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FED57FAA18D12ADF00B91DEA /* ensembioStroop.xcdatamodel */,
+			);
+			currentVersion = FED57FAA18D12ADF00B91DEA /* ensembioStroop.xcdatamodel */;
+			name = ensembioStroop.xcdatamodeld;
+			path = ../ensembioStroop.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FE9A3E211702067800716EA4 /* Project object */;
 }
