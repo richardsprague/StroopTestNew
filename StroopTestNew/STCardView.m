@@ -96,15 +96,15 @@
   
 }
 
-//- (id) initWithCard: (STCard*) card
-//{
-//    self = [super init];
-//    self.currentCard = card;
-//    self.cardColor = card.color;
-//    
-//    return self;
-//    
-//}
+- (id) initWithCard: (STCard*) card
+{
+    self = [super init];
+    self.currentCard = card;
+    self.cardColor = card.color;
+    
+    return self;
+    
+}
 
 - (id)initWithFrame:(CGRect)frame
 {

@@ -13,7 +13,7 @@
 
 @interface STCardView : UIView
 - (void) showCard: (STCard *) aCard;
-//- (id) initWithCard: (STCard*) card;
+- (id) initWithCard: (STCard*) card;
 @property (strong, nonatomic) STColors *cardColor;
 
 @end
