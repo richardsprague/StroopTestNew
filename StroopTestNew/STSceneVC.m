@@ -26,6 +26,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *STModeLabel;
 
+
 @end
 
 @implementation  STSceneVC
@@ -84,20 +85,32 @@
 
 - (void) showSelectionButtons
 {
-        
     
+ //   NSSet *allColors = [[NSSet alloc] initWithArray:self.scene.card.shuffledColors   ];
+
+NSArray *shuffledColorArray = [STCard shuffledColorArray];
+    
+  //  NSString *testString = @"this is a tesst";
+    
+    // walk through the buttons
     for (int i = 0 ; i < [self.STSelectionButtons count] ; i++){
+        
         UIButton *aButton = self.STSelectionButtons[i];
         NSArray *aColor = self.scene.card.shuffledColors[i];
-        
+        //assign each
      
         
         NSString *buttonLabel = [[NSString alloc] initWithFormat:@"%@", aColor[1]];
         [aButton setTitle:buttonLabel forState:UIControlStateNormal];
+       
+        
+       [aButton setTitleColor:shuffledColorArray[i][0] forState:UIControlStateNormal];
+       [aButton setTitleShadowColor:shuffledColorArray[i][0] forState:UIControlStateNormal];
         
         
-        [aButton setTitleColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
-        [aButton setTitleShadowColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
+        
+   //     [aButton setTitleColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
+   //     [aButton setTitleShadowColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
     }
     
 }

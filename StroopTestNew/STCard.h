@@ -12,6 +12,6 @@
 @interface STCard : NSObject
 @property (strong, nonatomic) STColors *color;
 @property (strong, nonatomic) NSArray *shuffledColors;
-
++ (NSArray *) shuffledColorArray;
 
 @end

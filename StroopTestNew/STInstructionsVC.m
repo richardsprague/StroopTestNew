@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIView *instructionsCardViewPlaceholder;
 @property  (strong, nonatomic) IBOutletCollection(UIButton) NSArray *instructionsSampleLabels;
 
+@property (weak, nonatomic) IBOutlet UILabel *instructionsLabelBottom;
 @property (strong, nonatomic)STCardView *instructionsCardView;
 @property (strong, nonatomic) STCard *instructionsSampleCard;
 @property (weak, nonatomic) IBOutlet UILabel *instructionsCardDescriptionLabel;
@@ -38,7 +39,7 @@
 - (void) showInstructionsSampleButtonLabels
 {
     
-    
+    NSArray *shuffledColorArray = [STCard shuffledColorArray];
     for (int i = 0 ; i < [self.instructionsSampleLabels count] ; i++){
         UIButton *aButton = self.instructionsSampleLabels[i];
         NSArray *aColor = self.instructionsSampleCard.shuffledColors[i];
@@ -51,8 +52,13 @@
         [aButton setTitle:buttonLabel forState:UIControlStateNormal];
         
         
-        [aButton setTitleColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
-        [aButton setTitleShadowColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
+        
+        [aButton setTitleColor:shuffledColorArray[i][0] forState:UIControlStateNormal];
+        [aButton setTitleShadowColor:shuffledColorArray[i][0] forState:UIControlStateNormal];
+//        
+//        
+//        [aButton setTitleColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
+//        [aButton setTitleShadowColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
     }
     
 }
@@ -77,9 +83,8 @@
     [self.instructionsCardView showCard:self.instructionsSampleCard];
     
     self.instructionsLabel.text =[[NSString alloc] initWithFormat:@"Tap the logo to start, then match the color of the card with its name as quickly as you can. For example, this is a %@ card", [STColors colorAsString:self.instructionsCardView.cardColor]];
-    self.instructionsLabelForCardColor.text = [[NSString alloc] initWithFormat:@"\"%@\"", [STColors colorAsString:self.instructionsCardView.cardColor]];
+    self.instructionsLabelBottom.text = [[NSString alloc] initWithFormat:@"Tap the button labeled \"%@\" and ignore all other cues.", [STColors colorAsString:self.instructionsCardView.cardColor]];
     
-   // self.instructionsLabel.text = @"Tap the logo to start, then match the color of the card with its name as quickly as you can. For example, this is a ";
     
     [self showInstructionsSampleButtonLabels];
     

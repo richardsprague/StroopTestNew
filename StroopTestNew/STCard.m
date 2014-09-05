@@ -45,7 +45,7 @@
 {
     if (!_shuffledColors){
         NSMutableArray *newColorArray = [[NSMutableArray alloc] initWithArray:[STColors colorAndColorNamesArray]];
-        NSArray *anotherArray =  [self shuffle:newColorArray];
+        NSArray *anotherArray =  [STCard shuffle:newColorArray];
         
         
         _shuffledColors = [[NSArray alloc] initWithArray:(NSArray *) anotherArray];
@@ -56,8 +56,16 @@
     return _shuffledColors;
 }
 
++ (NSArray *) shuffledColorArray
+{
+    NSMutableArray *newColorArray = [[NSMutableArray alloc] initWithArray:[STColors colorAndColorNamesArray]];
+    NSArray *anotherArray =  [STCard shuffle:newColorArray];
+    
+    return anotherArray;
+    
+}
 
-- (NSArray *) shuffle: (NSMutableArray *) anArray
++ (NSArray *) shuffle: (NSMutableArray *) anArray
 {
 //    for (NSUInteger i=0;i<[anArray count];i++){
 //        NSUInteger nElements = anArray.count -i;

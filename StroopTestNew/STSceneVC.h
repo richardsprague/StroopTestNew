@@ -14,6 +14,9 @@
 
 @interface STSceneVC : UIViewController
 @property (strong, nonatomic) STScene *scene;
+
+
+
 @property (nonatomic, weak) id <STSceneProtocol>delegate;
 @end
 
