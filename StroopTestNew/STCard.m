@@ -14,7 +14,7 @@
 { self = [super init];
     
     STColors *newColor =[[STColors alloc] init];
-    _color = newColor.colorAsUIColor;
+    _color = newColor; //.colorAsUIColor;
     
     _shuffledColors = self.shuffledColors;
    
@@ -28,6 +28,8 @@
     
     return self;
 }
+
+
 
 //- (STColors *) color
 //{

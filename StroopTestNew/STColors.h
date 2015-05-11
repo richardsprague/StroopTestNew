@@ -22,7 +22,7 @@
 
 + (NSArray *) colorAndColorNamesArray;
 + (NSString *) colorAsString:(STColors *)aColor;
-- (BOOL) isMatch: (STColors *)withColor;
+//- (BOOL) isMatch: (STColors *)withColor;
 
 //@property (strong, nonatomic) STColors *randomUIColor ;
 

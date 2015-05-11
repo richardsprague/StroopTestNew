@@ -44,15 +44,17 @@
 - (IBAction)STSelectionButtons:(id)sender {
 
     
-    NSInteger thisButton = [self.STSelectionButtons indexOfObject:sender];
+    NSUInteger thisButton = [self.STSelectionButtons indexOfObject:sender];
     
     
-    NSArray *aColor = self.scene.card.shuffledColors[thisButton];
+    NSArray *aColor = [[NSArray alloc] initWithArray:self.scene.card.shuffledColors[thisButton]];
     
-//    NSLog(@"tapped color=%@", self.scene.card.color);
+    
+ //   NSLog(@"card color=%@", self.scene.card.color.colorNameAsString);
+    NSLog(@"tapped color=%@", aColor[1]);
     
   //  if ([self.scene.card.color isMatch: aColor[0]]){
-    if (self.scene.card.color == aColor[0]){
+    if (self.scene.card.color.colorNameAsString == aColor[1]){
        self.latestScore++;
         [self.delegate StroopTestScorePlusOne];
         

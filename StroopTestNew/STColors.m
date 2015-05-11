@@ -50,6 +50,35 @@
     return colorString;
 }
 
+- (STColors *) greenColor {
+    
+    STColors *newColor = [[STColors alloc] init];
+    
+    newColor.colorAsUIColor = [UIColor greenColor];
+    
+    return newColor;
+}
+
+- (STColors *) blueColor {
+    
+    STColors *newColor = [[STColors alloc] init];
+    
+    newColor.colorAsUIColor = [UIColor blueColor];
+    
+    return newColor;
+}
+
+- (STColors *) redColor {
+    
+    STColors *newColor = [[STColors alloc] init];
+    
+    newColor.colorAsUIColor = [UIColor redColor];
+    
+    return newColor;
+}
+
+
+/*
 - (BOOL) isMatch: (STColors *)withColor
 {
     
@@ -69,6 +98,9 @@
     
     
 }
+ */
+
+
 //
 //- (STColors *) randomUIColor {
 //    
