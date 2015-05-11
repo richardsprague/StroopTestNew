@@ -17,10 +17,9 @@
 		FE51224418A85CAE003392CC /* settings60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224318A85CAE003392CC /* settings60x60.png */; };
 		FE51224618A85D46003392CC /* config30x30.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224518A85D46003392CC /* config30x30.png */; };
 		FE51224818A863B1003392CC /* StroopStartButton114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224718A863B1003392CC /* StroopStartButton114x114.png */; };
-		FE6EA12C1B010F17004DF376 /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FE6EA12B1B010F17004DF376 /* Readme.rtf */; };
+		FE6EA12E1B011213004DF376 /* ReadMe.md in Sources */ = {isa = PBXBuildFile; fileRef = FE6EA12D1B011213004DF376 /* ReadMe.md */; };
 		FE7D230A175066B20092757E /* STGeneric.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D2309175066B20092757E /* STGeneric.png */; };
 		FE7D230E17506C4F0092757E /* STGenericB.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D230D17506C4F0092757E /* STGenericB.png */; };
-		FE7D23121755790B0092757E /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23111755790A0092757E /* ReadMe.md */; };
 		FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23131755795A0092757E /* 1369802710_button_cancel.png */; };
 		FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D231517557A980092757E /* 1369803046_cancel.png */; };
 		FE7D23181757DF1A0092757E /* Ensembio Logo 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */; };
@@ -106,10 +105,9 @@
 		FE51224318A85CAE003392CC /* settings60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings60x60.png; sourceTree = "<group>"; };
 		FE51224518A85D46003392CC /* config30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config30x30.png; sourceTree = "<group>"; };
 		FE51224718A863B1003392CC /* StroopStartButton114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopStartButton114x114.png; sourceTree = "<group>"; };
-		FE6EA12B1B010F17004DF376 /* Readme.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Readme.rtf; sourceTree = "<group>"; };
+		FE6EA12D1B011213004DF376 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		FE7D2309175066B20092757E /* STGeneric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGeneric.png; sourceTree = "<group>"; };
 		FE7D230D17506C4F0092757E /* STGenericB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGenericB.png; sourceTree = "<group>"; };
-		FE7D23111755790A0092757E /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = ReadMe.md; path = StroopTestNew/ReadMe.md; sourceTree = "<group>"; };
 		FE7D23131755795A0092757E /* 1369802710_button_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1369802710_button_cancel.png; sourceTree = "<group>"; };
 		FE7D231517557A980092757E /* 1369803046_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1369803046_cancel.png; sourceTree = "<group>"; };
 		FE7D23171757DF1A0092757E /* Ensembio Logo 114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ensembio Logo 114x114.png"; path = "../Ensembio Logo 114x114.png"; sourceTree = "<group>"; };
@@ -256,8 +254,7 @@
 		FE9A3E201702067800716EA4 = {
 			isa = PBXGroup;
 			children = (
-				FE6EA12B1B010F17004DF376 /* Readme.rtf */,
-				FE7D23111755790A0092757E /* ReadMe.md */,
+				FE6EA12D1B011213004DF376 /* ReadMe.md */,
 				FE4D741118A9801C005185BC /* Images-2.xcassets */,
 				FE51223218A8435D003392CC /* Stroop Images */,
 				FE51222818A8349F003392CC /* Stroop Images */,
@@ -479,12 +476,10 @@
 				FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */,
 				FE51224418A85CAE003392CC /* settings60x60.png in Resources */,
 				FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */,
-				FE6EA12C1B010F17004DF376 /* Readme.rtf in Resources */,
 				FE7D230A175066B20092757E /* STGeneric.png in Resources */,
 				FE7D230E17506C4F0092757E /* STGenericB.png in Resources */,
 				FE4D741218A9801C005185BC /* Images-2.xcassets in Resources */,
 				FE51224618A85D46003392CC /* config30x30.png in Resources */,
-				FE7D23121755790B0092757E /* ReadMe.md in Resources */,
 				FE7D23141755795A0092757E /* 1369802710_button_cancel.png in Resources */,
 				FE51224018A85797003392CC /* home-7.png in Resources */,
 				FE7D231617557A980092757E /* 1369803046_cancel.png in Resources */,
@@ -542,6 +537,7 @@
 				FE9A3E82170255EC00716EA4 /* STColors.m in Sources */,
 				FE9A3E8B17035B8100716EA4 /* STScoreVC.m in Sources */,
 				FE9A3E8E17036AF000716EA4 /* STTest.m in Sources */,
+				FE6EA12E1B011213004DF376 /* ReadMe.md in Sources */,
 				FE9A3E91170370B200716EA4 /* STCardView.m in Sources */,
 				FE13985B18D21E1500D77125 /* StroopData+MOC.m in Sources */,
 				FE9A3E95170393B900716EA4 /* STSelectionsView.m in Sources */,

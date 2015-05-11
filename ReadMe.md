@@ -4,9 +4,9 @@ Settings Constants are kept in STSettings.h
 
 # Classes
 
-* *STScene*: keeps track of the card, which selection buttons are appropriate, the score so far, and the elapsed time.
-* Card: keeps a Color, plus an NSArray of randomly-ordered color names
-* STScores: messy! Keeps latestScore, start/end time, duration.  Used by
+* __STScene__: keeps track of the card, which selection buttons are appropriate, the score so far, and the elapsed time.
+* __Card__: keeps a Color, plus an NSArray of randomly-ordered color names
+* __STScores__: messy! Keeps latestScore, start/end time, duration.  Used by
 
 
 STViewController.m is where everything starts
