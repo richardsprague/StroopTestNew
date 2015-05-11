@@ -83,37 +83,61 @@
    
 }
 
+// of the five buttons, I need to turn on exactly three.
+// 1. the far left button or the second to the left (randomly)
+// 2. the far right button or the second to the right (randomly)
+// 3. the middle button or the one to either side, depending on which were chosen above
 - (void) showSelectionButtons
 {
     
- //   NSSet *allColors = [[NSSet alloc] initWithArray:self.scene.card.shuffledColors   ];
 
-NSArray *shuffledColorArray = [STCard shuffledColorArray];
+    NSArray *shuffledColorArray = [STCard shuffledColorArray];
     
-  //  NSString *testString = @"this is a tesst";
     
     // walk through the buttons
-    for (int i = 0 ; i < [self.STSelectionButtons count] ; i++){
+    for (int j = 0 ; j < [self.STSelectionButtons count] ; j++){
+ //   for (UIButton *aButton in self.STSelectionButtons){
+        
+        int i  = j ; // the index that aButton has in self.STSelectionButtons
         
         UIButton *aButton = self.STSelectionButtons[i];
         NSArray *aColor = self.scene.card.shuffledColors[i];
         //assign each
      
-        
+        //the button label will be a string name for the color in the shuffled color array
         NSString *buttonLabel = [[NSString alloc] initWithFormat:@"%@", aColor[1]];
         [aButton setTitle:buttonLabel forState:UIControlStateNormal];
        
-        
+        //but the color of the label will be chosen from the random shuffledColorArray above
        [aButton setTitleColor:shuffledColorArray[i][0] forState:UIControlStateNormal];
        [aButton setTitleShadowColor:shuffledColorArray[i][0] forState:UIControlStateNormal];
+
         
-        
-        
-   //     [aButton setTitleColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
-   //     [aButton setTitleShadowColor:[[[STColors alloc] init] randomUIColor] forState:UIControlStateNormal];
     }
     
 }
+// OLD CODE:
+// walk through the buttons
+//   for (int j = 0 ; j < [self.STSelectionButtons count] ; j++){
+//for (UIButton *aButton in self.STSelectionButtons){
+//    
+//    int i  = j % 3;
+//    
+//    //UIButton *aButton = self.STSelectionButtons[i];
+//    NSArray *aColor = self.scene.card.shuffledColors[i];
+//    //assign each
+//    
+//    
+//    NSString *buttonLabel = [[NSString alloc] initWithFormat:@"%@", aColor[1]];
+//    [aButton setTitle:buttonLabel forState:UIControlStateNormal];
+//    
+//    
+//    [aButton setTitleColor:shuffledColorArray[i][0] forState:UIControlStateNormal];
+//    [aButton setTitleShadowColor:shuffledColorArray[i][0] forState:UIControlStateNormal];
+//    
+//    
+//}
+
 
 - (void) STSecondsPassed
 {

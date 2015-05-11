@@ -14,7 +14,7 @@
 		<string>https://github.com/richardsprague/StroopTestNew.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>StroopTestNew.xcodeproj/project.xcworkspace</string>
+	<string>StroopTestNew.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>CD958F87ACE06D2B5CFB528BECC7B0EB9FBBE8DF</key>

@@ -17,7 +17,10 @@
 #define XGREENCOLOR XHEXCOLOR(0x66CC66FF)
 #define INITWITHGREENCOLOR XINITWITHHEXCOLOR(0x66CC66FF)
 //[[STColors alloc] INITWITHGREENCOLOR]
+@interface STColors()
 
+
+@end
 
 @implementation STColors
 
@@ -66,25 +69,32 @@
     
     
 }
-
-- (STColors *) randomUIColor {
-    
-    if (!_randomUIColor){
-        unsigned int index = arc4random() % [[STColors colorAndColorNamesArray] count];
-        _randomUIColor = [[STColors alloc] init];
-        _randomUIColor = [STColors colorAndColorNamesArray][index][0];
-    }
-    return _randomUIColor;
-
-
-}
-
-//- (id) init
-//{
-//    self = [super init];
-//    return self;
+//
+//- (STColors *) randomUIColor {
 //    
+//    if (!_randomUIColor){
+//        unsigned int index = arc4random() % [[STColors colorAndColorNamesArray] count];
+//        _randomUIColor = [[STColors alloc] init];
+//        _randomUIColor = [STColors colorAndColorNamesArray][index][0];
+//    }
+//    return _randomUIColor;
+//
+//
 //}
+
+- (id) init
+{
+    self = [super init];
+    unsigned int index = arc4random() % [[STColors colorAndColorNamesArray] count];
+  
+    _colorAsUIColor = [STColors colorAndColorNamesArray][index][0];
+    _colorNameAsString = [STColors colorAndColorNamesArray][index][1];
+    
+ 
+    
+    return self;
+    
+}
 
 
 @end

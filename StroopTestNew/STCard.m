@@ -9,37 +9,36 @@
 #import "STCard.h"
 
 @implementation STCard
+
 - (id) init
 { self = [super init];
-   // NSLog(@"init STCard");
-    if (!_color) {
-            _color = self.color;
-        _shuffledColors = self.shuffledColors;
-        
-    }
+    
+    STColors *newColor =[[STColors alloc] init];
+    _color = newColor.colorAsUIColor;
+    
+    _shuffledColors = self.shuffledColors;
+   
+//    if (!_color) {
+//        _color = self.color;
+//        _shuffledColors = self.shuffledColors;
+//        
+    
+ //   }
     
     
     return self;
 }
-- (STColors *) color
-{
-    
-    if (!_color) {
-   _color = [[[STColors alloc]  init] randomUIColor];
-    }
-    
- 
-  //  _colorName = [STCard colorAsString:_color];
-    
-    
-    
-    //  NSLog(@"colorName= %@", self.colorName);
-    
-    // NSLog(@"setColor=%@",_color.description);
-    
-    return _color;
-    
-}
+
+//- (STColors *) color
+//{
+//    
+//    if (!_color) {
+//        _color = [[STColors alloc] init]; //[[[STColors alloc] init] randomUIColor]; //[[STColors alloc]  init]; //
+//    }
+//    
+//    return _color;
+//    
+//}
 
 - (NSArray *) shuffledColors
 {
