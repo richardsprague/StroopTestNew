@@ -5,6 +5,7 @@
 //  Created by Richard Sprague on 3/26/13.
 //  Copyright (c) 2013 Richard Sprague. All rights reserved.
 //
+/*
 
 #import <Foundation/Foundation.h>
 #import "STSettings.h"
@@ -33,3 +34,4 @@
 + (void) setAllSTUserDefaultScores: (NSArray *) newScores;
 
 @end
+*/

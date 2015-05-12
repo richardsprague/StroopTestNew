@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "STCard.h"
-#import "STScores.h"
+//#import "STScores.h"
 
 @interface STScene : NSObject
 

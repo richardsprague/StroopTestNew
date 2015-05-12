@@ -15,7 +15,7 @@
 @interface STViewController ()<STSceneProtocol>
 @property (weak, nonatomic) IBOutlet UILabel *elapsedSecondsLabel;
 //@property (weak, nonatomic) IBOutlet UILabel *STCorrectScoreLabel;
-@property (strong, nonatomic) STScores *testResult;
+//@property (strong, nonatomic) STScores *testResult;
 @property (strong, nonatomic) STTest *stroopTest;
 @property (strong, nonatomic) STSceneVC *nextView;
 @property (strong, nonatomic) NSTimer *timerForTest;
@@ -238,13 +238,13 @@
 }
 
 
-
+/* deprecated on 5/8/15
 - (STScores *) testResult
 {
     if (!_testResult) _testResult = [[STScores alloc] init];
     return _testResult;
 }
-
+*/
 
 - (IBAction)InstructionsButtonPressed:(id)sender {
     

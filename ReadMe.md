@@ -6,7 +6,7 @@ Settings Constants are kept in STSettings.h
 
 * __STScene__: keeps track of the card, which selection buttons are appropriate, the score so far, and the elapsed time.
 * __Card__: keeps a Color, plus an NSArray of randomly-ordered color names
-* __STScores__: messy! Keeps latestScore, start/end time, duration.  Used by
+* __STScores__: Deprecated: replaced by STScoreVC and CoreData
 
 
 STViewController.m is where everything starts
@@ -20,7 +20,7 @@ STSceneVC shows the card
 
 STSceneVC.h defines <STSceneProtocol>, which lets the delegate know when the score has increased.
 
-STScoreVC displays a TableView of scores, which it computes itself from a call to NSUserDefaults.
+STScoreVC displays a TableView of scores kept in a CoreData 
 
 
 

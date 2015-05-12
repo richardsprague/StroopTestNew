@@ -9,7 +9,7 @@
 #import "STSceneVC.h"
 #import "STCardView.h"
 #import "STSelectionsView.h"
-#import "STScores.h"
+//#import "STScores.h"
 
 @interface STSceneVC ()
 
@@ -51,7 +51,7 @@
     
     
  //   NSLog(@"card color=%@", self.scene.card.color.colorNameAsString);
-    NSLog(@"tapped color=%@", aColor[1]);
+//    NSLog(@"tapped color=%@", aColor[1]);
     
   //  if ([self.scene.card.color isMatch: aColor[0]]){
     if (self.scene.card.color.colorNameAsString == aColor[1]){

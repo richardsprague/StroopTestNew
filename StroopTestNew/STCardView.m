@@ -31,19 +31,22 @@
 
     
     
-    NSString *currentColorString = @"color" ; //[self.cardColor colorNameAsString];
-    //[STColors colorAsString:[[STColors alloc]  init].randomUIColor];
-    
- //new   NSString * currentColorString = [[[STColors alloc] init] colorNameAsString];
+ 
+
     
     UIRectFill(self.bounds);
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.alignment = NSTextAlignmentCenter;
     
-    UIFont *cornerFont = [UIFont systemFontOfSize:self.bounds.size.width * PIP_FONT_SCALE_FACTOR];
+//    UIFont *cornerFont = [UIFont systemFontOfSize:self.bounds.size.width * PIP_FONT_SCALE_FACTOR];
     
     // this will draw NSString *currentColorString in the upper left corner of the card.
     // currently disabled.
+//    NSString *currentColorString = [self.cardColor colorNameAsString];
+    //[STColors colorAsString:[[STColors alloc]  init].randomUIColor];
+    
+    //new   NSString * currentColorString = [[[STColors alloc] init] colorNameAsString];
+    
 //    NSAttributedString *cornerText = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", currentColorString] attributes:@{ NSParagraphStyleAttributeName : paragraphStyle, NSFontAttributeName : cornerFont }];
     
 //    CGRect textBounds;

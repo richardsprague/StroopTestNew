@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Richard Sprague. All rights reserved.
 //
 
+/*
 #import "STScores.h"
 
 @interface STScores()
@@ -174,3 +175,5 @@
 }
 
 @end
+
+*/
