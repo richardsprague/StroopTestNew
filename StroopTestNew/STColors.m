@@ -43,13 +43,20 @@
 
 + (NSString *) colorAsString:(STColors *)aColor
 {
-    NSDictionary *colorDict = [STColors ColorToStringDictionary];
-    NSString *colorString = colorDict[aColor];
+   // NSDictionary *colorDict = [STColors ColorToStringDictionary];
+    
+//    if (!aColor) {
+//        aColor = [[STColors alloc] init];
+//        
+//        
+//    }
+    NSString *colorString = aColor.colorNameAsString; //colorDict[aColor];
     assert(colorString!=nil);
     
     return colorString;
 }
 
+/*
 - (STColors *) greenColor {
     
     STColors *newColor = [[STColors alloc] init];
@@ -77,6 +84,7 @@
     return newColor;
 }
 
+*/
 
 /*
 - (BOOL) isMatch: (STColors *)withColor
@@ -119,7 +127,7 @@
     self = [super init];
     unsigned int index = arc4random() % [[STColors colorAndColorNamesArray] count];
   
-    _colorAsUIColor = [STColors colorAndColorNamesArray][index][0];
+    _colorAsUIColor =[STColors colorAndColorNamesArray][index][0];
     _colorNameAsString = [STColors colorAndColorNamesArray][index][1];
     
  

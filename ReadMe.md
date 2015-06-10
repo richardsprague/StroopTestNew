@@ -26,6 +26,17 @@ STScoreVC displays a TableView of scores kept in a CoreData
 
 
 # Change Log
+
+Version 1.41 (May2015)
+* fixed crash in instructions page caused by incorrect STColors
+
+Version 1.4 (May2015)
+* Recompiled for iOS 8.3
+* STColors is now the main color object (instead of switching between UIColor and STColors)
+
+Version 1.3 (Aug2014)
+* Instructions page uses real examples.
+
 Version 1.2 (Feb2014)
 
 * Results page looks much better: uses custom tableviewcell labels.

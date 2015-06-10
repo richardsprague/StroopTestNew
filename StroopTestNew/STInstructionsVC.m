@@ -80,10 +80,16 @@
     self.instructionsCardView.cardColor = self.instructionsSampleCard.color;
     
     
-    [self.instructionsCardView showCard:self.instructionsSampleCard];
+    [self.instructionsCardView showCard:self.instructionsSampleCard];  // changes the color of instructionsCardView to sampleCard
     
-    self.instructionsLabel.text =[[NSString alloc] initWithFormat:@"Tap the logo to start, then match the color of the card with its name as quickly as you can. For example, this is a %@ card", [STColors colorAsString:self.instructionsCardView.cardColor]];
-    self.instructionsLabelBottom.text = [[NSString alloc] initWithFormat:@"Tap the button labeled \"%@\" and ignore all other cues.", [STColors colorAsString:self.instructionsCardView.cardColor]];
+    STColors *thisCardColor = self.instructionsCardView.cardColor;
+    
+    //self.instructionsCardView.cardColor;
+    
+    NSString *sampleCardColor =[STColors colorAsString:thisCardColor];
+    
+    self.instructionsLabel.text =[[NSString alloc] initWithFormat:@"Tap the logo to start, then match the color of the card with its name as quickly as you can. For example, this is a %@ card", sampleCardColor];
+    self.instructionsLabelBottom.text = [[NSString alloc] initWithFormat:@"Tap the button labeled \"%@\" and ignore all other cues.", sampleCardColor];
     
     
     [self showInstructionsSampleButtonLabels];

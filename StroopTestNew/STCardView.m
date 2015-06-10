@@ -9,7 +9,7 @@
 #import "STCardView.h"
 
 @interface STCardView()
-@property STCard *currentCard;
+//@property STCard *currentCard;
 
 @end
 
@@ -18,6 +18,8 @@
 
 #define PIP_FONT_SCALE_FACTOR 0.20
 #define CORNER_OFFSET 10.0
+
+
 
 - (void)drawRect:(CGRect)rect
 {
@@ -31,10 +33,19 @@
 
     
     
- 
+//    
+//        CAGradientLayer *gradient = [CAGradientLayer layer];
+//        gradient.frame = self.bounds;
+//        gradient.colors = [NSArray arrayWithObjects:(id)[self.cardColor.colorAsUIColor CGColor], (id)[[UIColor blackColor] CGColor], nil];
+//        [self.layer insertSublayer:gradient atIndex:0];
+//    
+ //   [roundedRect fill];
 
+  //  self.backgroundColor = self.currentCard.color.colorAsUIColor;
     
-    UIRectFill(self.bounds);
+  //  cardColor.colorAsUIColor;
+    
+   UIRectFill(self.bounds);
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.alignment = NSTextAlignmentCenter;
     
@@ -110,7 +121,7 @@
 - (id) initWithCard: (STCard*) card
 {
     self = [super init];
-    self.currentCard = card;
+//    self.currentCard = card;
     self.cardColor = card.color;
     
     return self;
@@ -121,7 +132,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+//        self.currentCard = [[STCard alloc] init];
+        self.cardColor = [[STColors alloc] init];
     }
     return self;
 }

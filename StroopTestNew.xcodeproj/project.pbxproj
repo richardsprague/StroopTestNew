@@ -17,6 +17,7 @@
 		FE51224418A85CAE003392CC /* settings60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224318A85CAE003392CC /* settings60x60.png */; };
 		FE51224618A85D46003392CC /* config30x30.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224518A85D46003392CC /* config30x30.png */; };
 		FE51224818A863B1003392CC /* StroopStartButton114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224718A863B1003392CC /* StroopStartButton114x114.png */; };
+		FE6E19541B2788BE00278FFB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6E19531B2788BE00278FFB /* QuartzCore.framework */; };
 		FE6EA12E1B011213004DF376 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = FE6EA12D1B011213004DF376 /* ReadMe.md */; };
 		FE7D230A175066B20092757E /* STGeneric.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D2309175066B20092757E /* STGeneric.png */; };
 		FE7D230E17506C4F0092757E /* STGenericB.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D230D17506C4F0092757E /* STGenericB.png */; };
@@ -105,6 +106,7 @@
 		FE51224318A85CAE003392CC /* settings60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings60x60.png; sourceTree = "<group>"; };
 		FE51224518A85D46003392CC /* config30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config30x30.png; sourceTree = "<group>"; };
 		FE51224718A863B1003392CC /* StroopStartButton114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StroopStartButton114x114.png; sourceTree = "<group>"; };
+		FE6E19531B2788BE00278FFB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FE6EA12D1B011213004DF376 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		FE7D2309175066B20092757E /* STGeneric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGeneric.png; sourceTree = "<group>"; };
 		FE7D230D17506C4F0092757E /* STGenericB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STGenericB.png; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6E19541B2788BE00278FFB /* QuartzCore.framework in Frameworks */,
 				FED57F9618D10BFD00B91DEA /* CoreData.framework in Frameworks */,
 				FE9A3E2D1702067800716EA4 /* UIKit.framework in Frameworks */,
 				FE9A3E2F1702067800716EA4 /* Foundation.framework in Frameworks */,
@@ -277,6 +280,7 @@
 		FE9A3E2B1702067800716EA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE6E19531B2788BE00278FFB /* QuartzCore.framework */,
 				FED57F9518D10BFD00B91DEA /* CoreData.framework */,
 				FE9A3E2C1702067800716EA4 /* UIKit.framework */,
 				FE9A3E2E1702067800716EA4 /* Foundation.framework */,
