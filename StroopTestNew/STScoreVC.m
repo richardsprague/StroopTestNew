@@ -139,7 +139,7 @@
     else
 
     return [UIFont smallSystemFontSize]+6;  //16.0;
-    [self updateUI];
+
 }
 
 

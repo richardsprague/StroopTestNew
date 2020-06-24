@@ -51,17 +51,17 @@
         [[NSUserDefaults standardUserDefaults] setFloat:STTIMER_DEFAULT forKey:STMAXTIMER_KEY];
         [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:STMODE_KEY];
         
-        self.STMaxScoreLabel.Enabled = NO;
+        self.STMaxScoreLabel.enabled = NO;
         self.STTestDurationLabel.enabled = YES;
-               self.STTestTimesLabel.Enabled = NO;
+               self.STTestTimesLabel.enabled = NO;
                self.STMaxScoreAdjustStepper.enabled = NO;
         self.STMaxScoreAdjustStepper.alpha = 0.5;
         
     } else         {
         
     [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:STMODE_KEY];
-           self.STMaxScoreLabel.Enabled = YES;
-         self.STTestTimesLabel.Enabled = YES;
+           self.STMaxScoreLabel.enabled = YES;
+         self.STTestTimesLabel.enabled = YES;
         self.STTestDurationLabel.enabled = NO;
         self.STMaxScoreAdjustStepper.enabled = YES;
         self.STMaxScoreAdjustStepper.alpha = 1.0;
@@ -132,9 +132,9 @@
     
     if (self.STTimerSegmentControl.selectedSegmentIndex!=0){
         
-        self.STMaxScoreLabel.Enabled = NO;
+        self.STMaxScoreLabel.enabled = NO;
         self.STTestDurationLabel.enabled = YES;
-        self.STTestTimesLabel.Enabled = NO;
+        self.STTestTimesLabel.enabled = NO;
         self.STMaxScoreAdjustStepper.enabled = NO;
         self.STMaxScoreAdjustStepper.alpha = 0.5;
     } else { self.STTestDurationLabel.enabled = NO;
