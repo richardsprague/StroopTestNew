@@ -1,0 +1,11 @@
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+## User settings
+xcuserdata/
+
+*.xcodeproj/
+DerivedData/
+
