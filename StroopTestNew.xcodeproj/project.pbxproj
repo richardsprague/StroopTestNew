@@ -11,7 +11,7 @@
 		FE13985818D16FF700D77125 /* backup in Resources */ = {isa = PBXBuildFile; fileRef = FE13985718D16FF700D77125 /* backup */; };
 		FE13985B18D21E1500D77125 /* StroopData+MOC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE13985A18D21E1500D77125 /* StroopData+MOC.m */; };
 		FE37D22E198AF7B40062F769 /* STInstructionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE37D22D198AF7B40062F769 /* STInstructionsVC.m */; };
-		FE47877824C7C71F000EAC41 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE47877724C7C71F000EAC41 /* Launch Screen.storyboard */; };
+		FE47877A24C8862F000EAC41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE47877924C8862F000EAC41 /* LaunchScreen.storyboard */; };
 		FE4D741218A9801C005185BC /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4D741118A9801C005185BC /* Images-2.xcassets */; };
 		FE51224018A85797003392CC /* home-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51223F18A85797003392CC /* home-7.png */; };
 		FE51224218A857BD003392CC /* Chart_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE51224118A857BD003392CC /* Chart_Up@2x.png */; };
@@ -78,7 +78,7 @@
 		FE37D22C198AF7B40062F769 /* STInstructionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STInstructionsVC.h; sourceTree = "<group>"; };
 		FE37D22D198AF7B40062F769 /* STInstructionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STInstructionsVC.m; sourceTree = "<group>"; };
 		FE47877424C7C414000EAC41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FE47877724C7C71F000EAC41 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FE47877924C8862F000EAC41 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE4D741118A9801C005185BC /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "Stroop/Images-2.xcassets"; sourceTree = "<group>"; };
 		FE51222918A8349F003392CC /* Ensembio Logo120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Logo120x120.png"; sourceTree = "<group>"; };
 		FE51222A18A8349F003392CC /* Stroop Icon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stroop Icon60x60.png"; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 		FE9A3E201702067800716EA4 = {
 			isa = PBXGroup;
 			children = (
-				FE47877724C7C71F000EAC41 /* Launch Screen.storyboard */,
+				FE47877924C8862F000EAC41 /* LaunchScreen.storyboard */,
 				FE6EA12D1B011213004DF376 /* ReadMe.md */,
 				FE4D741118A9801C005185BC /* Images-2.xcassets */,
 				FE51223218A8435D003392CC /* Stroop Images */,
@@ -459,10 +459,10 @@
 				FE51224818A863B1003392CC /* StroopStartButton114x114.png in Resources */,
 				FE9A3E461702067800716EA4 /* MainStoryboard.storyboard in Resources */,
 				FEBEB80E1714D9B1006CE864 /* StroopLogo.png in Resources */,
-				FE47877824C7C71F000EAC41 /* Launch Screen.storyboard in Resources */,
 				FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */,
 				FE51224418A85CAE003392CC /* settings60x60.png in Resources */,
 				FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */,
+				FE47877A24C8862F000EAC41 /* LaunchScreen.storyboard in Resources */,
 				FE7D230A175066B20092757E /* STGeneric.png in Resources */,
 				FE7D230E17506C4F0092757E /* STGenericB.png in Resources */,
 				FE4D741218A9801C005185BC /* Images-2.xcassets in Resources */,
@@ -676,7 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -694,7 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
