@@ -27,6 +27,10 @@ STScoreVC displays a TableView of scores kept in a CoreData
 
 # Change Log
 
+
+Version 1.41.1 (Jul 2020)
+* Now works on iOS 13
+
 Version 1.41 (May2015)
 * fixed crash in instructions page caused by incorrect STColors
 

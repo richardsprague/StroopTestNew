@@ -33,7 +33,7 @@
             startingLineNumber = "253"
             endingLineNumber = "253"
             landmarkName = "-InstructionsButtonPressed:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -65,7 +65,7 @@
             startingLineNumber = "307"
             endingLineNumber = "307"
             landmarkName = "-prepareForSegue:sender:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -99,7 +99,7 @@
             startingLineNumber = "177"
             endingLineNumber = "177"
             landmarkName = "-STUpdateScore"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -116,7 +116,7 @@
             startingLineNumber = "334"
             endingLineNumber = "334"
             landmarkName = "-viewDidAppear:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -132,7 +132,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
             endingLineNumber = "107"
-            landmarkName = "@implementation STViewController"
+            landmarkName = "STViewController"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
