@@ -127,7 +127,8 @@
 	// Do any additional setup after loading the view.
     
     self.STMaxScoreAdjustStepper.value =  (double) self.STMaxScore;
-    self.STSettingsVersionLabel.text = @"" ;
+    self.STSettingsVersionLabel.text = [NSString stringWithFormat:@"Version %@",
+        [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]];
     self.STTimerSegmentControl.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:STMODE_KEY];
     
     if (self.STTimerSegmentControl.selectedSegmentIndex!=0){
