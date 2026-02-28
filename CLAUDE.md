@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 StroopTestNew is a native iOS app implementing the Stroop Effect psychological test. Users see colored cards with color names in contrasting colors and must tap the button matching the actual color (not the word). Written entirely in **Objective-C** using **UIKit + Storyboards** with no external dependencies.
 
-**Current version:** 1.43.0 | **Deployment target:** iOS 16.0 | **Branch:** `modernize-ios`
+**Current version:** 1.43.1 | **Deployment target:** iOS 16.0 | **Tested on:** iOS 26
 
 ## Build & Run
 
@@ -28,6 +28,7 @@ Key classes in `StroopTestNew/`:
 - **STCard** — Card model with a color and shuffled color name array for selection buttons
 - **STColors** — Color abstraction (red, green, blue); the canonical color type used throughout
 - **STSettings** — Settings constants (defined in `STSettings.h`)
+- **STSettingsVC** — Settings screen, displays version number
 - **STScoreVC** — Results history via `NSFetchedResultsController` bound to Core Data
 - **STAppDelegate** — Core Data stack setup using `NSPersistentContainer`
 - **StroopData** — Core Data entity (date, score, duration, playMode, comment)
@@ -52,4 +53,4 @@ Key classes in `StroopTestNew/`:
 - All classes use `ST` prefix
 - Custom views (`STCardView`, `STSelectionsView`) do custom drawing
 - CSV export supported via file sharing (enabled in Info.plist)
-- Bundle ID pattern: `Ensembio.${PRODUCT_NAME:rfc1034identifier}`
+- Bundle ID: `com.ensembio.stroop`
