@@ -1,64 +1,70 @@
-# StroopTest OVERALL PROGRAM DESIGN
+# StroopTest
 
-Settings Constants are kept in STSettings.h
+A native iOS app implementing the [Stroop Effect](https://en.wikipedia.org/wiki/Stroop_effect) psychological test. Users see colored cards with color names in contrasting colors and must tap the button matching the actual color (not the word).
 
-# Classes
+**Current version:** 1.43.1 | **Requires:** iOS 16.0+ | **Tested on:** iOS 26
 
-* __STScene__: keeps track of the card, which selection buttons are appropriate, the score so far, and the elapsed time.
-* __Card__: keeps a Color, plus an NSArray of randomly-ordered color names
-* __STScores__: Deprecated: replaced by STScoreVC and CoreData
+## How It Works
 
+Cards display a color name (e.g., "RED") drawn in a different color (e.g., blue). The user must tap the button matching the **displayed color**, not the word. The cognitive interference between reading the word and identifying the color is the Stroop Effect.
 
-STViewController.m is where everything starts
+## Play Modes
 
-* Creates a new "Scene"
-* When you press the start button, start an NSTimer that 
-* The Start button simultaneously kicks off a modal segue to STSceneVC
-* prepareForSegue sends a STTest object, plus a STScene object to STSceneVC
+- **Score target** (default): reach a target score (default 3)
+- **Timed modes**: score as many as possible in 15s, 30s, or 60s
 
-STSceneVC shows the card
+## Features
 
-STSceneVC.h defines <STSceneProtocol>, which lets the delegate know when the score has increased.
+- Multiple play modes (score target or timed)
+- Score history stored in Core Data
+- CSV export via file sharing
+- Settings for play mode and score target
+- Version info displayed in Settings
 
-STScoreVC displays a TableView of scores kept in a CoreData 
+## Technical Details
 
+- **Language:** Objective-C
+- **UI:** UIKit + Storyboards
+- **Architecture:** MVC
+- **Data:** Core Data (`NSPersistentContainer`)
+- **Dependencies:** None (pure Apple frameworks)
 
+## Building
 
+Open `StroopTestNew.xcodeproj` in Xcode and build the **Stroop** target, or from the command line:
 
-# Change Log
+```bash
+xcodebuild -project StroopTestNew.xcodeproj -scheme StroopTestNew -sdk iphonesimulator build
+```
 
+## Change Log
 
-Version 1.41.1 (Jul 2020)
-* Now works on iOS 13
+### Version 1.43.1 (Feb 2026)
+- Updated for iOS 26
+- Version number now displayed in Settings
 
-Version 1.41 (May2015)
-* fixed crash in instructions page caused by incorrect STColors
+### Version 1.43.0 (Dec 2025)
+- Modernized for iOS 16: UIScene lifecycle, NSPersistentContainer
 
-Version 1.4 (May2015)
-* Recompiled for iOS 8.3
-* STColors is now the main color object (instead of switching between UIColor and STColors)
+### Version 1.41.1 (Jul 2020)
+- Updated for iOS 13
 
-Version 1.3 (Aug2014)
-* Instructions page uses real examples.
+### Version 1.41 (May 2015)
+- Fixed crash in instructions page caused by incorrect STColors
 
-Version 1.2 (Feb2014)
+### Version 1.4 (May 2015)
+- Recompiled for iOS 8.3
+- STColors is now the main color object
 
-* Results page looks much better: uses custom tableviewcell labels.
-* Instructions now uses unwind segue
-* All results are saved to a much more efficient Core Data file
-* Results are also saved to a real CSV file, easily readable in Excel
+### Version 1.3 (Aug 2014)
+- Instructions page uses real examples
 
+### Version 1.2 (Feb 2014)
+- Improved results page with custom table view cells
+- Instructions now uses unwind segue
+- All results saved to Core Data
+- CSV export support
 
-
-
-Version 1.1 (June2013)
-* Shipped in Feb 2014
-* UX overhauled for iOS 7
-* Results (in JSON form) can be transfered to iTunes for processing on a PC or Mac.
-
-
-
-
-
-
-
+### Version 1.1 (Jun 2013)
+- UX overhauled for iOS 7
+- Results transferable to iTunes

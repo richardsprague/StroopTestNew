@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA00000126020001000A0001 /* STSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00000126020003000A0001 /* STSceneDelegate.m */; };
 		FE00512617DA9E2D009F1D47 /* Ensembio Launch640x1096.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */; };
 		FE13985818D16FF700D77125 /* backup in Resources */ = {isa = PBXBuildFile; fileRef = FE13985718D16FF700D77125 /* backup */; };
 		FE13985B18D21E1500D77125 /* StroopData+MOC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE13985A18D21E1500D77125 /* StroopData+MOC.m */; };
@@ -58,7 +59,6 @@
 		FED57FAE18D12B5F00B91DEA /* StroopData.m in Sources */ = {isa = PBXBuildFile; fileRef = FED57FAD18D12B5F00B91DEA /* StroopData.m */; };
 		FEF9F52217220D7600C42FEF /* 1366432723_play.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF9F52117220D7600C42FEF /* 1366432723_play.png */; };
 		FEF9F52417220EF200C42FEF /* 1366433186_Perspective Button - Go.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF9F52317220EF200C42FEF /* 1366433186_Perspective Button - Go.png */; };
-		AA00000126020001000A0001 /* STSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA00000126020003000A0001 /* STSceneDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA00000126020002000A0001 /* STSceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STSceneDelegate.h; sourceTree = "<group>"; };
+		AA00000126020003000A0001 /* STSceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STSceneDelegate.m; sourceTree = "<group>"; };
 		FE00512517DA9E2C009F1D47 /* Ensembio Launch640x1096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ensembio Launch640x1096.png"; sourceTree = "<group>"; };
 		FE13985718D16FF700D77125 /* backup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = backup; sourceTree = "<group>"; };
 		FE13985918D21E1500D77125 /* StroopData+MOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StroopData+MOC.h"; sourceTree = "<group>"; };
@@ -130,8 +132,6 @@
 		FE9A3E3A1702067800716EA4 /* StroopTestNew-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StroopTestNew-Prefix.pch"; sourceTree = "<group>"; };
 		FE9A3E3B1702067800716EA4 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
 		FE9A3E3C1702067800716EA4 /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
-		AA00000126020002000A0001 /* STSceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STSceneDelegate.h; sourceTree = "<group>"; };
-		AA00000126020003000A0001 /* STSceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STSceneDelegate.m; sourceTree = "<group>"; };
 		FE9A3E471702067800716EA4 /* STViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
 		FE9A3E481702067800716EA4 /* STViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
 		FE9A3E4F1702067800716EA4 /* StroopTestNewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StroopTestNewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -688,6 +688,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.43.1;
+				DEVELOPMENT_TEAM = 4RZ2RJUXC8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNew/StroopTestNew-Info.plist";
@@ -708,6 +709,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.43.1;
+				DEVELOPMENT_TEAM = 4RZ2RJUXC8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StroopTestNew/StroopTestNew-Prefix.pch";
 				INFOPLIST_FILE = "StroopTestNew/StroopTestNew-Info.plist";
