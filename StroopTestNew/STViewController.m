@@ -65,17 +65,9 @@
     
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:[self dataFilePath]]) {
-        [[NSFileManager defaultManager] createFileAtPath: [self dataFilePath] contents:nil attributes:nil];
         NSLog(@"new results file created");
-        NSString *textToWrite = [[NSString alloc] initWithFormat:@"date,score,duration,mode,comment\n"];
-        NSFileHandle *handle;
-        handle = [NSFileHandle fileHandleForWritingAtPath: [self dataFilePath] ];
-        //say to handle where's the file fo write
- //       [handle truncateFileAtOffset:[handle seekToEndOfFile]];
-        //position handle cursor to the end of file
-        [handle writeData:[textToWrite dataUsingEncoding:NSUTF8StringEncoding]];
-        
-        
+        NSString *header = @"date,score,duration,mode,comment\n";
+        [header writeToFile:[self dataFilePath] atomically:YES encoding:NSUTF8StringEncoding error:nil];
     }
 
     
@@ -118,12 +110,10 @@
 - (void) saveToDisk: (NSDate *) date score: (uint) currentScore duration: (NSTimeInterval) duration  mode: (uint) currentMode {
     
     NSString *textToWrite = [[NSString alloc] initWithFormat:@"%@,%d,%f,%d\n",[NSDate date], currentScore,duration,currentMode];
-    NSFileHandle *handle;
-    handle = [NSFileHandle fileHandleForWritingAtPath: [self dataFilePath] ];
-    //say to handle where's the file fo write
-    [handle truncateFileAtOffset:[handle seekToEndOfFile]];
-    //position handle cursor to the end of file
-    [handle writeData:[textToWrite dataUsingEncoding:NSUTF8StringEncoding]];
+    NSString *existing = [NSString stringWithContentsOfFile:[self dataFilePath] encoding:NSUTF8StringEncoding error:nil];
+    if (!existing) existing = @"";
+    NSString *combined = [existing stringByAppendingString:textToWrite];
+    [combined writeToFile:[self dataFilePath] atomically:YES encoding:NSUTF8StringEncoding error:nil];
     
 }
 
